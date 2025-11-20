@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Future AI Research Lab - Advancing AI education, research, and innovation">
+    <title>Future AI Research Lab</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            /* Primary Palette */
+            --primary-blue: #0A2463;
+            --secondary-teal: #1E88A8;
+            --accent-cyan: #4FB3D9;
+            --dark-navy: #04152D;
+            
+            /* Neutrals */
+            --light-gray: #F5F7FA;
+            --medium-gray: #8B95A5;
+            --text-dark: #2C3E50;
+            
+            /* CQU Green - subtle presence */
+            --cqu-green: #00703C;
+            --cqu-lime: #8DC63F;
+            
+            /* Accent */
+            --accent-orange: #FB8B24;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: #ffffff;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.98);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            padding: 1rem 0;
+        }
+
+        nav .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+            text-decoration: none;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--secondary-teal);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--dark-navy) 100%);
+            color: white;
+            padding: 10rem 2rem 6rem;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .hero .subtitle {
+            font-size: 1.5rem;
+            color: var(--accent-cyan);
+            margin-bottom: 2rem;
+            font-weight: 300;
+        }
+
+       .hero p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+    opacity: 1;
+    color: var(--cqu-lime);
+   
+}
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Section Styling */
+        section {
+            padding: 5rem 2rem;
+        }
+
+        section:nth-child(even) {
+            background-color: var(--light-gray);
+        }
+
+        section h2 {
+            font-size: 2.5rem;
+            color: var(--primary-blue);
+            margin-bottom: 3rem;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        section h3 {
+            font-size: 1.8rem;
+            color: var(--secondary-teal);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        section p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            color: var(--text-dark);
+        }
+
+        /* Research Section */
+        .research-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .research-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .research-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .research-card h4 {
+            color: var(--primary-blue);
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+
+        .research-card .icon {
+            font-size: 2.5rem;
+            color: var(--secondary-teal); /* Uses your theme's teal color */
+            margin-bottom: 1.5rem;
+            display: block; /* Ensures it sits on its own line */
+        }
+
+        /* SAGE Section */
+        .sage-highlight {
+            background: linear-gradient(135deg, var(--secondary-teal) 0%, var(--accent-cyan) 100%);
+            color: white;
+            padding: 3rem;
+            border-radius: 12px;
+            margin: 2rem 0;
+        }
+
+        .sage-highlight h3 {
+            color: white;
+            font-size: 2rem;
+        }
+
+        /* Innovation Section */
+        .innovation-box {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent-orange);
+            margin: 2rem 0;
+        }
+
+        /* Team Section */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .team-member {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .team-member h4 {
+            color: var(--primary-blue);
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .team-member .title {
+            color: var(--secondary-teal);
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Contact Section */
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--text-dark);
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+            font-family: inherit;
+        }
+
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .btn {
+            background: var(--secondary-teal);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 4px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .btn:hover {
+            background: var(--primary-blue);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark-navy);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-cyan);
+        }
+
+        .cqu-acknowledgment {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            opacity: 0.8;
+            font-size: 0.9rem;
+        }
+
+        .cqu-badge {
+            display: inline-block;
+            color: var(--cqu-lime);
+            font-weight: 600;
+            margin-top: 0.5rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero .subtitle {
+                font-size: 1.2rem;
+            }
+
+            section h2 {
+                font-size: 2rem;
+            }
+
+            .research-grid,
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Section spacing utility */
+        .content-wrapper {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero .logo-img {
+    width: 80px; /* You can adjust this size */
+    height: auto;
+    margin-bottom: 1.5rem;
+}
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <a href="#home" class="logo">FAIR Lab</a>
+                       <ul>
+                <li><a href="#research">Research</a></li>
+                <li><a href="#teaching">Learning & Teaching</a></li>
+                <li><a href="#innovation">Innovation</a></li>
+                <li><a href="#activities">Activities</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+<img src="logo2.png" alt="Future AI Research Lab Logo" class="logo-img">
+        <h1>Future AI Research Lab</h1>
+        <p class="subtitle">Advancing AI Education, Research & Innovation</p>
+        <p>Bridging the gap between artificial intelligence research, educational innovation, and real-world impact through structured frameworks, community engagement, and transformative learning experiences.</p>
+    </section>
+
+  <section id="research">
+    <div class="container">
+        
+       <h2><i class="fa-solid fa-flask" style="margin-right: 0.75rem;"></i>Research</h2>
+        <div class="content-wrapper">
+            <p>The Future AI Research Lab conducts research across artificial intelligence, cybersecurity, blockchain integration, and educational technology. Our work spans theoretical foundations and practical applications, with emphasis on creating meaningful impact in both academic and industry contexts.</p>
+            
+            <div style="background: var(--light-gray); padding: 1.5rem; border-radius: 8px; margin: 2rem 0; border-left: 4px solid var(--secondary-teal);">
+                <h3 style="margin-top: 0;">Research Impact</h3>
+                <p>Lab members have collectively produced over 100 peer-reviewed publications with more than 3,600 citations, demonstrating sustained research excellence across multiple domains. Current research supervision includes 8 Higher Degree by Research (HDR) students across AI, cybersecurity, and interdisciplinary technology domains, building on a track record of 32 completed doctoral and masters research supervisions.</p>
+            </div>
+        </div>
+        
+        <div class="research-grid">
+            <div class="research-card">
+                <i class="fa-solid fa-brain icon"></i>
+                <h4>AI & Machine Learning</h4>
+                <p>Developing advanced AI systems and machine learning applications across healthcare, smart cities, and educational domains, with particular focus on AI orchestration competencies, responsible AI integration, and explainable AI frameworks.</p>
+            </div>
+            <div class="research-card">
+                <i class="fa-solid fa-shield-halved icon"></i>
+                <h4>Cybersecurity Research</h4>
+                <p>Investigating IoT security architectures, blockchain-based security frameworks, and next-generation security protocols for emerging technologies, with published work on data provenance, privacy-preserving systems, and vulnerability assessment.</p>
+            </div>
+            <div class="research-card">
+                <i class="fa-solid fa-graduation-cap icon"></i>
+                <h4>Educational Technology</h4>
+                <p>Pioneering AI-enhanced pedagogy and developing frameworks for generative AI integration in higher education curricula, including the SAGE framework validated across multiple institutions internationally.</p>
+            </div>
+            <div class="research-card">
+                <i class="fa-solid fa-user-graduate icon"></i>
+                <h4>HDR Supervision</h4>
+                <p>Supporting 8 current higher degree research students investigating cutting-edge topics in AI, cybersecurity, healthcare technology, and smart systems, with 32 completed supervisions demonstrating sustained commitment to developing emerging researchers.</p>
+            </div>
+            <div class="research-card">
+                <i class="fa-solid fa-heart-pulse icon"></i>
+                <h4>Healthcare AI & Analytics</h4>
+                <p>Applying machine learning and data analytics to healthcare challenges including disease prediction, medical image analysis, and clinical decision support systems, with high-impact contributions to Alzheimer's detection and patient data security.</p>
+            </div>
+            <div class="research-card">
+                <i class="fa-solid fa-city icon"></i>
+                <h4>Smart Cities & IoT Integration</h4>
+                <p>Researching the convergence of AI, blockchain, and IoT systems in next-generation urban infrastructure, exploring intelligent transportation, energy management, and context-aware services for connected environments.</p>
+            </div>
+        </div>
+        
+        <div class="content-wrapper" style="margin-top: 3rem;">
+    <h3><i class="fa-solid fa-book" style="margin-right: 0.75rem;"></i>Books and Monographs</h3>
+            
+            <div style="background: var(--light-gray); padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0; border-left: 4px solid var(--primary-blue);">
+                <p style="margin-bottom: 0.75rem;"><strong>Elkhodr, M.</strong> (2026). <em>Next-Generation Smart Cities: The Integration of AI, Blockchain, IoT and Emergent Networks.</em> Taylor & Francis. [216 pages]</p>
+                
+                <p style="margin-bottom: 0.75rem;"><strong>Elkhodr, M., & Gide, E.</strong> (2025). <em>Generative Artificial Intelligence Empowered Learning: A New Frontier in Educational Technology.</em> Taylor & Francis. [248 pages]</p>
+            </div>
+            
+            <h3><i class="fa-solid fa-chart-line" style="margin-right: 0.75rem;"></i>Selected High-Impact Publications</h3>
+            
+            <div style="background: var(--light-gray); padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0; border-left: 4px solid var(--secondary-teal);">
+                <h4 style="margin-top: 0; color: var(--secondary-teal);">Generative AI in Education</h4>
+                
+                <p style="margin-bottom: 0.75rem;"><strong>Elkhodr, M., Gide, E., Wu, R., & Darwish, O.</strong> (2023). "ICT students' perceptions towards ChatGPT: An experimental reflective lab analysis." <em>STEM Education, 3</em>(2), 70–88. <span style="background: #e8f5d8; padding: 0.2rem 0.4rem; border-radius: 3px; font-size: 0.9rem;">140 citations</span></p>
+                
+                <p style="margin-bottom: 0.75rem;"><strong>Sandu, R., Gide, E., & Elkhodr, M.</strong> (2024). "The role and impact of ChatGPT in educational practices: Insights from an Australian higher education case study." <em>Discover Education, 3</em>(1), 71. <span style="background: #e8f5d8; padding: 0.2rem 0.4rem; border-radius: 3px; font-size: 0.9rem;">58 citations</span></p>
+                
+                <p style="margin-bottom: 0.75rem;"><strong>Wangsa, K., Karim, S., Gide, E., & Elkhodr, M.</strong> (2024). "A systematic review and comprehensive analysis of pioneering AI Chatbot models from education to healthcare: ChatGPT, Bard, Llama, Ernie and Grok." <em>Future Internet, 16</em>(7), 219. <span style="background: #e8f5d8; padding: 0.2rem 0.4rem; border-radius: 3px; font-size: 0.9rem;">55 citations</span></p>
+            </div>
+            
+            <div style="background: var(--light-gray); padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0; border-left: 4px solid var(--accent-cyan);">
+                <h4 style="margin-top: 0; color: var(--accent-cyan);">Cybersecurity, IoT & Blockchain</h4>
+                
+                <p style="margin-bottom: 0.75rem;"><strong>Elkhodr, M.</strong> (2025). "An AI-driven framework for integrated security and privacy in Internet of Things using quantum-resistant blockchain." <em>Future Internet, 17</em>(6), 246.</p>
+                
+                <p style="margin-bottom: 0.75rem;"><strong>Elkhodr, M., Khan, S., & Gide, E.</strong> (2024). "A novel semantic IoT middleware for secure data management: Blockchain and AI-driven context awareness." <em>Future Internet, 16</em>(1), 22. <span style="background: #e8f5d8; padding: 0.2rem 0.4rem; border-radius: 3px; font-size: 0.9rem;">20 citations</span></p>
+                
+                <p style="margin-bottom: 0.75rem;"><strong>Elkhodr, M., Gide, E., Darwish, O., & Al-Eidi, S.</strong> (2023). "BioChainReward: A secure and incentivised blockchain framework for biomedical data sharing." <em>International Journal of Environmental Research and Public Health, 20</em>(19), 6825. <span style="background: #e8f5d8; padding: 0.2rem 0.4rem; border-radius: 3px; font-size: 0.9rem;">14 citations</span></p>
+            </div>
+            
+            <div style="background: var(--light-gray); padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0; border-left: 4px solid var(--accent-orange);">
+                <h4 style="margin-top: 0; color: var(--accent-orange);">Healthcare AI & Machine Learning</h4>
+                
+                <p style="margin-bottom: 0.75rem;"><strong>Uddin, S., Haque, I., Lu, H., Moni, M.A., & Gide, E.</strong> (2022). "Comparative performance analysis of K-nearest neighbour (KNN) algorithm and its different variants for disease prediction." <em>Scientific Reports, 12</em>(1), 6256. <span style="background: #fff4e6; padding: 0.2rem 0.4rem; border-radius: 3px; font-size: 0.9rem;">751 citations</span></p>
+                
+                <p style="margin-bottom: 0.75rem;"><strong>Elkhodr, M., et al.</strong> (2021). "Technology, privacy, and user opinions of COVID-19 mobile apps for contact tracing: Systematic search and content analysis." <em>Journal of Medical Internet Research, 23</em>(2), e23467. <span style="background: #e8f5d8; padding: 0.2rem 0.4rem; border-radius: 3px; font-size: 0.9rem;">101 citations</span></p>
+                
+                <p style="margin-bottom: 0.75rem;"><strong>Farid, F., Elkhodr, M., Sabrina, F., Ahamed, F., & Gide, E.</strong> (2021). "A smart biometric identity management framework for personalised IoT and cloud computing-based healthcare services." <em>Sensors, 21</em>(2), 552. <span style="background: #e8f5d8; padding: 0.2rem 0.4rem; border-radius: 3px; font-size: 0.9rem;">90 citations</span></p>
+            </div>
+            
+            <p style="margin-top: 2rem; font-size: 0.95rem; color: var(--medium-gray);">
+                Complete publication lists and researcher profiles: 
+                <a href="[link]" target="_blank" style="color: var(--secondary-teal);">Dr Mahmoud Elkhodr</a> | 
+                <a href="[link]" target="_blank" style="color: var(--secondary-teal);">Professor Ergun Gide</a>
+            </p>
+        </div>
+    </div>
+</section>
+
+
+<section id="teaching">
+    <div class="container">
+        <h2><i class="fa-solid fa-chalkboard-user" style="margin-right: 0.75rem;"></i>Learning & Teaching</h2>
+        <div class="content-wrapper">
+            <p>The lab's educational focus is on the transformation of AI pedagogy. Evidence-based frameworks and innovative pedagogical approaches are employed to prepare students for the rapidly evolving technological landscape.</p>
+
+            <!-- Key teaching resources: SAGE + GenAI 101 -->
+            <div class="resource-links" style="margin-top: 1.75rem; margin-bottom: 2rem;">
+                <a href="https://raw.githack.com/MahmoudElkhodr/fair/GENAI-101/SAGE.html"
+                   target="_blank" rel="noopener"
+                   style="display: inline-block; padding: 0.75rem 1.5rem; margin-right: 1rem;
+                          border-radius: 999px; text-decoration: none; font-weight: 600;
+                          background-color: #1a5f3a; color: #ffffff;">
+                    SAGE Framework – Educator Guide
+                </a>
+
+                <a href="https://raw.githack.com/MahmoudElkhodr/fair/GENAI-101/genai-101.html"
+                   target="_blank" rel="noopener"
+                   style="display: inline-block; padding: 0.75rem 1.5rem;
+                          border-radius: 999px; text-decoration: none; font-weight: 600;
+                          background-color: #a4d65e; color: #0d3d26;">
+                    GenAI 101 – Student Module
+                </a>
+            </div>
+        </div>
+
+        <div class="sage-highlight">
+            <h3>SAGE Framework</h3>
+            <p><strong>Structured AI-Guided Education</strong> is the lab’s flagship educational framework designed to develop AI orchestration competencies in students. SAGE has been validated across multiple Australian university campuses and has gained international adoption by institutions including the University of Warwick and the National University of Singapore. Further information, including implementation guidance for educators, is available on the dedicated framework page at
+                <a href="https://raw.githack.com/MahmoudElkhodr/fair/GENAI-101/SAGE.html" target="_blank" rel="noopener">SAGE Framework – Educator Guide</a>.
+            </p>
+            <p style="margin-top: 1.5rem;">The framework addresses critical competencies including prompt engineering, AI tool selection, critical evaluation of AI outputs, ethical considerations, and accessibility awareness in AI-enhanced workflows.</p>
+        </div>
+
+        <div class="content-wrapper">
+
+            <h3>The SAGE 4-Step Cycle</h3>
+            <p>At its core, the SAGE framework is built on a simple, repeatable cycle that moves students from passive AI consumption to critical AI orchestration. This process trains students to treat Generative AI as an assistive tool whose outputs must be rigorously evaluated, not as an authority to be copied.</p>
+
+            <p>The cycle involves four key stages:</p>
+            <ul style="margin-left: 2rem; margin-top: 1rem;">
+                <li><strong>Generate:</strong> Students use AI tools with structured prompts to create an initial output (e.g., a draft policy, code, or analysis).</li>
+                <li><strong>Evaluate:</strong> Students compare the AI-generated output against domain-specific standards, research, and contextual requirements to identify gaps, errors, and biases.</li>
+                <li><strong>Refine:</strong> Students modify, reject, or accept the AI's output, documenting their decisions with evidence-based justifications.</li>
+                <li><strong>Reflect:</strong> Students conduct a metacognitive analysis of the process, identifying AI's limitations and the irreplaceable value of human domain expertise.</li>
+            </ul>
+
+            <hr style="margin: 2.5rem 0;">
+
+            <h3>Selected Publications</h3>
+            <p>The SAGE framework and its related educational research have been disseminated through numerous peer-reviewed publications and scholarly works. Key resources include:</p>
+            <ul style="margin-left: 2rem; margin-top: 1rem;">
+                <li><strong>Book:</strong> Elkhodr, M., & Gide, E. (2025). <em>Generative Artificial Intelligence Empowered Learning: A New Frontier in Educational Technology</em>. CRC Press.</li>
+                <li><strong>Framework Validation:</strong> Elkhodr, M., & Gide, E. (2025). "Integrating Generative AI in Cybersecurity Education: Case Study Insights on Pedagogical Strategies, Critical Thinking, and Responsible AI Use." <em>arXiv preprint arXiv:2502.15357</em>.</li>
+                <li><strong>Foundational Study:</strong> Elkhodr, M., et al. (2023). "ICT students' perceptions towards ChatGPT: An experimental reflective lab analysis." <em>STEM Education</em>, 3(2), 70–88.</li>
+            </ul>
+
+            <hr style="margin: 2.5rem 0;">
+
+            <h3>GenAI Literacy Resources</h3>
+            <p>Comprehensive GenAI literacy modules have been developed to provide students with foundational knowledge of generative AI technologies. These resources focus on responsible use and practical applications across academic disciplines, supporting the development of critical AI literacy skills essential for contemporary academic and professional contexts. An introductory module, <em>GenAI 101</em>, is publicly accessible at
+                <a href="https://raw.githack.com/MahmoudElkhodr/fair/GENAI-101/genai-101.html" target="_blank" rel="noopener">GenAI 101 – Student Module</a>.
+            </p>
+
+            <h3>TEQSA GenAI Knowledge Hub</h3>
+            <p>In addition to internal resources, the lab contributes educator resources to TEQSA's GenAI Knowledge Hub. This engagement supports the broader Australian higher education sector in navigating the complex integration of generative AI within teaching and learning contexts.</p>
+        </div>
+    </div>
+</section>
+
+
+
+    <!-- Innovation Support Section -->
+    <section id="innovation">
+        <div class="container">
+            <h2>Innovation Support</h2>
+            <div class="content-wrapper">
+                <p>We support students in transforming innovative ideas into tangible outcomes by providing mentorship, technical guidance, and connections to resources. Our goal is to foster entrepreneurial thinking and facilitate the journey from concept to proof-of-concept.</p>
+            </div>
+
+            <div class="innovation-box">
+                <h3>Student Innovation Programme</h3>
+                <p>We welcome students with innovative ideas in AI, technology, and interdisciplinary domains. Through our programme, students receive:</p>
+                <ul style="margin-left: 2rem; margin-top: 1rem;">
+                    <li>One-on-one mentorship from experienced researchers</li>
+                    <li>Technical guidance for proof-of-concept development</li>
+                    <li>Connections to university resources and commercialisation pathways</li>
+                    <li>Support in navigating IP and intellectual property considerations</li>
+                </ul>
+                <p style="margin-top: 1.5rem;">We work in partnership with CQUniversity's existing innovation infrastructure to ensure students receive comprehensive support throughout their innovation journey.</p>
+            </div>
+
+            <div class="content-wrapper">
+                <h3>Current Project Opportunities</h3>
+                <p>We maintain a list of projects seeking student involvement across various technology domains. If you have your own innovative idea or would like to contribute to existing projects, we encourage you to reach out through our contact form below.</p>
+            </div>
+        </div>
+    </section>
+
+<section id="activities">
+    <div class="container">
+        <h2>Scholarly Activities</h2>
+        <div class="content-wrapper">
+            <p>The lab actively engages with the broader academic and professional community through conferences, workshops, seminars, and collaborative initiatives that advance knowledge and practice in AI and related fields.</p>
+
+            <h3>Leadership in AI and Education Research</h3>
+            <p>Lab members have established a strong track record of leadership within the international research community. Recent highlights include delivering a keynote address at the 2024 International Conference on Artificial Intelligence and E-learning Systems (AEIS 2024) and co-chairing the International Workshop on Designing AI-based Conversational Agents (DIAC 2024). This leadership extends to ongoing roles, with appointments as Special Sessions Chair for the 22nd International Conference on Information Technology Based Higher Education and Training (ITHET 2026), reflecting sustained recognition within the field.</p>
+            
+            <p>This engagement builds on a decade-long record of conference organizing roles spanning publicity coordination, workshop co-founding, and technical program committees across multiple IEEE and international conferences. Lab members regularly present research on generative AI in education at premier venues including ITHET, where multiple papers on AI-enhanced pedagogy were delivered in 2024.</p>
+
+            <h3>Published Work and Vol. 2 Call for Chapters</h3>
+            <p>The lab's research has been consolidated into <em>Generative Artificial Intelligence Empowered Learning</em> (Volume 1), published by Taylor & Francis in 2025. This foundational work established frameworks for GenAI integration across higher education contexts. <a href="https://www.taylorfrancis.com/books/edit/10.1201/9781003422433/generative-artificial-intelligence-empowered-learning-mahmoud-elkhodr-ergun-gide" target="_blank" rel="noopener noreferrer">Access the book here</a>.</p>
+            
+            <a href="https://www.taylorfrancis.com/books/edit/10.1201/9781003422433/generative-artificial-intelligence-empowered-learning-mahmoud-elkhodr-ergun-gide" 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               style="display: block; margin: 2rem auto; max-width: 300px; text-align: center; text-decoration: none;">
+                <img src="https://images.tandf.co.uk/common/jackets/crclarge/978100342/9781003422433.jpg" 
+                     alt="Cover of Generative Artificial Intelligence Empowered Learning Volume 1" 
+                     style="width: 100%; height: auto; border: 1px solid #ddd; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                <span style="font-size: 0.9rem; color: var(--medium-gray); margin-top: 0.75rem; display: block;">Published by Taylor & Francis, 2025</span>
+            </a>
+            
+            <p>Building on this foundation, we are now seeking chapter contributions for Volume 2, which will explore advanced topics in AI orchestration, disciplinary adaptations of the SAGE framework, and long-term educational impacts of embedded AI systems. Expressions of interest are welcome from researchers, practitioners, and educators working at the intersection of generative AI and pedagogy.</p>
+
+            <h3>FAIR Workshop 2026: Call for Abstracts</h3>
+            <p>The lab will host the inaugural FAIR Workshop in April 2026, themed "Showcasing GenAI Implementation in Assessment and Curriculum." We invite submissions from academics, researchers, and professional staff demonstrating innovative or research-informed approaches to generative AI integration in educational contexts. Selected papers will be fast-tracked for consideration in Volume 2 of <em>Generative Artificial Intelligence Empowered Learning</em>, providing contributors with a clear pathway from presentation to publication.</p>
+
+            <h3>Professional Development and Community Engagement</h3>
+            <p>Beyond conference participation, the lab organises professional development workshops on AI education, AI applications in business contexts, and cybersecurity for academics, industry professionals, and students. These workshops provide certificates of attendance and serve as accessible entry points for institutions beginning their GenAI integration journey.</p>
+            
+            <p>The lab maintains active partnerships with educational institutions, industry organisations, and government bodies to facilitate knowledge exchange and collaborative research. We welcome collaboration opportunities including GenAI integration consultations, speaking engagements, research partnerships, and contributions to our regular seminar series. For all inquiries, please use the contact form below.</p>
+        </div>
+    </div>
+</section>
+
+    <!-- Team Section -->
+    <section id="team">
+        <div class="container">
+            <h2>Our Team</h2>
+            <div class="team-grid">
+                <div class="team-member">
+                    <h4>Dr Mahmoud Elkhodr</h4>
+                    <p class="title">Senior Lecturer (Level C)<br>CQUniversity Australia</p>
+                    <p>Dr Elkhodr specialises in cybersecurity, IoT, blockchain, and AI education. As a Teaching Scholar with expertise spanning systems analysis, machine learning, and educational technology innovation, he developed the SAGE framework and maintains an active research profile with over 1,600 citations. His work focuses on AI-enhanced pedagogy and educational technology innovation in higher education.</p>
+                </div>
+                <div class="team-member">
+                    <h4>Professor Ergun Gide</h4>
+                    <p class="title">Professor<br>CQUniversity Australia</p>
+                    <p>Professor Gide brings extensive experience in information systems, business technology, and academic leadership. His research interests span information systems, digital innovation, and technology adoption in organisational contexts. Professor Gide contributes strategic guidance and research expertise to the lab's initiatives.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <div class="content-wrapper">
+                <p style="text-align: center; margin-bottom: 2rem;">We welcome inquiries from students, researchers, industry partners, and institutions interested in collaboration, research partnerships, or learning more about our work.</p>
+            </div>
+            <div class="contact-form">
+                <form>
+                    <div class="form-group">
+                        <label for="name">Name *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject *</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#research">Research</a>
+                <a href="#teaching">Learning & Teaching</a>
+                <a href="#innovation">Innovation</a>
+                <a href="#activities">Activities</a>
+                <a href="#team">Team</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <p>&copy; 2024 Future AI Research Lab. All rights reserved.</p>
+            <div class="cqu-acknowledgment">
+                <p>Affiliated with <span class="cqu-badge">CQUniversity Australia</span></p>
+                <p>Supporting accessible and inclusive education through research and innovation</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
