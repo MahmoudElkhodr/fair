@@ -671,6 +671,990 @@
       size: A4;
       margin: 20mm;
     }
+
+
+
+
+
+
+    * Opening Section Styles */
+.sage-opening {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #212529;
+}
+
+/* AI Literacy & Numeracy Definition Box */
+.literacy-numeracy-definition {
+    background: linear-gradient(135deg, #1a5f3a 0%, #0d3d26 100%);
+    color: white;
+    padding: 50px 40px;
+    margin: 0 0 60px 0;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.literacy-numeracy-definition h2 {
+    font-size: 2.2em;
+    margin: 0 0 20px 0;
+    font-weight: 600;
+    text-align: center;
+    color: white;
+    border-bottom: none;
+}
+
+.definition-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.definition-text {
+    flex: 2;
+    font-size: 1.1em;
+    line-height: 1.8;
+}
+
+.definition-visual {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+/* Evidence Base Section */
+.evidence-base-section {
+    max-width: 1200px;
+    margin: 0 auto 60px auto;
+    padding: 0 20px;
+}
+
+.evidence-base-section h2 {
+    font-size: 2.5em;
+    color: #1a5f3a;
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.authority-statement {
+    font-size: 1.15em;
+    line-height: 1.8;
+    color: #444;
+    margin-bottom: 50px;
+    text-align: center;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Three Gaps Framework */
+.three-gaps-framework {
+    margin: 60px 0;
+}
+
+.three-gaps-framework h3 {
+    font-size: 2em;
+    color: #1a5f3a;
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: 600;
+}
+
+.gaps-simple-list {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #fff5f5;
+    border: 3px solid #e76f51;
+    border-radius: 12px;
+    padding: 40px 50px;
+}
+
+.gaps-simple-list h4 {
+    color: #e76f51;
+    font-size: 1.4em;
+    margin-bottom: 25px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.gap-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 20px;
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #333;
+}
+
+.gap-item:last-child {
+    margin-bottom: 0;
+}
+
+.gap-danger-icon {
+    flex-shrink: 0;
+    margin-top: 3px;
+}
+
+.gap-text {
+    flex: 1;
+}
+
+.gap-text strong {
+    color: #e76f51;
+    font-weight: 600;
+}
+
+/* Research Foundation Visual */
+.research-foundation {
+    background: #f8f9fa;
+    padding: 60px 20px;
+    margin: 60px 0;
+}
+
+.research-foundation h3 {
+    font-size: 2em;
+    color: #1a5f3a;
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: 600;
+}
+
+.foundation-visual {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+/* SAGE Four Pillars - Matrix Style */
+.sage-pillars-section {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.sage-pillars-section h3 {
+    font-size: 2.2em;
+    color: #1a5f3a;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.pillars-intro {
+    font-size: 1.1em;
+    color: #444;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto 50px auto;
+    line-height: 1.8;
+}
+
+.pillars-matrix-container {
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.matrix-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0;
+    position: relative;
+}
+
+.matrix-quadrant {
+    padding: 50px 40px;
+    border: 2px solid #dee2e6;
+    position: relative;
+    min-height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.matrix-quadrant.top-left {
+    background: #f5f2f9;
+    border-top-left-radius: 12px;
+}
+
+.matrix-quadrant.top-right {
+    background: #e8f5d8;
+    border-top-right-radius: 12px;
+}
+
+.matrix-quadrant.bottom-left {
+    background: #fff8f0;
+    border-bottom-left-radius: 12px;
+}
+
+.matrix-quadrant.bottom-right {
+    background: #fef3f0;
+    border-bottom-right-radius: 12px;
+}
+
+.matrix-quadrant h4 {
+    font-size: 1.4em;
+    margin: 0 0 15px 0;
+    color: #1a5f3a;
+    font-weight: 600;
+}
+
+.matrix-quadrant p {
+    font-size: 1em;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.matrix-center-badge {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #e76f51;
+    color: white;
+    padding: 25px 35px;
+    border-radius: 8px;
+    font-size: 2em;
+    font-weight: 700;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    z-index: 10;
+}
+
+.matrix-axis-label {
+    position: absolute;
+    font-size: 1.1em;
+    font-weight: 600;
+    color: #495057;
+}
+
+.matrix-axis-label.vertical {
+    top: 50%;
+    left: -120px;
+    transform: translateY(-50%) rotate(-90deg);
+    transform-origin: center;
+}
+
+.matrix-axis-label.horizontal {
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.matrix-axis-arrow {
+    position: absolute;
+    color: #e76f51;
+    font-size: 2em;
+    font-weight: 700;
+}
+
+.matrix-axis-arrow.vertical-top {
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.matrix-axis-arrow.horizontal-right {
+    top: 50%;
+    right: -40px;
+    transform: translateY(-50%);
+}
+
+/* Evidence of Impact */
+.impact-evidence-section {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e8f5d8 100%);
+    padding: 60px 20px;
+    margin: 60px 0;
+}
+
+.impact-evidence-section h3 {
+    font-size: 2.2em;
+    color: #1a5f3a;
+    text-align: center;
+    margin-bottom: 50px;
+    font-weight: 600;
+}
+
+.impact-cards-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.impact-card {
+    background: white;
+    border-radius: 12px;
+    padding: 35px 25px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.impact-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+}
+
+.impact-card.competency::before {
+    background: #1a5f3a;
+}
+
+.impact-card.performance::before {
+    background: #a4d65e;
+}
+
+.impact-card.thinking::before {
+    background: #6a4c93;
+}
+
+.impact-card.achievement::before {
+    background: #5a6c7d;
+}
+
+.impact-number {
+    font-size: 3em;
+    font-weight: 700;
+    margin: 10px 0;
+    line-height: 1;
+}
+
+.impact-card.competency .impact-number {
+    color: #1a5f3a;
+}
+
+.impact-card.performance .impact-number {
+    color: #0d3d26;
+}
+
+.impact-card.thinking .impact-number {
+    color: #6a4c93;
+}
+
+.impact-card.achievement .impact-number {
+    color: #5a6c7d;
+}
+
+.impact-subtitle {
+    font-size: 0.95em;
+    color: #495057;
+    line-height: 1.5;
+    margin-top: 15px;
+}
+
+.impact-validation {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 1.05em;
+    color: #1a5f3a;
+    font-weight: 600;
+}
+
+/* Student Voices */
+.student-voices-section {
+    max-width: 1100px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.student-voices-section h3 {
+    font-size: 2em;
+    color: #1a5f3a;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.voices-intro {
+    text-align: center;
+    font-size: 1.05em;
+    color: #444;
+    margin-bottom: 40px;
+    line-height: 1.7;
+}
+
+.quotes-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.quote-card {
+    background: #f8f9fa;
+    border-left: 5px solid #1a5f3a;
+    padding: 30px 25px;
+    border-radius: 8px;
+    position: relative;
+}
+
+.quote-mark {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    opacity: 0.1;
+}
+
+.quote-text {
+    font-style: italic;
+    color: #333;
+    font-size: 1.05em;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    position: relative;
+    z-index: 1;
+}
+
+.quote-theme {
+    font-weight: 600;
+    color: #1a5f3a;
+    font-size: 0.9em;
+    margin-bottom: 5px;
+}
+
+.quote-percentage {
+    font-size: 0.85em;
+    color: #495057;
+}
+
+/* Assessment Redesign Section Styles */
+.assessment-redesign-section {
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 0 20px;
+}
+
+.assessment-redesign-section h3 {
+    font-size: 2.2em;
+    color: #1a5f3a;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.assessment-intro {
+    font-size: 1.1em;
+    line-height: 1.8;
+    color: #444;
+    max-width: 1000px;
+    margin: 0 auto 50px auto;
+}
+
+/* Visual 1: Theory to Practice Comparison */
+.theory-practice-visual {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e8f5d8 100%);
+    padding: 50px 40px;
+    border-radius: 12px;
+    margin: 50px 0;
+}
+
+.comparison-container {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 40px;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.comparison-side {
+    text-align: center;
+}
+
+.comparison-side h4 {
+    font-size: 1.5em;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+.theory-side h4 {
+    color: #999;
+}
+
+.practice-side h4 {
+    color: #1a5f3a;
+}
+
+.concept-bubbles {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.bubble {
+    background: white;
+    padding: 15px 25px;
+    border-radius: 25px;
+    font-size: 1em;
+    border: 2px solid #ddd;
+    color: #999;
+    opacity: 0.7;
+}
+
+.implementation-boxes {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.impl-box {
+    background: white;
+    padding: 15px 20px;
+    border-radius: 8px;
+    font-size: 1em;
+    border-left: 4px solid #1a5f3a;
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.impl-box::before {
+    content: '✓';
+    color: #a4d65e;
+    font-weight: bold;
+    font-size: 1.3em;
+}
+
+.comparison-arrow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.arrow-label {
+    font-size: 1.2em;
+    font-weight: 600;
+    color: #e76f51;
+    background: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.validation-badge {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.05em;
+    color: #1a5f3a;
+    font-weight: 600;
+}
+
+/* Visual 2: SAGE Assessment Cycle */
+.assessment-cycle-section {
+    background: #f8f9fa;
+    padding: 60px 40px;
+    margin: 60px 0;
+    border-radius: 12px;
+}
+
+.assessment-cycle-section h4 {
+    font-size: 1.8em;
+    color: #1a5f3a;
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: 600;
+}
+
+.cycle-visual-container {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+/* Strategy Text Sections */
+.strategy-section {
+    margin: 50px 0;
+}
+
+.strategy-section h4 {
+    font-size: 1.5em;
+    color: #1a5f3a;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.strategy-section p {
+    font-size: 1.05em;
+    line-height: 1.8;
+    color: #444;
+    margin-bottom: 15px;
+}
+
+.strategy-example {
+    background: #e8f5d8;
+    border-left: 4px solid #1a5f3a;
+    padding: 20px 25px;
+    margin: 20px 0;
+    border-radius: 4px;
+}
+
+.strategy-example strong {
+    color: #1a5f3a;
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1.05em;
+}
+
+/* Visual 4: Four Strategies Cards */
+.four-strategies-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin: 60px 0;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.strategy-card {
+    background: white;
+    border-radius: 12px;
+    padding: 35px 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-top: 5px solid #1a5f3a;
+}
+
+.strategy-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.strategy-card-icon {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.strategy-card h5 {
+    font-size: 1.3em;
+    color: #1a5f3a;
+    margin-bottom: 15px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.strategy-card-phrase {
+    text-align: center;
+    font-size: 1.05em;
+    color: #0d3d26;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.strategy-card-stat {
+    text-align: center;
+    font-size: 0.95em;
+    color: #495057;
+    background: #f8f9fa;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+/* Visual 6: Iceberg Model */
+.iceberg-section {
+    background: linear-gradient(180deg, #e3f2fd 0%, #5a6c7d 50%, #1a5f3a 100%);
+    padding: 60px 40px;
+    margin: 60px 0;
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+}
+
+.iceberg-section h4 {
+    font-size: 1.8em;
+    color: #0d3d26;
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: 600;
+}
+
+.iceberg-visual-container {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.waterline {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 35%;
+    height: 3px;
+    background: repeating-linear-gradient(
+        90deg,
+        white,
+        white 10px,
+        transparent 10px,
+        transparent 20px
+    );
+}
+
+.waterline-label {
+    position: absolute;
+    right: 50px;
+    top: 33%;
+    background: white;
+    color: #1a5f3a;
+    padding: 8px 15px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9em;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.iceberg-content {
+    position: relative;
+    z-index: 2;
+}
+
+.above-water {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.above-water h5 {
+    color: #0d3d26;
+    font-size: 1.3em;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.above-water-items {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.above-item {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 15px 25px;
+    border-radius: 8px;
+    color: #333;
+    font-size: 1.05em;
+    display: inline-block;
+    margin: 0 auto;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.percentage-badge {
+    display: inline-block;
+    background: #fff3cd;
+    color: #856404;
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-weight: 600;
+    font-size: 0.85em;
+    margin-left: 10px;
+}
+
+.below-water {
+    text-align: center;
+    margin-top: 80px;
+}
+
+.below-water h5 {
+    color: white;
+    font-size: 1.3em;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.below-water-items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.below-item {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 15px 20px;
+    border-radius: 8px;
+    color: #1a5f3a;
+    font-size: 1em;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    border-left: 4px solid #a4d65e;
+}
+
+.iceberg-conclusion {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 1.15em;
+    color: white;
+    font-weight: 600;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+}
+
+/* Section Dividers */
+.section-divider {
+    max-width: 1000px;
+    margin: 50px auto;
+}
+
+.section-divider h4 {
+    font-size: 1.8em;
+    color: #1a5f3a;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.section-divider p {
+    font-size: 1.05em;
+    line-height: 1.8;
+    color: #444;
+    margin-bottom: 15px;
+}
+
+.section-divider ul {
+    font-size: 1.05em;
+    line-height: 1.8;
+    color: #444;
+    margin-left: 25px;
+}
+
+.section-divider li {
+    margin-bottom: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .matrix-axis-label.vertical {
+        left: -100px;
+        font-size: 1em;
+    }
+    
+    .matrix-quadrant {
+        padding: 40px 30px;
+        min-height: 220px;
+    }
+    
+    .matrix-center-badge {
+        padding: 20px 28px;
+        font-size: 1.6em;
+    }
+    
+    .impact-cards-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .comparison-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .comparison-arrow {
+        transform: rotate(90deg);
+    }
+    
+    .four-strategies-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .below-water-items {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .definition-content {
+        flex-direction: column;
+    }
+    
+    .gaps-simple-list {
+        padding: 30px 25px;
+    }
+    
+    .gap-item {
+        font-size: 1em;
+    }
+    
+    .matrix-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+    
+    .matrix-quadrant {
+        border-radius: 0 !important;
+        min-height: 180px;
+    }
+    
+    .matrix-quadrant.top-left {
+        border-top-left-radius: 12px !important;
+        border-top-right-radius: 12px !important;
+    }
+    
+    .matrix-quadrant.bottom-right {
+        border-bottom-left-radius: 12px !important;
+        border-bottom-right-radius: 12px !important;
+    }
+    
+    .matrix-center-badge {
+        position: static;
+        transform: none;
+        display: block;
+        margin: 20px auto;
+        width: fit-content;
+    }
+    
+    .matrix-axis-label {
+        display: none;
+    }
+    
+    .matrix-axis-arrow {
+        display: none;
+    }
+    
+    .impact-cards-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .quotes-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .literacy-numeracy-definition h2 {
+        font-size: 1.8em;
+    }
+    
+    .evidence-base-section h2 {
+        font-size: 2em;
+    }
+    
+    .impact-number {
+        font-size: 2.5em;
+    }
+    
+    .assessment-cycle-section {
+        padding: 40px 20px;
+    }
+    
+    .iceberg-section {
+        padding: 40px 20px;
+    }
+    
+    .waterline-label {
+        right: 20px;
+        font-size: 0.8em;
+    }
+}
   </style>
 </head>
 <body>
@@ -712,6 +1696,672 @@
     </div>
   </div>
 </div>
+
+
+
+<!-- AI LITERACY & NUMERACY DEFINITION -->
+ <div class="page">
+<section class="literacy-numeracy-definition">
+    <h2>AI Literacy and Numeracy: A Unified Framework</h2>
+    <div class="definition-content">
+        <div class="definition-text">
+            <p>This resource adopts the paired terms <strong>"AI literacy and numeracy"</strong> to recognize the full spectrum of GenAI capabilities in higher education. AI literacy encompasses critical evaluation, ethical reasoning, and qualitative analysis skills required for text-based AI interactions. AI numeracy extends this to quantitative domains including data analysis, mathematical problem-solving, statistical reasoning, and computational thinking. Contemporary students require integrated competency development across both dimensions to succeed academically and professionally. We position these as inseparable components of workforce-ready AI orchestration.</p>
+        </div>
+        <div class="definition-visual">
+            <!-- Venn Diagram SVG -->
+            <svg width="280" height="280" viewBox="0 0 280 280" xmlns="http://www.w3.org/2000/svg">
+                <!-- Left Circle - Literacy -->
+                <circle cx="100" cy="140" r="80" fill="rgba(255,255,255,0.25)" stroke="white" stroke-width="3"/>
+                <!-- Right Circle - Numeracy -->
+                <circle cx="180" cy="140" r="80" fill="rgba(255,255,255,0.25)" stroke="white" stroke-width="3"/>
+                
+                <!-- Book Icon (Literacy) -->
+                <g transform="translate(60, 120)">
+                    <rect x="0" y="0" width="30" height="35" fill="white" rx="2"/>
+                    <line x1="5" y1="8" x2="25" y2="8" stroke="#1a5f3a" stroke-width="2"/>
+                    <line x1="5" y1="15" x2="25" y2="15" stroke="#1a5f3a" stroke-width="2"/>
+                    <line x1="5" y1="22" x2="25" y2="22" stroke="#1a5f3a" stroke-width="2"/>
+                </g>
+                
+                <!-- Calculator Icon (Numeracy) -->
+                <g transform="translate(195, 120)">
+                    <rect x="0" y="0" width="28" height="35" fill="white" rx="2"/>
+                    <rect x="3" y="3" width="22" height="8" fill="#1a5f3a"/>
+                    <circle cx="8" cy="18" r="2" fill="#1a5f3a"/>
+                    <circle cx="14" cy="18" r="2" fill="#1a5f3a"/>
+                    <circle cx="20" cy="18" r="2" fill="#1a5f3a"/>
+                    <circle cx="8" cy="25" r="2" fill="#1a5f3a"/>
+                    <circle cx="14" cy="25" r="2" fill="#1a5f3a"/>
+                    <circle cx="20" cy="25" r="2" fill="#1a5f3a"/>
+                </g>
+                
+                <!-- AI Brain Icon (Center - Overlap) -->
+                <g transform="translate(125, 120)">
+                    <ellipse cx="15" cy="20" rx="13" ry="17" fill="white"/>
+                    <path d="M 8,15 Q 15,10 22,15" stroke="#1a5f3a" stroke-width="2" fill="none"/>
+                    <path d="M 8,20 Q 15,25 22,20" stroke="#1a5f3a" stroke-width="2" fill="none"/>
+                    <circle cx="10" cy="17" r="1.5" fill="#1a5f3a"/>
+                    <circle cx="20" cy="17" r="1.5" fill="#1a5f3a"/>
+                </g>
+                
+                <!-- Labels -->
+                <text x="60" y="235" fill="white" font-size="12" font-weight="600" text-anchor="middle">Qualitative</text>
+                <text x="60" y="250" fill="white" font-size="12" font-weight="600" text-anchor="middle">Reasoning</text>
+                
+                <text x="140" y="235" fill="white" font-size="12" font-weight="600" text-anchor="middle">AI</text>
+                <text x="140" y="250" fill="white" font-size="12" font-weight="600" text-anchor="middle">Orchestration</text>
+                
+                <text x="220" y="235" fill="white" font-size="12" font-weight="600" text-anchor="middle">Quantitative</text>
+                <text x="220" y="250" fill="white" font-size="12" font-weight="600" text-anchor="middle">Reasoning</text>
+            </svg>
+        </div>
+    </div>
+</section>
+
+<!-- EVIDENCE BASE SECTION -->
+<section class="evidence-base-section sage-opening">
+    <h2>The Evidence Base: Why Structured GenAI Integration Matters</h2>
+    
+    <p class="authority-statement">
+        Over three years of systematic research involving 30+ peer-reviewed publications, four large-scale empirical validation studies, and direct observation of student learning across multiple Australian universities, a consistent pattern emerges: students are engaging with GenAI tools without the foundational competencies required for effective, ethical, and academically rigorous use. This evidence base, developed through collaboration with research students and validated across metropolitan, regional, and online contexts with over 1000 students, identifies three critical gaps that impede successful GenAI integration in higher education.
+    </p>
+    
+    <!-- THREE CRITICAL GAPS FRAMEWORK -->
+    <div class="three-gaps-framework">
+        <h3>Three Evidence-Based Gaps in Student GenAI Competency</h3>
+        
+        <div class="gaps-simple-list">
+            <h4>⚠️ Critical Problems We Identified</h4>
+            
+            <div class="gap-item">
+                <div class="gap-danger-icon">
+                    <!-- Danger X Icon SVG -->
+                    <svg width="28" height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="14" cy="14" r="13" fill="#e76f51" stroke="#c1502d" stroke-width="2"/>
+                        <line x1="9" y1="9" x2="19" y2="19" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                        <line x1="19" y1="9" x2="9" y2="19" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <div class="gap-text">
+                    <strong>Students don't know how to use GenAI effectively.</strong> The majority classify themselves as beginners with minimal skills in prompt engineering, output refinement, or strategic AI use. They're using tools without understanding how to get quality results.
+                </div>
+            </div>
+            
+            <div class="gap-item">
+                <div class="gap-danger-icon">
+                    <svg width="28" height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="14" cy="14" r="13" fill="#e76f51" stroke="#c1502d" stroke-width="2"/>
+                        <line x1="9" y1="9" x2="19" y2="19" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                        <line x1="19" y1="9" x2="9" y2="19" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <div class="gap-text">
+                    <strong>Students can't tell if AI output is accurate or biased.</strong> They accept whatever GenAI produces without checking facts, verifying sources, or identifying potential bias. This is especially dangerous in data analysis and mathematical problem-solving where errors compound.
+                </div>
+            </div>
+            
+            <div class="gap-item">
+                <div class="gap-danger-icon">
+                    <svg width="28" height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="14" cy="14" r="13" fill="#e76f51" stroke="#c1502d" stroke-width="2"/>
+                        <line x1="9" y1="9" x2="19" y2="19" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                        <line x1="19" y1="9" x2="9" y2="19" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <div class="gap-text">
+                    <strong>Students don't understand what responsible or ethical use means.</strong> While they follow rules when told explicitly what to do, they don't understand why those rules exist or how to make ethical decisions in new situations. This creates academic integrity risks.
+                </div>
+            </div>
+        </div>
+        
+        <p style="text-align: center; margin-top: 30px; font-size: 1.1em; color: #495057; font-style: italic;">
+            Based on research with 1000+ students across multiple Australian universities
+        </p>
+    </div>
+    
+    <!-- RESEARCH FOUNDATION VISUAL -->
+    <div class="research-foundation">
+        <h3>Our Research Foundation</h3>
+        <div class="foundation-visual">
+            <!-- Concentric Circles SVG -->
+            <svg width="600" height="400" viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="greenGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#1a5f3a;stop-opacity:0.3" />
+                        <stop offset="100%" style="stop-color:#a4d65e;stop-opacity:0.3" />
+                    </linearGradient>
+                </defs>
+                
+                <!-- Outer circle -->
+                <circle cx="300" cy="200" r="170" fill="url(#greenGrad)" stroke="#1a5f3a" stroke-width="3"/>
+                
+                <!-- Middle circle -->
+                <circle cx="300" cy="200" r="115" fill="rgba(26,95,58,0.2)" stroke="#1a5f3a" stroke-width="3"/>
+                
+                <!-- Inner circle -->
+                <circle cx="300" cy="200" r="65" fill="rgba(26,95,58,0.4)" stroke="#1a5f3a" stroke-width="3"/>
+                
+                <!-- Text labels -->
+                <text x="300" y="50" font-size="18" font-weight="600" fill="#0d3d26" text-anchor="middle">30+ Peer-Reviewed Publications</text>
+                <text x="300" y="70" font-size="14" fill="#495057" text-anchor="middle">(2021-2025)</text>
+                
+                <text x="300" y="130" font-size="18" font-weight="600" fill="#0d3d26" text-anchor="middle">4 Empirical Validation Studies</text>
+                
+                <text x="300" y="195" font-size="20" font-weight="700" fill="#1a5f3a" text-anchor="middle">1000+ Students</text>
+                <text x="300" y="215" font-size="14" fill="#0d3d26" text-anchor="middle">Across Australian</text>
+                <text x="300" y="232" font-size="14" fill="#0d3d26" text-anchor="middle">Universities</text>
+                
+                <!-- Research theme nodes -->
+                <g transform="translate(120, 180)">
+                    <circle cx="0" cy="0" r="8" fill="#1a5f3a"/>
+                    <text x="15" y="5" font-size="12" fill="#0d3d26">GenAI Education</text>
+                </g>
+                
+                <g transform="translate(430, 150)">
+                    <circle cx="0" cy="0" r="8" fill="#1a5f3a"/>
+                    <text x="15" y="5" font-size="12" fill="#0d3d26">Cybersecurity</text>
+                </g>
+                
+                <g transform="translate(150, 290)">
+                    <circle cx="0" cy="0" r="8" fill="#1a5f3a"/>
+                    <text x="15" y="5" font-size="12" fill="#0d3d26">Healthcare AI</text>
+                </g>
+                
+                <g transform="translate(420, 260)">
+                    <circle cx="0" cy="0" r="8" fill="#1a5f3a"/>
+                    <text x="15" y="5" font-size="12" fill="#0d3d26">Smart Cities & IoT</text>
+                </g>
+            </svg>
+        </div>
+    </div>
+    
+    <!-- SAGE FOUR PILLARS - MATRIX STYLE -->
+    <div class="sage-pillars-section">
+        <h3>SAGE: Evidence-Based Framework for Competency Development</h3>
+        <p class="pillars-intro">
+            The Structured AI-Guided Education (SAGE) framework was developed to systematically address these three research-validated gaps through structured pedagogical intervention. Grounded in educational psychology and validated through multi-institutional empirical studies involving over 1000 students, SAGE provides a scaffolded approach to developing AI literacy and numeracy across all student cohorts.
+        </p>
+        
+        <div class="pillars-matrix-container">
+            <!-- Axis Labels -->
+            <div class="matrix-axis-label vertical">Student Empowerment</div>
+            <div class="matrix-axis-label horizontal">Academic Integrity</div>
+            <div class="matrix-axis-arrow vertical-top">↑</div>
+            <div class="matrix-axis-arrow horizontal-right">→</div>
+            
+            <!-- Matrix Grid -->
+            <div class="matrix-grid">
+                <!-- Top Left: Systematic Progression -->
+                <div class="matrix-quadrant top-left">
+                    <h4>Systematic Progression</h4>
+                    <p>Scaffolds learning from foundational understanding through advanced orchestration, empowering students through visible competency milestones and achievable progression pathways (Novice → Intermediate → Advanced → Expert).</p>
+                </div>
+                
+                <!-- Top Right: Critical Evaluation -->
+                <div class="matrix-quadrant top-right">
+                    <h4>Critical Evaluation</h4>
+                    <p>Motivates students to develop structured assessment and verification capabilities across qualitative and quantitative outputs through systematic practice in accuracy assessment and bias detection.</p>
+                </div>
+                
+                <!-- Bottom Left: Workforce Integration -->
+                <div class="matrix-quadrant bottom-left">
+                    <h4>Workforce Integration</h4>
+                    <p>Connects academic skill development to professional contexts, empowering students to position GenAI competency as professional asset rather than academic compliance requirement.</p>
+                </div>
+                
+                <!-- Bottom Right: Ethical Reasoning -->
+                <div class="matrix-quadrant bottom-right">
+                    <h4>Ethical Reasoning</h4>
+                    <p>Builds deep understanding of academic integrity principles and responsible AI use, allowing institutions to assure and celebrate student learning while maintaining ethical standards.</p>
+                </div>
+            </div>
+            
+            <!-- Center Badge -->
+            <div class="matrix-center-badge">SAGE</div>
+        </div>
+    </div>
+    
+    <!-- EVIDENCE OF IMPACT -->
+    <div class="impact-evidence-section">
+        <h3>The Evidence of Impact</h3>
+        
+        <div class="impact-cards-container">
+            <!-- Card 1 -->
+            <div class="impact-card competency">
+                <div class="impact-number">46%</div>
+                <p class="impact-subtitle">Students reaching advanced orchestration competency within one semester</p>
+            </div>
+            
+            <!-- Card 2 -->
+            <div class="impact-card performance">
+                <div class="impact-number">56-87%</div>
+                <p class="impact-subtitle">Performance improvements in AI-assisted task completion</p>
+            </div>
+            
+            <!-- Card 3 -->
+            <div class="impact-card thinking">
+                <div class="impact-number">78%</div>
+                <p class="impact-subtitle">Enhancement in critical thinking skills applied to AI outputs</p>
+            </div>
+            
+            <!-- Card 4 -->
+            <div class="impact-card achievement">
+                <div class="impact-number">84%</div>
+                <p class="impact-subtitle">Students developing capability in evaluating accuracy and bias</p>
+            </div>
+        </div>
+        
+        <p class="impact-validation">
+            Validated with 1000+ students across metropolitan, regional, and online delivery modes
+        </p>
+    </div>
+    
+    <!-- STUDENT VOICES -->
+    <div class="student-voices-section">
+        <h3>What Students Are Asking For</h3>
+        <p class="voices-intro">
+            Analysis of open-ended student feedback across our research studies reveals consistent themes. Students seek empowerment through structured learning rather than restriction through prohibition.
+        </p>
+        
+        <div class="quotes-grid">
+            <!-- Quote 1 -->
+            <div class="quote-card">
+                <div class="quote-mark">
+                    <svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                        <text x="0" y="35" font-size="40" fill="#1a5f3a" font-family="Georgia, serif">"</text>
+                    </svg>
+                </div>
+                <p class="quote-text">More examples of what constitutes 'correct' versus 'incorrect' use in assignments.</p>
+                <p class="quote-theme">Seeking Clarity</p>
+                <p class="quote-percentage">15% request examples of ethical use</p>
+            </div>
+            
+            <!-- Quote 2 -->
+            <div class="quote-card">
+                <div class="quote-mark">
+                    <svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                        <text x="0" y="35" font-size="40" fill="#1a5f3a" font-family="Georgia, serif">"</text>
+                    </svg>
+                </div>
+                <p class="quote-text">Workshops on how to cite AI-generated content properly.</p>
+                <p class="quote-theme">Requesting Structure</p>
+                <p class="quote-percentage">30% request workshops and tutorials</p>
+            </div>
+            
+            <!-- Quote 3 -->
+            <div class="quote-card">
+                <div class="quote-mark">
+                    <svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                        <text x="0" y="35" font-size="40" fill="#1a5f3a" font-family="Georgia, serif">"</text>
+                    </svg>
+                </div>
+                <p class="quote-text">Clarify the university's stance on specific tools like ChatGPT.</p>
+                <p class="quote-theme">Wanting Guidance</p>
+                <p class="quote-percentage">45% request clearer policies</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SAGE ASSESSMENT REDESIGN SECTION -->
+<section class="assessment-redesign-section sage-opening">
+    <h3>SAGE Assessment Redesign: From Theory to Practice</h3>
+    
+    <div class="assessment-intro">
+        <p>The higher education sector is actively discussing assessment redesign in response to GenAI capabilities. Leading voices advocate for programmatic assessment approaches, authentic tasks that "empty the value of cheating," and increased reliance on human expert judgment. These are valuable conceptual frameworks. SAGE moves beyond conceptual discussion to operationalized pedagogy—assessment strategies that have been implemented, refined, and validated across over 1000 students in real classroom contexts.</p>
+    </div>
+    
+    <!-- VISUAL 1: THEORY TO PRACTICE COMPARISON -->
+    <div class="theory-practice-visual">
+        <div class="comparison-container">
+            <!-- Left Side: Sector Discussion -->
+            <div class="comparison-side theory-side">
+                <svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" style="margin-bottom: 20px;">
+                    <!-- Speech bubbles icon -->
+                    <ellipse cx="30" cy="35" rx="20" ry="18" fill="#ddd" stroke="#999" stroke-width="2"/>
+                    <path d="M 25,50 L 20,60 L 30,55 Z" fill="#ddd" stroke="#999" stroke-width="2"/>
+                    <ellipse cx="55" cy="30" rx="18" ry="16" fill="#ddd" stroke="#999" stroke-width="2"/>
+                    <path d="M 60,43 L 65,52 L 55,48 Z" fill="#ddd" stroke="#999" stroke-width="2"/>
+                </svg>
+                <h4>Sector Discussion</h4>
+                <div class="concept-bubbles">
+                    <div class="bubble">Programmatic assessment</div>
+                    <div class="bubble">Authentic tasks</div>
+                    <div class="bubble">Assessment security</div>
+                    <div class="bubble">Human expert judgment</div>
+                </div>
+                <p style="margin-top: 20px; color: #999; font-size: 0.95em; font-style: italic;">Conceptual frameworks</p>
+            </div>
+            
+            <!-- Arrow -->
+            <div class="comparison-arrow">
+                <svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                            <polygon points="0 0, 10 3, 0 6" fill="#e76f51" />
+                        </marker>
+                    </defs>
+                    <line x1="5" y1="30" x2="50" y2="30" stroke="#e76f51" stroke-width="4" marker-end="url(#arrowhead)"/>
+                </svg>
+                <div class="arrow-label">SAGE</div>
+            </div>
+            
+            <!-- Right Side: SAGE Implementation -->
+            <div class="comparison-side practice-side">
+                <svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" style="margin-bottom: 20px;">
+                    <!-- Document with checkmarks and tools -->
+                    <rect x="20" y="15" width="40" height="50" fill="white" stroke="#1a5f3a" stroke-width="3" rx="3"/>
+                    <path d="M 28,30 L 33,35 L 42,25" stroke="#a4d65e" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M 28,45 L 33,50 L 42,40" stroke="#a4d65e" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                    <!-- Gear -->
+                    <circle cx="55" cy="60" r="10" fill="#1a5f3a"/>
+                    <circle cx="55" cy="60" r="6" fill="white"/>
+                </svg>
+                <h4>SAGE Implementation</h4>
+                <div class="implementation-boxes">
+                    <div class="impl-box">Structured prompt scaffolding</div>
+                    <div class="impl-box">Experiential AI limitations</div>
+                    <div class="impl-box">Mandatory cross-verification</div>
+                    <div class="impl-box">AI as critical reviewer</div>
+                </div>
+                <p style="margin-top: 20px; color: #1a5f3a; font-size: 0.95em; font-weight: 600;">Operationalized pedagogy</p>
+            </div>
+        </div>
+        <div class="validation-badge">Validated with 1000+ students across multiple institutional contexts</div>
+    </div>
+    
+    <!-- Operationalizing Section -->
+    <div class="section-divider">
+        <h4>Operationalizing Assessment Redesign</h4>
+        <p>Traditional assessment approaches position GenAI as either prohibited tool or unregulated resource, creating a binary that fails to develop student competency. SAGE assessment redesign fundamentally restructures the relationship between students, AI tools, and learning outcomes through four pedagogical strategies validated across multiple institutional contexts.</p>
+    </div>
+    
+    <!-- VISUAL 2: SAGE ASSESSMENT CYCLE -->
+    <div class="assessment-cycle-section">
+        <h4>The SAGE Assessment Cycle</h4>
+        <div class="cycle-visual-container">
+            <svg width="600" height="600" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <marker id="cycleArrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                        <polygon points="0 0, 10 3, 0 6" fill="#1a5f3a" />
+                    </marker>
+                </defs>
+                
+                <!-- Circular path -->
+                <circle cx="300" cy="300" r="180" fill="none" stroke="#1a5f3a" stroke-width="3" opacity="0.3"/>
+                
+                <!-- Stage 1: PROMPT (top) -->
+                <circle cx="300" cy="100" r="60" fill="#f5f2f9" stroke="#6a4c93" stroke-width="3"/>
+                <text x="300" y="95" font-size="16" font-weight="700" fill="#0d3d26" text-anchor="middle">PROMPT</text>
+                <text x="300" y="112" font-size="12" fill="#495057" text-anchor="middle">Structured</text>
+                <text x="300" y="127" font-size="12" fill="#495057" text-anchor="middle">frameworks</text>
+                <!-- Icon: Template -->
+                <rect x="285" y="60" width="30" height="25" fill="white" stroke="#6a4c93" stroke-width="2" rx="2"/>
+                <line x1="290" y1="68" x2="310" y2="68" stroke="#6a4c93" stroke-width="1.5"/>
+                <line x1="290" y1="73" x2="310" y2="73" stroke="#6a4c93" stroke-width="1.5"/>
+                <line x1="290" y1="78" x2="305" y2="78" stroke="#6a4c93" stroke-width="1.5"/>
+                
+                <!-- Arrow 1 to 2 -->
+                <path d="M 355,130 Q 420,180 420,260" fill="none" stroke="#1a5f3a" stroke-width="3" marker-end="url(#cycleArrow)"/>
+                
+                <!-- Stage 2: GENERATE (right) -->
+                <circle cx="450" cy="300" r="60" fill="#e8f5d8" stroke="#1a5f3a" stroke-width="3"/>
+                <text x="450" y="295" font-size="16" font-weight="700" fill="#0d3d26" text-anchor="middle">GENERATE</text>
+                <text x="450" y="312" font-size="12" fill="#495057" text-anchor="middle">AI produces</text>
+                <text x="450" y="327" font-size="12" fill="#495057" text-anchor="middle">output</text>
+                <!-- Icon: AI brain -->
+                <path d="M 435,255 Q 430,250 430,260 Q 428,270 432,275 Q 430,285 435,290 Q 440,295 450,293 Q 460,295 465,290 Q 470,285 468,275 Q 472,270 470,260 Q 470,250 465,255 Q 460,245 450,245 Q 440,245 435,255 Z" fill="white" stroke="#1a5f3a" stroke-width="2"/>
+                
+                <!-- Arrow 2 to 3 -->
+                <path d="M 420,355 Q 380,420 300,450" fill="none" stroke="#1a5f3a" stroke-width="3" marker-end="url(#cycleArrow)"/>
+                
+                <!-- Stage 3: VERIFY (bottom) -->
+                <circle cx="300" cy="500" r="60" fill="#fff8f0" stroke="#f4a261" stroke-width="3"/>
+                <text x="300" y="495" font-size="16" font-weight="700" fill="#0d3d26" text-anchor="middle">VERIFY</text>
+                <text x="300" y="512" font-size="12" fill="#495057" text-anchor="middle">Cross-check</text>
+                <text x="300" y="527" font-size="12" fill="#495057" text-anchor="middle">3+ sources</text>
+                <!-- Icon: Magnifying glass + sources -->
+                <circle cx="300" cy="460" r="12" fill="none" stroke="#f4a261" stroke-width="2"/>
+                <line x1="309" y1="469" x2="318" y2="478" stroke="#f4a261" stroke-width="2" stroke-linecap="round"/>
+                <circle cx="285" cy="465" r="3" fill="#f4a261"/>
+                <circle cx="295" cy="455" r="3" fill="#f4a261"/>
+                <circle cx="305" cy="465" r="3" fill="#f4a261"/>
+                
+                <!-- Arrow 3 to 4 -->
+                <path d="M 245,470 Q 180,420 180,340" fill="none" stroke="#1a5f3a" stroke-width="3" marker-end="url(#cycleArrow)"/>
+                
+                <!-- Stage 4: CRITIQUE (left) -->
+                <circle cx="150" cy="300" r="60" fill="#fef3f0" stroke="#e76f51" stroke-width="3"/>
+                <text x="150" y="295" font-size="16" font-weight="700" fill="#0d3d26" text-anchor="middle">CRITIQUE</text>
+                <text x="150" y="312" font-size="12" fill="#495057" text-anchor="middle">AI reviews</text>
+                <text x="150" y="327" font-size="12" fill="#495057" text-anchor="middle">your work</text>
+                <!-- Icon: AI examining document -->
+                <rect x="140" y="255" width="20" height="25" fill="white" stroke="#e76f51" stroke-width="2" rx="2"/>
+                <circle cx="155" cy="265" r="8" fill="none" stroke="#e76f51" stroke-width="2"/>
+                
+                <!-- Arrow 4 to 5 -->
+                <path d="M 180,245 Q 220,180 280,150" fill="none" stroke="#1a5f3a" stroke-width="3" marker-end="url(#cycleArrow)"/>
+                
+                <!-- Stage 5: REFLECT (center) -->
+                <circle cx="300" cy="300" r="80" fill="#e8f5d8" stroke="#a4d65e" stroke-width="3"/>
+                <text x="300" y="290" font-size="18" font-weight="700" fill="#0d3d26" text-anchor="middle">REFLECT</text>
+                <text x="300" y="310" font-size="13" fill="#495057" text-anchor="middle">Analyze &amp;</text>
+                <text x="300" y="328" font-size="13" fill="#495057" text-anchor="middle">document</text>
+                <text x="300" y="346" font-size="13" fill="#495057" text-anchor="middle">decisions</text>
+                <!-- Icon: Thinking person -->
+                <circle cx="300" cy="255" r="10" fill="white" stroke="#1a5f3a" stroke-width="2"/>
+                <ellipse cx="300" cy="270" rx="8" ry="12" fill="white" stroke="#1a5f3a" stroke-width="2"/>
+                
+                <!-- Center label -->
+                <text x="300" y="395" font-size="14" font-weight="600" fill="#0d3d26" text-anchor="middle">Assessable</text>
+                <text x="300" y="412" font-size="14" font-weight="600" fill="#0d3d26" text-anchor="middle">Process</text>
+            </svg>
+        </div>
+    </div>
+    
+    <!-- Strategy 1 -->
+    <div class="strategy-section">
+        <h4>Strategy 1: Structured Prompt Scaffolding</h4>
+        <p>Rather than allowing students unguided access to GenAI tools, SAGE assessments provide structured prompt frameworks that scaffold progression from novice to expert orchestration. Students receive explicit templates for initial prompts, refinement questions, and verification queries. Early assessments use highly structured prompts with clear success criteria; later assessments reduce scaffolding as competency develops. This approach makes AI orchestration itself an assessable skill rather than hidden process.</p>
+        
+        <div class="strategy-example">
+            <strong>Example:</strong> In cybersecurity management assessments, students receive prompt frameworks that require them to specify context parameters, define constraints, and articulate verification requirements before generating AI outputs. This transforms prompt engineering from implicit skill to explicit learning objective.
+        </div>
+    </div>
+    
+    <!-- Strategy 2 -->
+    <div class="strategy-section">
+        <h4>Strategy 2: Experiential Discovery of AI Limitations</h4>
+        <p>SAGE assessments create structured opportunities for students to encounter AI bias, factual errors, and reasoning limitations through guided experimentation rather than passive instruction. Assignments deliberately incorporate scenarios where GenAI tools produce flawed outputs—requiring students to identify problems, explain why errors occurred, and demonstrate correction strategies.</p>
+        
+        <p>This pedagogical approach proves more effective than lecture-based warnings about AI limitations. Students who discover bias through structured experiential tasks demonstrate significantly higher retention of evaluation skills and more sophisticated understanding of AI capabilities and constraints. The learning emerges from doing rather than being told.</p>
+        
+        <div class="strategy-example">
+            <strong>Example:</strong> Students analyze AI-generated policy recommendations on cybersecurity frameworks, discovering that the AI conflates standards from different jurisdictions or misapplies compliance requirements. The assessment requires documentation of specific errors, explanation of why they represent problems, and corrected versions with proper source verification.
+        </div>
+    </div>
+    
+    <!-- Strategy 3 -->
+    <div class="strategy-section">
+        <h4>Strategy 3: Mandatory Cross-Verification Protocols</h4>
+        <p>SAGE assessments embed systematic verification requirements that make cross-checking AI outputs against authoritative sources a core assessment component. Students must demonstrate three-source verification for factual claims, policy framework alignment for recommendations, and peer-reviewed research support for technical assertions. The verification process itself generates assessable artifacts—annotated AI outputs showing source checking, comparison matrices documenting discrepancies, and reflection statements explaining verification methodology.</p>
+        
+        <p>This approach addresses the critical evaluation gap by making verification visible, assessable, and integral to task completion rather than optional quality enhancement. Students cannot achieve high grades by submitting unverified AI outputs, regardless of surface plausibility.</p>
+        
+        <div class="strategy-example">
+            <strong>Example:</strong> When students use GenAI to analyze threat landscapes, assessments require citation of specific threat intelligence reports, alignment with frameworks like MITRE ATT&CK, and cross-reference with current vulnerability databases. The assessment rubric allocates significant weight to verification quality, not just final output quality.
+        </div>
+    </div>
+    
+    <!-- Strategy 4 -->
+    <div class="strategy-section">
+        <h4>Strategy 4: AI as Critical Peer Reviewer</h4>
+        <p>SAGE assessments leverage GenAI tools as critical reviewers of student work, requiring students to submit their outputs to AI critique, analyze the feedback received, and document response decisions. This creates metacognitive opportunity where students must evaluate AI evaluation—determining which criticisms are valid, which reflect AI limitations, and which require human judgment to resolve.</p>
+        
+        <p>This strategy develops sophisticated understanding of AI capabilities while building reflective practice skills. Students learn AI tools can identify surface-level errors (grammar, citation format) more reliably than deep conceptual problems (logical coherence, theoretical alignment), developing nuanced understanding of when to trust AI feedback versus seeking human expert review.</p>
+        
+        <div class="strategy-example">
+            <strong>Example:</strong> Students submit draft cybersecurity risk assessments to AI tools for critique, receive feedback on methodology and recommendations, then write reflective analysis explaining which AI suggestions they accepted (with justification), rejected (with reasoning), or flagged for instructor review (explaining uncertainty). The reflection demonstrates critical engagement with AI feedback rather than passive acceptance.
+        </div>
+    </div>
+    
+    <!-- VISUAL 4: FOUR STRATEGIES CARDS -->
+    <div class="four-strategies-grid">
+        <!-- Card 1 -->
+        <div class="strategy-card">
+            <div class="strategy-card-icon">
+                <svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Ladder/building blocks ascending -->
+                    <rect x="15" y="55" width="20" height="15" fill="#f5f2f9" stroke="#6a4c93" stroke-width="2" rx="2"/>
+                    <rect x="30" y="42" width="20" height="15" fill="#f5f2f9" stroke="#6a4c93" stroke-width="2" rx="2"/>
+                    <rect x="45" y="29" width="20" height="15" fill="#f5f2f9" stroke="#6a4c93" stroke-width="2" rx="2"/>
+                    <path d="M 25,50 L 40,37" stroke="#1a5f3a" stroke-width="3" marker-end="url(#cycleArrow)"/>
+                    <path d="M 40,37 L 55,24" stroke="#1a5f3a" stroke-width="3" marker-end="url(#cycleArrow)"/>
+                </svg>
+            </div>
+            <h5>Structured Prompt Scaffolding</h5>
+            <p class="strategy-card-phrase">"Make orchestration visible"</p>
+            <p class="strategy-card-stat">Explicit learning objective with progressive complexity</p>
+        </div>
+        
+        <!-- Card 2 -->
+        <div class="strategy-card">
+            <div class="strategy-card-icon">
+                <svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Lightbulb with exclamation -->
+                    <circle cx="40" cy="35" r="18" fill="#fff8f0" stroke="#f4a261" stroke-width="3"/>
+                    <path d="M 30,50 L 30,58 L 50,58 L 50,50" fill="#f4a261"/>
+                    <rect x="35" y="58" width="10" height="5" fill="#f4a261" rx="1"/>
+                    <!-- Light rays -->
+                    <line x1="40" y1="12" x2="40" y2="5" stroke="#f4a261" stroke-width="2"/>
+                    <line x1="55" y1="20" x2="62" y2="13" stroke="#f4a261" stroke-width="2"/>
+                    <line x1="18" y1="20" x2="11" y2="13" stroke="#f4a261" stroke-width="2"/>
+                    <!-- Exclamation -->
+                    <text x="40" y="40" font-size="18" font-weight="700" fill="#f4a261" text-anchor="middle">!</text>
+                </svg>
+            </div>
+            <h5>Experiential Discovery</h5>
+            <p class="strategy-card-phrase">"Learning through doing"</p>
+            <p class="strategy-card-stat">Higher retention than lecture-based instruction</p>
+        </div>
+        
+        <!-- Card 3 -->
+        <div class="strategy-card">
+            <div class="strategy-card-icon">
+                <svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Shield with checkmark and three sources -->
+                    <path d="M 40,10 L 25,18 L 25,40 Q 25,55 40,65 Q 55,55 55,40 L 55,18 Z" fill="#e8f5d8" stroke="#1a5f3a" stroke-width="3"/>
+                    <path d="M 33,38 L 38,43 L 47,32" stroke="#1a5f3a" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                    <!-- Three sources dots -->
+                    <circle cx="20" cy="50" r="4" fill="#1a5f3a"/>
+                    <circle cx="40" cy="55" r="4" fill="#1a5f3a"/>
+                    <circle cx="60" cy="50" r="4" fill="#1a5f3a"/>
+                    <line x1="24" y1="48" x2="36" y2="53" stroke="#1a5f3a" stroke-width="1.5"/>
+                    <line x1="44" y1="53" x2="56" y2="48" stroke="#1a5f3a" stroke-width="1.5"/>
+                </svg>
+            </div>
+            <h5>Cross-Verification Protocols</h5>
+            <p class="strategy-card-phrase">"Make verification assessable"</p>
+            <p class="strategy-card-stat">Three-source minimum with documented process</p>
+        </div>
+        
+        <!-- Card 4 -->
+        <div class="strategy-card">
+            <div class="strategy-card-icon">
+                <svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+                    <!-- AI examining document with magnifying glass -->
+                    <rect x="25" y="25" width="30" height="40" fill="white" stroke="#495057" stroke-width="2" rx="3"/>
+                    <line x1="30" y1="33" x2="50" y2="33" stroke="#dee2e6" stroke-width="2"/>
+                    <line x1="30" y1="40" x2="50" y2="40" stroke="#dee2e6" stroke-width="2"/>
+                    <line x1="30" y1="47" x2="45" y2="47" stroke="#dee2e6" stroke-width="2"/>
+                    <!-- AI brain with magnifying glass -->
+                    <circle cx="55" cy="50" r="12" fill="#f0f3f6" stroke="#5a6c7d" stroke-width="2"/>
+                    <path d="M 50,48 Q 55,45 60,48" stroke="#5a6c7d" stroke-width="1.5" fill="none"/>
+                    <circle cx="62" cy="58" r="8" fill="none" stroke="#5a6c7d" stroke-width="2"/>
+                    <line x1="68" y1="64" x2="74" y2="70" stroke="#5a6c7d" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </div>
+            <h5>AI as Critical Reviewer</h5>
+            <p class="strategy-card-phrase">"Metacognitive development"</p>
+            <p class="strategy-card-stat">Evaluate the evaluator - build reflective practice</p>
+        </div>
+    </div>
+    
+    <!-- Structural Redesign Section -->
+    <div class="section-divider">
+        <h4>Structural Redesign: Continuous Competency Development</h4>
+        <p>SAGE assessment architecture replaces single high-stakes tasks with sequenced assignments building progressive competency. Early assessments focus on basic skills (structured prompting, simple verification) with extensive scaffolding and formative feedback. Mid-semester assessments increase complexity while reducing scaffolds. Final assessments require independent orchestration with sophisticated verification across complex scenarios.</p>
+        
+        <p>This programmatic approach allows students multiple opportunities to develop and demonstrate competency while providing continuous evidence of learning progression. Assessment becomes learning mechanism rather than summative judgment.</p>
+    </div>
+    
+    <!-- VISUAL 6: ICEBERG MODEL -->
+    <div class="iceberg-section">
+        <div class="waterline"></div>
+        <div class="waterline-label">Traditional Assessment Line</div>
+        
+        <div class="iceberg-content">
+            <h4 style="color: #0d3d26; margin-bottom: 60px;">What Gets Assessed: The Complete Picture</h4>
+            
+            <!-- Above Water -->
+            <div class="above-water">
+                <h5>Traditional Assessment Focus</h5>
+                <div class="above-water-items">
+                    <div class="above-item">
+                        Final written output <span class="percentage-badge">20%</span>
+                    </div>
+                    <div class="above-item">
+                        Surface correctness <span class="percentage-badge">visible</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Below Water -->
+            <div class="below-water">
+                <h5>SAGE Assessment Focus</h5>
+                <div class="below-water-items">
+                    <div class="below-item">Prompt engineering decisions</div>
+                    <div class="below-item">Source verification process</div>
+                    <div class="below-item">Error identification capability</div>
+                    <div class="below-item">AI critique evaluation</div>
+                    <div class="below-item">Reflective reasoning</div>
+                    <div class="below-item">Iteration decisions</div>
+                </div>
+                <p style="color: white; font-size: 1.1em; margin-top: 25px; font-weight: 600;">
+                    <span class="percentage-badge" style="background: #1a5f3a; color: white; padding: 8px 16px; font-size: 1em;">80%</span> of meaningful learning
+                </p>
+            </div>
+        </div>
+        
+        <div class="iceberg-conclusion">
+            SAGE assesses the 80% that traditional approaches miss
+        </div>
+    </div>
+    
+    <!-- Why This Works Section -->
+    <div class="section-divider">
+        <h4>Why This Works: Evidence from Implementation</h4>
+        <p>These assessment strategies have been validated across four empirical studies involving diverse student cohorts in metropolitan, regional, and online contexts. The approaches prove effective because they:</p>
+        
+        <ul>
+            <li>Make AI orchestration skills explicit and assessable rather than hidden</li>
+            <li>Create genuine learning opportunities where failure is informative rather than catastrophic</li>
+            <li>Align assessment tasks with authentic professional contexts where AI verification is standard practice</li>
+            <li>Reduce academic integrity risks by requiring demonstrated process, not just final products</li>
+            <li>Develop transferable skills applicable beyond specific course content</li>
+        </ul>
+        
+        <p style="margin-top: 25px;">Traditional assessment asks: "What did you produce?" SAGE assessment asks: "How did you produce it, how did you verify quality, and what did you learn from the process?" This shift from product to process-plus-product fundamentally changes the student-AI relationship from one of potential deception to one of sophisticated orchestration.</p>
+    </div>
+    
+    <!-- Distinguishing Theory from Practice -->
+    <div class="section-divider" style="background: #e8f5d8; padding: 40px; border-radius: 12px; margin-top: 60px;">
+        <h4>Distinguishing Theory from Practice</h4>
+        <p>The assessment strategies described above are not aspirational proposals—they represent current practice validated through empirical research with over 1000 students. While the sector discusses what assessment redesign might look like, SAGE provides documented evidence of what works when theory meets classroom implementation. The framework offers practical guidance for educators seeking to move beyond conceptual discussion to actionable assessment transformation that empowers students, motivates engagement, and assures learning outcomes.</p>
+    </div>
+</section>
+</div>
+
 
 <!-- SECTION 1: PURPOSE -->
 <div class="page">
@@ -813,11 +2463,11 @@
   
   <div class="stat-grid">
     <div class="stat-card">
-      <div class="stat-number">2000</div>
+      <div class="stat-number">271</div>
       <div class="stat-label">Students</div>
     </div>
     <div class="stat-card">
-      <div class="stat-number">6</div>
+      <div class="stat-number">4</div>
       <div class="stat-label">Studies</div>
     </div>
     <div class="stat-card">
@@ -908,7 +2558,7 @@
     SAGE is grounded in empirical research across multiple contexts, student cohorts, and disciplines. This section provides key findings at a glance; comprehensive methodology and detailed results are available in Section 5.2 for institutional validation purposes.
   </p>
   
-  <h2>Research Portfolio: Selected Validated Studies</h2>
+  <h2>Research Portfolio: Four Validated Studies</h2>
   
   <table class="evidence-table">
     <thead>
@@ -951,11 +2601,11 @@
   
   <div class="stat-grid">
     <div class="stat-card">
-      <div class="stat-number">500+</div>
+      <div class="stat-number">271</div>
       <div class="stat-label">Total Students</div>
     </div>
     <div class="stat-card">
-      <div class="stat-number">6</div>
+      <div class="stat-number">4</div>
       <div class="stat-label">Published Studies</div>
     </div>
     <div class="stat-card">
@@ -1181,6 +2831,249 @@
 <p style="font-size: 15px; line-height: 1.8; background: var(--cqu-light-green); padding: 1.5rem; border-radius: 8px; border-left: 4px solid var(--cqu-deep-green); margin: 1.5rem 0;">
   SAGE assumes that students require scaffolded guidance when learning to work with AI, not abstract warnings about its limitations. Rather than instructing students that "AI may generate culturally insensitive content" or "AI outputs can be generic and lack context," SAGE provides structured prompts that lead students to <strong>discover these limitations through experience</strong>. When a nursing student realises their AI-generated discharge plan failed to consider Indigenous health protocols, or when a cybersecurity student discovers AI omitted jurisdiction-specific regulations, the lesson is internalised far more effectively than any lecture could achieve. This experiential approach—allowing students to encounter AI's strengths and weaknesses firsthand through carefully designed tasks—ensures the learning is both memorable and transferable to professional practice.
 </p> 
+<div class="svg-container">
+<svg viewBox="0 0 900 640" role="img" aria-labelledby="sageTitle sageDesc" style="max-width:100%;height:auto;">
+  <title id="sageTitle">SAGE Framework: Two-Stage Progression and Competency Dimensions</title>
+  <desc id="sageDesc">Two-stage SAGE progression with wrapped headings and captions for better readability.</desc>
+
+  <!-- Title -->
+  <text x="450" y="32" text-anchor="middle" font-size="18" font-weight="700" fill="#174A2D">
+    SAGE Framework: Two-Stage Progression
+  </text>
+
+  <!-- Pedagogical Foundation Banner -->
+  <rect x="50" y="50" width="800" height="56" rx="8" fill="#174A2D"/>
+  <text x="450" y="75" text-anchor="middle" font-size="14" font-weight="700" fill="#FFFFFF">Pedagogical Foundation</text>
+  <text x="450" y="95" text-anchor="middle" font-size="12" fill="#A4D65E">
+    Constructivist Learning • Bloom’s Taxonomy • Situated Learning
+  </text>
+
+  <!-- Stage 1 Panel -->
+  <rect x="50" y="130" width="380" height="360" rx="8" fill="#E8F5D8" stroke="#A4D65E" stroke-width="2.5"/>
+  <text x="240" y="158" text-anchor="middle" font-size="16" font-weight="700" fill="#0D3D26">
+    Stage 1: Tutorial-Based Scaffolded Learning
+  </text>
+  <text x="240" y="176" text-anchor="middle" font-size="12" font-weight="600" fill="#0D3D26" opacity="0.8">FORMATIVE</text>
+
+  <!-- Stage 1 Steps -->
+  <rect x="70" y="196" width="340" height="56" rx="6" fill="#FFFFFF" stroke="#2D7A4B" stroke-width="2"/>
+  <text x="90" y="216" font-size="13" font-weight="700" fill="#0D3D26">Step 1: AI Output Generation</text>
+  <text x="90" y="234" font-size="11" fill="#3E4A54">Students use GenAI tools to create initial artefacts</text>
+
+  <!-- Connector 1 -->
+  <circle cx="240" cy="260" r="10" fill="#2D7A4B"/><text x="240" y="263" text-anchor="middle" font-size="11" font-weight="700" fill="#FFFFFF">1</text>
+  <line x1="240" y1="270" x2="240" y2="280" stroke="#2D7A4B" stroke-width="2"/>
+
+  <rect x="70" y="286" width="340" height="56" rx="6" fill="#FFFFFF" stroke="#5A6C7D" stroke-width="2"/>
+  <text x="90" y="306" font-size="13" font-weight="700" fill="#0D3D26">Step 2: Research-Based Evaluation</text>
+  <text x="90" y="324" font-size="11" fill="#3E4A54">Critique with academic literature and standards</text>
+
+  <!-- Connector 2 -->
+  <circle cx="240" cy="350" r="10" fill="#5A6C7D"/><text x="240" y="353" text-anchor="middle" font-size="11" font-weight="700" fill="#FFFFFF">2</text>
+  <line x1="240" y1="360" x2="240" y2="370" stroke="#5A6C7D" stroke-width="2"/>
+
+  <rect x="70" y="376" width="340" height="56" rx="6" fill="#FFFFFF" stroke="#E76F51" stroke-width="2"/>
+  <text x="90" y="396" font-size="13" font-weight="700" fill="#0D3D26">Step 3: Guided Refinement</text>
+  <text x="90" y="414" font-size="11" fill="#3E4A54">Instructor-supported improvement with peer input</text>
+
+  <!-- Connector 3 -->
+  <circle cx="240" cy="440" r="10" fill="#E76F51"/><text x="240" y="443" text-anchor="middle" font-size="11" font-weight="700" fill="#FFFFFF">3</text>
+  <line x1="240" y1="450" x2="240" y2="460" stroke="#E76F51" stroke-width="2"/>
+
+  <!-- Wrapped subtitle -->
+  <rect x="70" y="466" width="340" height="66" rx="6" fill="#FFFFFF" stroke="#6A4C93" stroke-width="2"/>
+  <text x="90" y="486" font-size="13" font-weight="700" fill="#0D3D26">Step 4: Structured Reflection</text>
+  <text font-size="11" fill="#3E4A54">
+    <tspan x="90" y="504">Metacognitive analysis</tspan>
+    <tspan x="90" dy="14">(150–250 words)</tspan>
+  </text>
+  <text x="240" y="540" text-anchor="middle" font-size="11" font-weight="600" fill="#0D3D26">Weeks 1–11</text>
+
+  <!-- Stage 2 Panel -->
+  <rect x="470" y="130" width="380" height="360" rx="8" fill="#FEF3F0" stroke="#E76F51" stroke-width="2.5"/>
+  <!-- Wrapped Stage 2 title -->
+  <text text-anchor="middle" font-size="16" font-weight="700" fill="#0D3D26">
+    <tspan x="660" y="156">Stage 2: Assessment-Driven</tspan>
+    <tspan x="660" dy="18">Independent Application</tspan>
+  </text>
+  <text x="660" y="194" text-anchor="middle" font-size="12" font-weight="600" fill="#0D3D26" opacity="0.8">SUMMATIVE</text>
+
+  <!-- Stage 2 Steps -->
+  <rect x="490" y="204" width="340" height="56" rx="6" fill="#FFFFFF" stroke="#E76F51" stroke-width="2"/>
+  <text x="510" y="224" font-size="13" font-weight="700" fill="#0D3D26">Step 1: Autonomous Creation</text>
+  <text x="510" y="242" font-size="11" fill="#3E4A54">Independent GenAI-assisted problem solving with baseline</text>
+
+  <!-- Connector 1 -->
+  <circle cx="660" cy="268" r="10" fill="#E76F51"/><text x="660" y="271" text-anchor="middle" font-size="11" font-weight="700" fill="#FFFFFF">1</text>
+  <line x1="660" y1="278" x2="660" y2="288" stroke="#E76F51" stroke-width="2"/>
+
+  <rect x="490" y="294" width="340" height="56" rx="6" fill="#FFFFFF" stroke="#F4A261" stroke-width="2"/>
+  <text x="510" y="314" font-size="13" font-weight="700" fill="#0D3D26">Step 2: Stakeholder Integration</text>
+  <text x="510" y="332" font-size="11" fill="#3E4A54">Interviews or case-study analysis for context</text>
+
+  <!-- Connector 2 -->
+  <circle cx="660" cy="358" r="10" fill="#F4A261"/><text x="660" y="361" text-anchor="middle" font-size="11" font-weight="700" fill="#FFFFFF">2</text>
+  <line x1="660" y1="368" x2="660" y2="378" stroke="#F4A261" stroke-width="2"/>
+
+  <rect x="490" y="384" width="340" height="56" rx="6" fill="#FFFFFF" stroke="#2A9D8F" stroke-width="2"/>
+  <text x="510" y="404" font-size="13" font-weight="700" fill="#0D3D26">Step 3: Professional-Standard Output</text>
+  <text x="510" y="422" font-size="11" fill="#3E4A54">Industry-ready artefacts with regulatory compliance</text>
+
+  <!-- Connector 3 -->
+  <circle cx="660" cy="448" r="10" fill="#2A9D8F"/><text x="660" y="451" text-anchor="middle" font-size="11" font-weight="700" fill="#FFFFFF">3</text>
+  <line x1="660" y1="458" x2="660" y2="468" stroke="#2A9D8F" stroke-width="2"/>
+
+  <!-- Wrapped subtitle -->
+  <rect x="490" y="474" width="340" height="66" rx="6" fill="#FFFFFF" stroke="#6A4C93" stroke-width="2"/>
+  <text x="510" y="494" font-size="13" font-weight="700" fill="#0D3D26">Step 4: Evidence-Based Justification</text>
+  <text font-size="11" fill="#3E4A54">
+    <tspan x="510" y="512">Decision log and reflection</tspan>
+    <tspan x="510" dy="14">(400–500 words)</tspan>
+  </text>
+  <text x="660" y="548" text-anchor="middle" font-size="11" font-weight="600" fill="#0D3D26">Weeks 4, 8, 12</text>
+
+  <!-- Midline Progression -->
+  <line x1="430" y1="320" x2="470" y2="320" stroke="#174A2D" stroke-width="3"/>
+  <text x="450" y="312" text-anchor="middle" font-size="12" font-weight="700" fill="#174A2D">Progression</text>
+
+  <!-- Evaluation & Analysis Footer (taller; wrapped text) -->
+  <rect x="50" y="560" width="800" height="60" rx="8" fill="#0D3D26"/>
+  <text x="450" y="580" text-anchor="middle" font-size="14" font-weight="700" fill="#A4D65E">Evaluation &amp; Analysis</text>
+  <text text-anchor="middle" font-size="11" fill="#FFFFFF">
+    <tspan x="450" y="596">Student reflections and observations • Critical thinking (assessed with Bloom’s taxonomy)</tspan>
+    
+  </text>
+
+  <!-- Competency Legend (more spacing to prevent overlap) -->
+  <g transform="translate(50,626)">
+    <rect x="0" y="-22" width="800" height="22" rx="4" fill="#FFFFFF" stroke="#D0D6DC"/>
+    <circle cx="30" cy="-11" r="5" fill="#2D7A4B"/><text x="44" y="-8" font-size="11" fill="#3E4A54">Analytical Deconstruction</text>
+    <circle cx="320" cy="-11" r="5" fill="#2A9D8F"/><text x="334" y="-8" font-size="11" fill="#3E4A54">Contextual Application</text>
+    <circle cx="590" cy="-11" r="5" fill="#6A4C93"/><text x="604" y="-8" font-size="11" fill="#3E4A54">Reflective Synthesis</text>
+  </g>
+</svg>
+</div>
+
+
+
+<!-- SAGE Results & Practice Infographic (SVG, 1000x720) — Taller Playbook Tiles -->
+<svg viewBox="0 0 1000 740" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc" style="max-width:100%;height:auto">
+  <title id="title">SAGE Findings and Recommendations for Practice</title>
+  <desc id="desc">Infographic summarising SAGE findings, practice recommendations, and a cross-sector implementation playbook with the Apply–Defend–Synthesise pattern.</desc>
+
+  <!-- Header -->
+  <rect x="20" y="20" width="960" height="70" rx="10" fill="#1a5f3a"/>
+  <text x="500" y="55" text-anchor="middle" font-size="22" font-weight="700" fill="white">SAGE Findings and Recommendations for Practice</text>
+  <text x="500" y="78" text-anchor="middle" font-size="13" fill="#a4d65e">Orchestration Competencies • Accessibility Activation • AI as Critic • Metacognitive Synthesis</text>
+
+  <!-- Left: Key Findings -->
+  <rect x="30" y="110" width="460" height="410" rx="12" fill="#e8f5d8" stroke="#a4d65e" stroke-width="3"/>
+  <text x="60" y="142" font-size="18" font-weight="700" fill="#0d3d26">Key Findings</text>
+
+  <rect x="50" y="160" width="420" height="100" rx="8" fill="white" stroke="#a4d65e" stroke-width="2"/>
+  <circle cx="70" cy="185" r="14" fill="#a4d65e"/><text x="70" y="190" text-anchor="middle" font-size="12" font-weight="700" fill="white">1</text>
+  <text x="95" y="178" font-size="14" font-weight="700" fill="#0d3d26">Accessibility Activation is Stimulus-Dependent</text>
+  <text x="95" y="198" font-size="12" fill="#495057">
+    <tspan x="95" dy="0">Spontaneous tests omitted without prompts. Awareness returns with</tspan>
+    <tspan x="95" dy="16">reflection. Activation must be designed, not assumed.</tspan>
+  </text>
+
+  <rect x="50" y="272" width="420" height="110" rx="8" fill="white" stroke="#5a6c7d" stroke-width="2"/>
+  <circle cx="70" cy="297" r="14" fill="#5a6c7d"/><text x="70" y="302" text-anchor="middle" font-size="12" font-weight="700" fill="white">2</text>
+  <text x="95" y="290" font-size="14" font-weight="700" fill="#0d3d26">AI as Critic Elicits Disciplined Authority</text>
+  <text x="95" y="310" font-size="12" fill="#495057">
+    <tspan x="95" dy="0">Selective acceptance and justified rejections anchored in scope, platform,</tspan>
+    <tspan x="95" dy="16">risk, and compliance confirm leadership rather than deference.</tspan>
+  </text>
+
+  <rect x="50" y="396" width="420" height="104" rx="8" fill="white" stroke="#e76f51" stroke-width="2"/>
+  <circle cx="70" cy="420" r="14" fill="#e76f51"/><text x="70" y="425" text-anchor="middle" font-size="12" font-weight="700" fill="white">3</text>
+  <text x="95" y="414" font-size="14" font-weight="700" fill="#0d3d26">Competency Ceiling Broken</text>
+  <text x="95" y="434" font-size="12" fill="#495057">
+    <tspan x="95" dy="0">Apply–Defend–Synthesise yields principled explanation and original</tspan>
+    <tspan x="95" dy="16">literature critique that exceed corrective editing.</tspan>
+  </text>
+
+  <!-- Right: Recommendations -->
+  <rect x="510" y="110" width="460" height="410" rx="12" fill="#fef3f0" stroke="#e76f51" stroke-width="3"/>
+  <text x="540" y="142" font-size="18" font-weight="700" fill="#0d3d26">Recommendations for Practice</text>
+
+  <rect x="530" y="160" width="420" height="82" rx="8" fill="white" stroke="#2a9d8f" stroke-width="2"/>
+  <circle cx="550" cy="183" r="12" fill="#2a9d8f"/><text x="550" y="187" text-anchor="middle" font-size="11" font-weight="700" fill="white">A</text>
+  <text x="575" y="176" font-size="13" font-weight="700" fill="#0d3d26">Re-cue Non-Functional Qualities Across Phases</text>
+  <text x="575" y="194" font-size="12" fill="#495057">
+    <tspan x="575" dy="0">Specify at least one accessibility or usability check with brief</tspan>
+    <tspan x="575" dy="16">justification in each life-cycle stage.</tspan>
+  </text>
+
+  <rect x="530" y="248" width="420" height="82" rx="8" fill="white" stroke="#2a9d8f" stroke-width="2"/>
+  <circle cx="550" cy="271" r="12" fill="#2a9d8f"/><text x="550" y="275" text-anchor="middle" font-size="11" font-weight="700" fill="white">B</text>
+  <text x="575" y="264" font-size="13" font-weight="700" fill="#0d3d26">Adopt an AI as Critic Protocol</text>
+  <text x="575" y="282" font-size="12" fill="#495057">
+    <tspan x="575" dy="0">Decision logs with Accept, Modify, Reject and reasons tied to scope,</tspan>
+    <tspan x="575" dy="16">platform, risk, and governance.</tspan>
+  </text>
+
+  <rect x="530" y="336" width="420" height="82" rx="8" fill="white" stroke="#2a9d8f" stroke-width="2"/>
+  <circle cx="550" cy="359" r="12" fill="#2a9d8f"/><text x="550" y="363" text-anchor="middle" font-size="11" font-weight="700" fill="white">C</text>
+  <text x="575" y="352" font-size="13" font-weight="700" fill="#0d3d26">Mandate Literature-Linked Synthesis</text>
+  <text x="575" y="370" font-size="12" fill="#495057">
+    <tspan x="575" dy="0">Short critique that names what the AI summary missed and links to</tspan>
+    <tspan x="575" dy="16">observed failures.</tspan>
+  </text>
+
+  <rect x="530" y="424" width="420" height="82" rx="8" fill="white" stroke="#2a9d8f" stroke-width="2"/>
+  <circle cx="550" cy="447" r="12" fill="#2a9d8f"/><text x="550" y="451" text-anchor="middle" font-size="11" font-weight="700" fill="white">D</text>
+  <text x="575" y="440" font-size="13" font-weight="700" fill="#0d3d26">Make Governance Visible</text>
+  <text x="575" y="458" font-size="12" fill="#495057">
+    <tspan x="575" dy="0">Integrate compliance and change-control into testing rubrics to</tspan>
+    <tspan x="575" dy="16">cultivate responsibility.</tspan>
+  </text>
+
+  <!-- Bottom band -->
+  <rect x="30" y="540" width="940" height="170" rx="12" fill="#0d3d26"/>
+  <text x="500" y="565" text-anchor="middle" font-size="15" font-weight="700" fill="#a4d65e">Cross-Sector Implementation Playbook</text>
+
+  <!-- Left: Playbook panel enlarged and tiles taller -->
+  <rect x="50" y="580" width="430" height="110" rx="8" fill="white" stroke="#a4d65e" stroke-width="2"/>
+
+  <!-- Top row (taller 50px) -->
+  <rect x="60"  y="592" width="200" height="50" rx="6" fill="#e8f5d8" stroke="#a4d65e" stroke-width="2"/>
+  <text x="160" y="612" text-anchor="middle" font-size="12" font-weight="700" fill="#0d3d26">Design for Activation</text>
+  <text x="160" y="628" text-anchor="middle" font-size="11" fill="#495057">Re-cue non-functional qualities</text>
+
+  <rect x="280" y="592" width="190" height="50" rx="6" fill="#fef3f0" stroke="#e76f51" stroke-width="2"/>
+  <text x="375" y="612" text-anchor="middle" font-size="12" font-weight="700" fill="#0d3d26">Evidence over Artefacts</text>
+  <text x="375" y="628" text-anchor="middle" font-size="11" fill="#495057">Logs and justifications</text>
+
+  <!-- Bottom row (taller 50px) -->
+  <rect x="60"  y="646" width="200" height="50" rx="6" fill="#e6f6f4" stroke="#2a9d8f" stroke-width="2"/>
+  <text x="160" y="666" text-anchor="middle" font-size="12" font-weight="700" fill="#0d3d26">Governance-in-the-Loop</text>
+  <text x="160" y="682" text-anchor="middle" font-size="11" fill="#495057">Compliance constrains “correct”</text>
+
+  <rect x="280" y="646" width="190" height="50" rx="6" fill="#eef1f5" stroke="#5a6c7d" stroke-width="2"/>
+  <text x="375" y="666" text-anchor="middle" font-size="12" font-weight="700" fill="#0d3d26">Portability by Design</text>
+  <text x="375" y="682" text-anchor="middle" font-size="11" fill="#495057">Track transfer across contexts</text>
+
+  <!-- Right: Apply–Defend–Synthesise panel -->
+  <rect x="520" y="580" width="430" height="110" rx="8" fill="white" stroke="#e76f51" stroke-width="2"/>
+  <text x="540" y="598" font-size="12" font-weight="700" fill="#0d3d26">Apply–Defend–Synthesise</text>
+
+  <rect x="540" y="610" width="115" height="62" rx="6" fill="#e8f5d8" stroke="#a4d65e" stroke-width="2"/>
+  <text x="598" y="632" text-anchor="middle" font-size="12" font-weight="700" fill="#0d3d26">Apply</text>
+  <text x="598" y="648" text-anchor="middle" font-size="11" fill="#495057">Human baseline</text>
+
+  <rect x="660" y="610" width="115" height="62" rx="6" fill="#fef3f0" stroke="#e76f51" stroke-width="2"/>
+  <text x="718" y="632" text-anchor="middle" font-size="12" font-weight="700" fill="#0d3d26">Defend</text>
+  <text x="718" y="648" text-anchor="middle" font-size="11" fill="#495057">AI as critic</text>
+
+  <rect x="780" y="610" width="115" height="62" rx="6" fill="#e6f6f4" stroke="#2a9d8f" stroke-width="2"/>
+  <text x="838" y="632" text-anchor="middle" font-size="12" font-weight="700" fill="#0d3d26">Synthesise</text>
+  <text x="838" y="648" text-anchor="middle" font-size="11" fill="#495057">Metacognition</text>
+</svg>
+
+
+
   <div class="svg-container">
     <svg viewBox="0 0 900 600" style="max-width: 100%; height: auto;">
       <!-- Title -->
@@ -2471,6 +4364,7 @@
   </div>
 </div>
 
+
 <!-- 4.4 WHAT MAKES THESE WORK -->
 <div class="page">
   <h2>4.4 What Makes These Assessments Work (And Common Pitfalls)</h2>
@@ -2721,21 +4615,22 @@
 <div class="page">
   <h2>5.1 Who We Are</h2>
   
- <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin: 2rem 0;">
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin: 2rem 0;">
+    <!-- Author 1 -->
     <div style="background: var(--grey-100); padding: 1.5rem; border-radius: 8px; border-left: 4px solid var(--cqu-deep-green);">
       <h3 style="margin-top: 0; color: var(--cqu-deep-green);">Dr Mahmoud Elkhodr</h3>
-      <p style="font-size: 13px; font-weight: 600; color: var(--grey-700); margin-bottom: 1rem;">Teaching Scholar and Senior Lecturer<br>School of Engineering and Technology<br>Central Queensland University, Australia</p>
+      <p style="font-size: 13px; font-weight: 600; color: var(--grey-700); margin-bottom: 1rem;">Teaching Scholar and Lecturer<br>School of Engineering and Technology<br>Central Queensland University, Australia</p>
       
       <p style="font-size: 14px; line-height: 1.7;">
         Dr Elkhodr specialises in cybersecurity, IoT, blockchain, and AI-enhanced pedagogy. He is recognised as a pioneer in integrating generative AI into formal higher education curricula, with research spanning AI orchestration competencies, digital divide impacts, and responsible AI use in education. His work has been adopted internationally by institutions including the National University of Singapore and University of Warwick.
       </p>
       
       <p style="font-size: 14px; line-height: 1.7; margin-top: 1rem;">
-        <strong>Research Impact:</strong> Co-published with Prof Ergun over 50+ publications on GenAI in education.
+        <strong>Research Impact:</strong> 1,600+ citations; h-index 20+; 50+ publications on GenAI in education, cybersecurity, and IoT security frameworks.
       </p>
       
       <p style="font-size: 14px; line-height: 1.7; margin-top: 1rem;">
-        <strong>Active Research-Teaching Nexus:</strong> Dr Elkhodr maintains a highly active intersection between his research and teaching practice. He is the author of <em>Next Generation Smart Cities</em> (2026) and the editor of the Routledge book <em>Generative Artificial Intelligence Empowered Learning</em>.
+        <strong>Teaching Excellence:</strong> Consistently achieves 100% student satisfaction whilst maintaining 121-163% teaching loads; recipient of teaching innovation awards.
       </p>
     </div>
     
@@ -3456,74 +5351,63 @@
     This educator's guide is part of a comprehensive SAGE implementation ecosystem. Additional resources are available to support your adoption:
   </p>
   
- <h3>Student-Facing GenAI Literacy Module</h3>
+  <h3>Student-Facing GenAI Literacy Module</h3>
   
   <div style="border: 2px solid var(--cqu-deep-green); border-radius: 8px; padding: 2rem; margin: 2rem 0; background: linear-gradient(135deg, #f8fbf1 0%, #e8f5d8 100%);">
     <h4 style="margin-top: 0; color: var(--cqu-deep-green); font-size: 20px;">📚 GenAI Literacy 101 for Higher Education Students</h4>
     
     <p style="font-size: 14px; margin-bottom: 1rem;"><strong>Format:</strong> Interactive HTML module + Static PDF version</p>
     
-    <p style="font-size: 14px; margin-bottom: 1rem;"><strong>Purpose:</strong> Equip your students with foundational GenAI competencies before they begin SAGE assessments. This module addresses the "variable AI literacy" challenge observed in our research. <a href="https://raw.githack.com/MahmoudElkhodr/fair/GENAI-101/genai-101.html" target="_blank" style="color: white; text-decoration: underline;"></a></p>
+    <p style="font-size: 14px; margin-bottom: 1rem;"><strong>Purpose:</strong> Equip your students with foundational GenAI competencies before they begin SAGE assessments. This module addresses the "variable AI literacy" challenge observed in our research.</p>
     
-    <h4 style="color: var(--cqu-deep-green); margin-top: 1.5rem; margin-bottom: 0.75rem;">Module Contents (10 Lessons)</h4>
+    <h4 style="color: var(--cqu-deep-green); margin-top: 1.5rem; margin-bottom: 0.75rem;">Module Contents (7 Lessons)</h4>
     
     <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem;">
-      
       <div style="background: white; padding: 1rem; border-radius: 6px; border-left: 3px solid var(--cqu-lime-green);">
-        <p style="font-size: 14px; font-weight: 600; margin-bottom: 0.25rem;">1. Module Overview</p>
-        <p style="font-size: 12px; margin: 0;">Introduction to GenAI literacy, learning outcomes, and structure</p>
-      </div>
-
-      <div style="background: white; padding: 1rem; border-radius: 6px; border-left: 3px solid var(--cqu-lime-green);">
-        <p style="font-size: 14px; font-weight: 600; margin-bottom: 0.25rem;">2. Lesson 1: What is Generative AI?</p>
-        <p style="font-size: 12px; margin: 0;">Understanding foundations, capabilities, and limitations (LLMs)</p>
+        <p style="font-size: 14px; font-weight: 600; margin-bottom: 0.25rem;">Lesson 1: What is GenAI?</p>
+        <p style="font-size: 12px; margin: 0;">How AI works, capabilities, limitations, common tools</p>
       </div>
       
       <div style="background: white; padding: 1rem; border-radius: 6px; border-left: 3px solid var(--cqu-lime-green);">
-        <p style="font-size: 14px; font-weight: 600; margin-bottom: 0.25rem;">3. Lesson 2: How to Talk to AI</p>
-        <p style="font-size: 12px; margin: 0;">Mastering basic prompt engineering (Instruction & Role Prompting)</p>
+        <p style="font-size: 14px; font-weight: 600; margin-bottom: 0.25rem;">Lesson 2: Prompt Engineering</p>
+        <p style="font-size: 12px; margin: 0;">Writing effective prompts, iterative refinement</p>
       </div>
       
       <div style="background: white; padding: 1rem; border-radius: 6px; border-left: 3px solid var(--cqu-lime-green);">
-        <p style="font-size: 14px; font-weight: 600; margin-bottom: 0.25rem;">4. Lesson 3: Using AI the Right Way</p>
-        <p style="font-size: 12px; margin: 0;">Exploring responsible use, ethics, and academic integrity</p>
+        <p style="font-size: 14px; font-weight: 600; margin-bottom: 0.25rem;">Lesson 3: Academic Integrity</p>
+        <p style="font-size: 12px; margin: 0;">Permitted vs prohibited use, disclosure requirements</p>
       </div>
       
       <div style="background: white; padding: 1rem; border-radius: 6px; border-left: 3px solid var(--cqu-lime-green);">
-        <p style="font-size: 14px; font-weight: 600; margin-bottom: 0.25rem;">5. Lesson 4: Practical Applications</p>
-        <p style="font-size: 12px; margin: 0;">Examples across disciplines: note-taking, explaining concepts, etc.</p>
+        <p style="font-size: 14px; font-weight: 600; margin-bottom: 0.25rem;">Lesson 4: Source Verification</p>
+        <p style="font-size: 12px; margin: 0;">Checking AI-generated references, fact-checking</p>
       </div>
       
       <div style="background: white; padding: 1rem; border-radius: 6px; border-left: 3px solid var(--cqu-lime-green);">
-        <p style="font-size: 14px; font-weight: 600; margin-bottom: 0.25rem;">6. Lesson 5: Personal Tutor</p>
-        <p style="font-size: 12px; margin: 0;">Using the "Feedback Loop" to critique and improve your work</p>
+        <p style="font-size: 14px; font-weight: 600; margin-bottom: 0.25rem;">Lesson 5: Using AI for Feedback</p>
+        <p style="font-size: 12px; margin: 0;">Getting critique, not answers; knowing when to override</p>
       </div>
       
       <div style="background: white; padding: 1rem; border-radius: 6px; border-left: 3px solid var(--cqu-lime-green);">
-        <p style="font-size: 14px; font-weight: 600; margin-bottom: 0.25rem;">7. Lesson 6: Finding Academic Sources</p>
-        <p style="font-size: 12px; margin: 0;">Locating and verifying credible research; avoiding hallucinations</p>
+        <p style="font-size: 14px; font-weight: 600; margin-bottom: 0.25rem;">Lesson 6: Group Work with AI</p>
+        <p style="font-size: 12px; margin: 0;">Collaborative use, documenting contributions</p>
       </div>
       
       <div style="background: white; padding: 1rem; border-radius: 6px; border-left: 3px solid var(--cqu-lime-green);">
-        <p style="font-size: 14px; font-weight: 600; margin-bottom: 0.25rem;">8. Lesson 7: Group Projects</p>
-        <p style="font-size: 12px; margin: 0;">Fair and transparent AI use in team assignments</p>
+        <p style="font-size: 14px; font-weight: 600; margin-bottom: 0.25rem;">Lesson 7: Assessment Quiz</p>
+        <p style="font-size: 12px; margin: 0;">10 scenario-based questions testing understanding</p>
       </div>
       
       <div style="background: white; padding: 1rem; border-radius: 6px; border-left: 3px solid var(--cqu-lime-green);">
-        <p style="font-size: 14px; font-weight: 600; margin-bottom: 0.25rem;">9. Final Quiz</p>
-        <p style="font-size: 12px; margin: 0;">Scenario-based questions to test your knowledge</p>
-      </div>
-
-      <div style="background: white; padding: 1rem; border-radius: 6px; border-left: 3px solid var(--cqu-lime-green);">
-        <p style="font-size: 14px; font-weight: 600; margin-bottom: 0.25rem;">10. Module Wrap-Up</p>
-        <p style="font-size: 12px; margin: 0;">Key takeaways, official resources, and next steps</p>
+        <p style="font-size: 14px; font-weight: 600; margin-bottom: 0.25rem;">Bonus: Discipline Examples</p>
+        <p style="font-size: 12px; margin: 0;">Nursing, business, engineering, education contexts</p>
       </div>
     </div>
     
     <div style="background: var(--cqu-deep-green); color: white; padding: 1rem; border-radius: 6px; margin-top: 1.5rem; text-align: center;">
-    <p style="margin: 0; font-size: 15px; font-weight: 600;">
-  📥 <a href="https://raw.githack.com/MahmoudElkhodr/fair/GENAI-101/genai-101.html" target="_blank" style="color: white; text-decoration: underline;">Access the GenAI Literacy and Numeracy Module</a> | Completion time: 45-60 minutes
-</p>
+      <p style="margin: 0; font-size: 15px; font-weight: 600;">
+        📥 Access: [URL when published] | Completion time: 45-60 minutes | LMS-compatible (SCORM)
+      </p>
     </div>
   </div>
   
@@ -3604,15 +5488,15 @@
   <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 2rem;">
     <div style="background: var(--grey-100); padding: 1.5rem; border-radius: 8px; border-left: 4px solid var(--cqu-deep-green);">
       <h4 style="margin-top: 0; color: var(--cqu-deep-green);">Dr Mahmoud Elkhodr</h4>
-      <p style="font-size: 13px; margin-bottom: 0.5rem;">📧 Email: m.elkhodr@cqu.edu.au</p>
-      <p style="font-size: 13px; margin-bottom: 0.5rem;">🌐 Profile: https://staff-profiles.cqu.edu.au/home/view/1633</p>
+      <p style="font-size: 13px; margin-bottom: 0.5rem;">📧 Email: [email address]</p>
+      <p style="font-size: 13px; margin-bottom: 0.5rem;">🌐 Profile: [CQU staff profile URL]</p>
       <p style="font-size: 13px; margin-bottom: 0;">🔬 Research: Cybersecurity, AI pedagogy, IoT security</p>
     </div>
     
     <div style="background: var(--grey-100); padding: 1.5rem; border-radius: 8px; border-left: 4px solid var(--cqu-deep-green);">
       <h4 style="margin-top: 0; color: var(--cqu-deep-green);">Professor Ergun Gide</h4>
-      <p style="font-size: 13px; margin-bottom: 0.5rem;">📧 Email: e.gide1@cqu.edu.au</p>
-      <p style="font-size: 13px; margin-bottom: 0.5rem;">🌐 Profile: https://staff-profiles.cqu.edu.au/home/view/956</p>
+      <p style="font-size: 13px; margin-bottom: 0.5rem;">📧 Email: [email address]</p>
+      <p style="font-size: 13px; margin-bottom: 0.5rem;">🌐 Profile: [CQU staff profile URL]</p>
       <p style="font-size: 13px; margin-bottom: 0;">🔬 Research: Information systems, GenAI in business education</p>
     </div>
   </div>
@@ -3632,10 +5516,10 @@
     </ul>
   </div>
   
-  <h3>FUTURE AI (FAIR) Lab (Launching 2026)</h3>
+  <h3>SAGE Implementers Community (Launching 2025)</h3>
   
   <div style="background: linear-gradient(135deg, #e8f5d8 0%, #f8fbf1 100%); padding: 2rem; border-radius: 8px; margin: 2rem 0; border-left: 4px solid var(--cqu-deep-green);">
-    <h4 style="margin-top: 0; color: var(--cqu-deep-green);">Join the Global FAIR Lab</h4>
+    <h4 style="margin-top: 0; color: var(--cqu-deep-green);">Join the Global Community of Practice</h4>
     
     <p style="font-size: 14px; margin-bottom: 1rem;">
       We're establishing an online community for educators implementing SAGE worldwide. Benefits include:
@@ -3662,7 +5546,7 @@
     
     <div style="background: var(--cqu-deep-green); color: white; padding: 1rem; border-radius: 6px; margin-top: 1rem; text-align: center;">
       <p style="margin: 0; font-size: 14px; font-weight: 600;">
-        🌐 Register interest: [URL when available] | Expected launch: Q1 2026
+        🌐 Register interest: [URL when available] | Expected launch: Q1 2025
       </p>
     </div>
   </div>
@@ -3714,7 +5598,7 @@
       </tr>
       <tr style="background: var(--grey-100);">
         <td><strong>1.1</strong></td>
-        <td><em>Planned Q2 2026</em></td>
+        <td><em>Planned Q2 2025</em></td>
         <td>
           <em>Anticipated updates based on community feedback:</em><br>
           • Additional discipline-specific examples (nursing, social work, law)<br>
@@ -3734,10 +5618,10 @@
       Updates and Announcements
     </div>
     <ul style="margin-left: 1.5rem; font-size: 14px; line-height: 1.7;">
-      <li>Check [FAIR URL] periodically for the latest version</li>
-      <li>Join the SAGE Implementers Community for update notifications (TBA on FAIR website)</li>
+      <li>Check [URL] periodically for the latest version</li>
+      <li>Join the SAGE Implementers Community for update notifications</li>
       <li>Follow our research profiles for new publications</li>
-      
+      <li>Subscribe to the TEQSA GenAI Knowledge Hub newsletter</li>
     </ul>
   </div>
   
@@ -3795,7 +5679,7 @@
     </div>
     
     <p style="font-size: 14px; margin-top: 2rem; margin-bottom: 0;">
-      <strong>Access resources:</strong> https://raw.githack.com/MahmoudElkhodr/fair/GENAI-101/genai-101.html
+      <strong>Access all resources:</strong> [URL when published]
     </p>
   </div>
   
