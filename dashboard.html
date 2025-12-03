@@ -45,6 +45,19 @@
             border: 1px solid rgba(0, 86, 179, 0.2);
         }
 
+        /* NEW: Narrative Text Box */
+        .section-intro {
+            background-color: #eef2f5;
+            border-left: 5px solid var(--sage-blue);
+            padding: 20px;
+            margin-bottom: 25px;
+            border-radius: 8px;
+            color: #4a5568;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        .section-intro strong { color: var(--primary); }
+
         /* Layout Grid */
         .grid-main { display: grid; grid-template-columns: repeat(12, 1fr); gap: 25px; margin-bottom: 30px; }
         .col-4 { grid-column: span 4; }
@@ -66,22 +79,13 @@
         .card-title { font-weight: 700; font-size: 1.15rem; color: var(--primary); margin: 0; }
         .card-desc { font-size: 0.85rem; color: #777; margin-top: 5px; }
         
-        /* Explicit Height Container for Charts */
-        .chart-wrapper {
-            position: relative;
-            height: 300px; 
-            width: 100%;
-        }
+        .chart-wrapper { position: relative; height: 300px; width: 100%; }
 
         /* KPI Stats */
         .kpi-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-bottom: 30px; }
         .kpi-card { 
-            background: #fff; 
-            padding: 20px; 
-            border-radius: 12px; 
-            text-align: center; 
-            border-top: 5px solid #ccc; 
-            box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+            background: #fff; padding: 20px; border-radius: 12px; text-align: center; 
+            border-top: 5px solid #ccc; box-shadow: 0 4px 10px rgba(0,0,0,0.03);
         }
         .kpi-num { font-size: 2.5rem; font-weight: 800; line-height: 1; margin-bottom: 5px; }
         .kpi-label { font-size: 0.8rem; font-weight: 700; text-transform: uppercase; color: #888; letter-spacing: 0.5px; }
@@ -90,11 +94,7 @@
         /* Typologies */
         .archetype-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; margin-top: 10px; }
         .archetype-card { 
-            padding: 15px; 
-            border-radius: 8px; 
-            border: 1px solid #eee; 
-            text-align: center; 
-            background: #fafafa;
+            padding: 15px; border-radius: 8px; border: 1px solid #eee; text-align: center; background: #fafafa;
         }
         .arch-title { font-weight: 700; font-size: 0.95rem; color: var(--primary); }
         .arch-perc { font-weight: 800; font-size: 1.2rem; color: var(--sage-blue); margin: 5px 0; }
@@ -102,36 +102,23 @@
 
         /* Titles & Footer */
         .section-title { 
-            font-size: 1.4rem; 
-            font-weight: 700; 
-            margin: 50px 0 20px; 
-            display: flex; 
-            align-items: center; 
-            color: var(--primary);
-            border-bottom: 2px solid #eee;
-            padding-bottom: 10px;
+            font-size: 1.4rem; font-weight: 700; margin: 50px 0 20px; 
+            display: flex; align-items: center; color: var(--primary);
+            border-bottom: 2px solid #eee; padding-bottom: 10px;
         }
         .section-title::before { content: ''; width: 6px; height: 28px; background: var(--sage-blue); margin-right: 12px; border-radius: 4px; }
 
         .insight-footer { 
-            margin-top: 15px; 
-            background: #f1f8ff; 
-            padding: 12px; 
-            border-radius: 8px; 
-            border-left: 4px solid var(--sage-blue); 
-            font-size: 0.85rem; 
-            color: #444; 
+            margin-top: 15px; background: #f1f8ff; padding: 12px; 
+            border-radius: 8px; border-left: 4px solid var(--sage-blue); 
+            font-size: 0.85rem; color: #444; 
         }
 
-        /* Action Steps Grid (New CSS) */
+        /* Action Steps */
         .action-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
         .action-card {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            border: 1px solid #eee;
-            position: relative;
-            overflow: hidden;
+            background: white; padding: 20px; border-radius: 10px; 
+            border: 1px solid #eee; position: relative; overflow: hidden;
             box-shadow: 0 2px 5px rgba(0,0,0,0.05);
         }
         .action-step { text-transform: uppercase; font-size: 0.75rem; color: #999; font-weight: 700; margin-bottom: 5px; }
@@ -182,6 +169,9 @@
     </div>
 
     <div class="section-title">1. Behavioral Typologies (Cluster Analysis)</div>
+    <div class="section-intro">
+        <strong>Meaning Behind the Data:</strong> Cluster analysis of student behaviors reveals that students are not a monolith. They fall into four distinct archetypes. While <strong>32% are "Strategic Optimizers"</strong> who balance speed and quality, nearly <strong>28% are "Dialogic Learners"</strong> who engage in deep, conversation-style learning. This suggests support strategies must be tailored: Optimizers need templates, while Dialogic Learners need help with synthesis and closure.
+    </div>
     <div class="grid-main">
         <div class="col-12 card">
             <div class="card-header">
@@ -213,6 +203,9 @@
     </div>
 
     <div class="section-title">2. The "SAGE" Verification Core</div>
+    <div class="section-intro">
+        <strong>Meaning Behind the Data:</strong> The study used the SAGE framework to force a "Verification" step. The results are striking: <strong>73% of students complied</strong> with the requirement to verify, debunking the idea that students will always take the easy route. However, the <strong>"Application Bottleneck"</strong> is visible in the center chart: Students struggled most (red bar) when asked to provide specific recommendations, proving that AI is good at summarizing but poor at applying context—this is where the human student adds value.
+    </div>
     <div class="grid-main">
         <div class="col-4 card">
             <div class="card-header">
@@ -255,6 +248,9 @@
     </div>
 
     <div class="section-title">3. Learning Trajectory</div>
+    <div class="section-intro">
+        <strong>Meaning Behind the Data:</strong> How do students learn to prompt? The data suggests a <strong>"Goldilocks Zone" of 4-8 prompts</strong> where students feel most productive. Those who used 15+ prompts often reported "confusion spirals," where more AI interaction led to worse outputs. Most importantly, the "Pivot" chart (right) shows <strong>95% of students want to change their strategy</strong> next time, indicating high metacognitive awareness and a desire to move from "one-shot" attempts to iterative dialogue.
+    </div>
     <div class="grid-main">
         <div class="col-6 card">
             <div class="card-header">
@@ -284,6 +280,9 @@
     </div>
 
     <div class="section-title">4. Depth of Engagement: Myth vs. Reality</div>
+    <div class="section-intro">
+        <strong>Meaning Behind the Data:</strong> A common fear is that AI leads to passivity. The data refutes this. <strong>81% of students (Green)</strong> engaged in "Deep" behaviors—either completely rewriting the output or asking follow-up questions to refine it. Only a minority (14%) engaged in "Surface" behaviors like minor formatting. This proves that for most students, AI functions as a drafting partner that stimulates revision, rather than a ghostwriter that replaces it.
+    </div>
     <div class="grid-main">
         <div class="col-6 card">
             <div class="card-header">
@@ -294,7 +293,7 @@
                 <canvas id="engagementChart"></canvas>
             </div>
             <div class="insight-footer">
-                <strong>Data Proof:</strong> 81% of students (Active) engaged in rewriting or follow-up questions. Only 14% (Passive) used output with minor formatting. This proves students are <strong>Partners</strong>, not just consumers.
+                <strong>Data Proof:</strong> 81% of students (Active) engaged in rewriting or follow-up questions. Only 14% (Passive) used output with minor formatting.
             </div>
         </div>
         <div class="col-6 card">
@@ -316,6 +315,9 @@
     </div>
 
     <div class="section-title">5. Drivers Beyond Time: Equity & Inclusion</div>
+    <div class="section-intro">
+        <strong>Meaning Behind the Data:</strong> Why do students use AI? While "Time Pressure" is the obvious #1, the #2 driver is <strong>"English Confidence" (46%)</strong>. This suggests that for international and NESB students, AI is not just a shortcut, but an equity tool—a "levelling mechanism" that allows them to express their ideas without the barrier of language proficiency.
+    </div>
     <div class="grid-main">
         <div class="col-12 card">
             <div class="card-header">
@@ -326,12 +328,15 @@
                 <canvas id="driversChart"></canvas>
             </div>
             <div class="insight-footer">
-                <strong>Equity Insight:</strong> "English Confidence" (46%) is the second highest driver. This highlights AI's role as an <strong>Equalizer</strong> for international/NESB students, allowing them to focus on ideas rather than grammar.
+                <strong>Equity Insight:</strong> "English Confidence" (46%) is the second highest driver. This highlights AI's role as an <strong>Equalizer</strong> for international/NESB students.
             </div>
         </div>
     </div>
 
     <div class="section-title">6. The "Support Wishlist": What They Want</div>
+    <div class="section-intro">
+        <strong>Meaning Behind the Data:</strong> Institutional responses often focus on "Integrity Frameworks" (Rules). However, students are asking for "Technical Guidance" (Skills). The chart below shows that <strong>"Verification Guidance" and "Prompt Examples"</strong> are requested nearly 3x more often than integrity policies. Students are essentially saying: "We want to be ethical, but we need you to teach us the technical skills to do so."
+    </div>
     <div class="grid-main">
         <div class="col-12 card">
             <div class="card-header">
@@ -342,12 +347,15 @@
                 <canvas id="supportChart"></canvas>
             </div>
             <div class="insight-footer">
-                <strong>Actionable Intelligence:</strong> Students want <strong>Technical Guidance</strong> (Verification & Prompts) more than they want "Integrity Frameworks". They are asking for "How-to" skills, not just rules.
+                <strong>Actionable Intelligence:</strong> Students want <strong>Technical Guidance</strong> (Verification & Prompts) more than they want "Integrity Frameworks".
             </div>
         </div>
     </div>
 
     <div class="section-title">7. Thematic Analysis of Concerns & Needs</div>
+    <div class="section-intro">
+        <strong>Meaning Behind the Data:</strong> Analyzing the open-ended reflections reveals a hierarchy of needs. <strong>45% of all concerns</strong> relate to "Policy Clarity"—students are anxious about vague rules and fear accidental plagiarism. When it comes to training (right chart), they don't want generic advice; they want specific <strong>"Prompt Engineering" (35%)</strong> and tool overviews. They are asking for a curriculum that is practical and hands-on.
+    </div>
     <div class="grid-main">
         <div class="col-4 card">
             <div class="card-header">
@@ -377,6 +385,9 @@
     </div>
 
     <div class="section-title">8. Actionable Roadmap (Recommendations)</div>
+    <div class="section-intro">
+        <strong>Meaning Behind the Data:</strong> Based on the "Support Wishlist" and behavioral gaps, this roadmap outlines a phased institutional response. It moves from the immediate need for <strong>clarity</strong> (stopping the anxiety), to the mid-term need for <strong>competency</strong> (building skills), to the long-term need for <strong>integration</strong> (embedding AI into the fabric of the degree).
+    </div>
     <div class="grid-main">
         <div class="col-12">
             <div class="action-grid">
@@ -413,7 +424,7 @@
 
     <footer>
         <p>Data Source: CQU Mixed-Methods Study (2025) | Analysis of 167 Valid Responses</p>
-        <p>Copyright Dr Mahmoud Elkhodr and Professor Ergun Gide | Property of FAIR Lab (CQU) </p>
+        <p>Copyright Dr Mahmoud Elkhodr and Professor Ergun Gide | Property of FAIR Lab (CQU)</p>
     </footer>
 </div>
 
@@ -562,8 +573,6 @@
             scales: { x: { grid: { display: false } }, y: { beginAtZero: true } }
         }
     });
-
-    // --- NEW: SECTIONS 7 & 8 CHARTS ---
 
     // 9. Thematic Distribution (Donut)
     new Chart(document.getElementById('thematicChart'), {
