@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Extended Student AI Dashboard | COIT11239</title>
+    <title>How First-Year Students Actually Use AI in Permitted Assessments</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
@@ -45,7 +45,66 @@
             border: 1px solid rgba(0, 86, 179, 0.2);
         }
 
-        /* NEW: Narrative Text Box */
+        /* Context Box */
+        .context-box {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 25px;
+            margin: 20px 0;
+            border-radius: 12px;
+            border-left: 5px solid var(--sage-blue);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        .context-box h3 {
+            margin: 0 0 15px 0;
+            color: var(--sage-blue);
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+        .context-box p {
+            margin: 12px 0;
+            line-height: 1.7;
+            color: #495057;
+        }
+        .context-box strong {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        /* Key Findings Summary */
+        .summary-box {
+            background: #fff3cd;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            border-left: 5px solid #ffc107;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        }
+        .summary-box h4 {
+            margin: 0 0 10px 0;
+            color: #856404;
+            font-size: 1.1rem;
+        }
+        .summary-box p {
+            margin: 0;
+            color: #856404;
+            line-height: 1.6;
+        }
+
+        /* Section Context - Simple Question Intro */
+        .section-context {
+            background: #f1f8ff;
+            border-left: 4px solid var(--sage-blue);
+            padding: 15px 20px;
+            margin: -10px 0 20px 0;
+            border-radius: 6px;
+            font-size: 0.95rem;
+            color: #444;
+        }
+        .section-context strong {
+            color: var(--sage-blue);
+            font-weight: 600;
+        }
+
         .section-intro {
             background-color: #eef2f5;
             border-left: 5px solid var(--sage-blue);
@@ -60,9 +119,11 @@
 
         /* Layout Grid */
         .grid-main { display: grid; grid-template-columns: repeat(12, 1fr); gap: 25px; margin-bottom: 30px; }
+        .col-3 { grid-column: span 3; }
         .col-4 { grid-column: span 4; }
         .col-6 { grid-column: span 6; }
         .col-8 { grid-column: span 8; }
+        .col-9 { grid-column: span 9; }
         .col-12 { grid-column: span 12; }
 
         /* Cards */
@@ -128,7 +189,7 @@
 
         footer { text-align: center; margin-top: 50px; padding: 20px; color: #999; font-size: 0.8rem; }
 
-        @media (max-width: 1024px) { .col-4, .col-6, .col-8 { grid-column: span 12; } .kpi-row, .archetype-grid, .action-grid { grid-template-columns: 1fr 1fr; } }
+        @media (max-width: 1024px) { .col-3, .col-4, .col-6, .col-8, .col-9 { grid-column: span 12; } .kpi-row, .archetype-grid, .action-grid { grid-template-columns: 1fr 1fr; } }
         @media (max-width: 768px) { .kpi-row, .archetype-grid, .action-grid { grid-template-columns: 1fr; } }
     </style>
 </head>
@@ -136,14 +197,40 @@
 
 <div class="container">
     <header>
-        <h1>Student AI Interaction & Reflection Dashboard</h1>
-        <div class="subtitle">Comprehensive Analysis of Post-Activity Survey & Behavioral Clusters</div>
+        <h1>How First-Year Students Actually Use AI in Permitted Assessments</h1>
+        <div class="subtitle">Interactive Dashboard: Empirical Evidence from 167 Students</div>
+        
+        <div class="context-box">
+            <h3>Research Context</h3>
+            <p>
+                <strong>The Challenge:</strong> Whilst institutional policies on generative AI proliferate across higher education, empirical evidence of how students actually navigate these tools in authentic assessment contexts remains limited. Assumptions about student behaviour, ranging from fears of passive "copy-paste" practices to concerns about uncritical AI acceptance, dominate discourse without validation through direct observation.
+            </p>
+            <p>
+                <strong>What We Studied:</strong> This research examined first-year ICT students at Central Queensland University during a supervised in-class assessment where AI use was explicitly permitted under institutional "AI Collaborate" guidelines. Students analysed a peer-reviewed research article whilst having explicit permission to use generative AI tools, then completed an embedded 12-item reflection instrument capturing both quantitative behavioural patterns and qualitative reflections.
+            </p>
+            <p>
+                <strong>How We Collected Data:</strong> During Week 12 of Term 3, 2025, 167 students completed behavioural questions documenting their AI interaction patterns (prompt frequency, verification strategies, revision approaches) and 163 provided qualitative reflections on challenges, support needs, and institutional frameworks. The assessment was designed using SAGE (Structured AI-Guided Education) verification protocols, requiring systematic cross-referencing with source materials.
+            </p>
+            <p>
+                <strong>Why This Matters:</strong> This dashboard presents empirical evidence challenging prevailing assumptions about student AI adoption. Rather than passive acceptance or minimal-effort shortcuts, the data reveals sophisticated verification behaviours, strategic interaction patterns, and a critical competency-confidence inversion wherein students demonstrate higher competence than confidence. These findings position students as partners in developing AI literacy frameworks rather than subjects requiring policing.
+            </p>
+        </div>
+
         <div class="badge-container">
-            <span class="meta-tag">Unit: COIT11239 (Professional Communication)</span>
-            <span class="meta-tag">Participants: 167 (94% Response)</span>
-            <span class="meta-tag">Framework: SAGE (Verification Focus)</span>
+            <span class="meta-tag">Unit: COIT11239 (Professional Communication for ICT)</span>
+            <span class="meta-tag">Participants: 167 Valid Responses</span>
+            <span class="meta-tag">Context: First-year, first-term students</span>
+            <span class="meta-tag">Framework: SAGE (Structured AI-Guided Education)</span>
+            <span class="meta-tag" style="background: #d4edda; color: #155724; border-color: #c3e6cb;">✓ DATA VERIFIED</span>
         </div>
     </header>
+
+    <div class="summary-box">
+        <h4>Key Findings Summary</h4>
+        <p>
+            The dashboard below presents twelve dimensions of student AI engagement, revealing four behavioural typologies (Strategic Optimisers 32%, Dialogic Learners 28%, Cautious Adopters 23%, Experimental Users 17%), a "Goldilocks Zone" of optimal interaction (4-8 prompts, 55.1%), and critical gaps between demonstrated competency and expressed confidence. Students prioritise technical guidance (85%) over integrity frameworks (19.2%), seeking partnership rather than policing in AI literacy development.
+        </p>
+    </div>
 
     <div class="kpi-row">
         <div class="kpi-card" style="border-color: var(--sage-blue);">
@@ -152,7 +239,7 @@
             <div class="kpi-sub">Debunking "Lazy Cheater" Myth</div>
         </div>
         <div class="kpi-card" style="border-color: var(--success);">
-            <div class="kpi-num" style="color: var(--success);">58.6%</div>
+            <div class="kpi-num" style="color: var(--success);">55.1%</div>
             <div class="kpi-label">Goldilocks Zone</div>
             <div class="kpi-sub">Optimal (4-8) Prompts</div>
         </div>
@@ -168,9 +255,35 @@
         </div>
     </div>
 
-    <div class="section-title">1. Behavioral Typologies (Cluster Analysis)</div>
+    <!-- SECTION 1: Q1 Initial Approach -->
+    <div class="section-title">1. Initial Approach Strategies (Q1)</div>
+    <div class="section-context">
+        <strong>What we asked:</strong> How did you begin interacting with the AI tool: conversation style, upload everything at once, or something different for each section?
+    </div>
     <div class="section-intro">
-        <strong>Meaning Behind the Data:</strong> Cluster analysis of student behaviors reveals that students are not a monolith. They fall into four distinct archetypes. While <strong>32% are "Strategic Optimizers"</strong> who balance speed and quality, nearly <strong>28% are "Dialogic Learners"</strong> who engage in deep, conversation-style learning. This suggests support strategies must be tailored: Optimizers need templates, while Dialogic Learners need help with synthesis and closure.
+        <strong>Meaning Behind the Data:</strong> How do students begin their AI interaction? The data reveals that <strong>39.5% adopt conversational paradigms</strong>, treating AI as a dialogic partner rather than a search engine. Meanwhile, <strong>36.5% gave the article first</strong> before addressing questions, showing systematic sequential processing. Only <strong>7.2% attempted "upload and extract"</strong> monolithic approaches, suggesting students intuitively understand AI limitations and prefer structured engagement over one-shot queries.
+    </div>
+    <div class="grid-main">
+        <div class="col-12 card">
+            <div class="card-header">
+                <h3 class="card-title">Initial Approach Distribution (Q1)</h3>
+                <div class="card-desc">How students began their AI interaction</div>
+            </div>
+            <div class="chart-wrapper" style="height: 350px;">
+                <canvas id="q1Chart"></canvas>
+            </div>
+            <div class="insight-footer">
+                <strong>Key Finding:</strong> Conversational (39.5%) and Sequential (36.5%) approaches dominate, whilst monolithic "Upload & Extract" represents only 7.2%, suggesting sophisticated intuitive understanding of AI engagement patterns.
+            </div>
+        </div>
+    </div>
+
+    <div class="section-title">2. Behavioral Typologies (Cluster Analysis)</div>
+    <div class="section-context">
+        <strong>What we analysed:</strong> By examining patterns across prompt frequency, verification intensity, and revision strategies, we identified four distinct student types.
+    </div>
+    <div class="section-intro">
+        <strong>Meaning Behind the Data:</strong> Cluster analysis of student behaviors reveals that students are not a monolith. They fall into four distinct archetypes. While <strong>32% are "Strategic Optimisers"</strong> who balance speed and quality, nearly <strong>28% are "Dialogic Learners"</strong> who engage in deep, conversation-style learning. This suggests support strategies must be tailored: Optimisers need templates, while Dialogic Learners need help with synthesis and closure.
     </div>
     <div class="grid-main">
         <div class="col-12 card">
@@ -202,86 +315,34 @@
         </div>
     </div>
 
-    <div class="section-title">2. The "SAGE" Verification Core</div>
+    <div class="section-title">3. Learning Trajectory: Prompt Frequency (Q2)</div>
+    <div class="section-context">
+        <strong>What we asked:</strong> How many separate times did you interact with the AI during this assessment—just once, a few times, or many iterations?
+    </div>
     <div class="section-intro">
-        <strong>Meaning Behind the Data:</strong> The study used the SAGE framework to force a "Verification" step. The results are striking: <strong>73% of students complied</strong> with the requirement to verify, debunking the idea that students will always take the easy route. However, the <strong>"Application Bottleneck"</strong> is visible in the center chart: Students struggled most (red bar) when asked to provide specific recommendations, proving that AI is good at summarizing but poor at applying context—this is where the human student adds value.
+        <strong>Meaning Behind the Data:</strong> How do students learn to prompt? The data reveals a <strong>"Goldilocks Zone" of 4-8 prompts (55.1%)</strong> where students feel most productive. Those who used 15+ prompts (4.8%) often reported "confusion spirals," where more AI interaction led to worse outputs. The convergence towards moderate engagement suggests students intuitively discover optimal interaction intensity through experiential learning.
     </div>
     <div class="grid-main">
-        <div class="col-4 card">
+        <div class="col-12 card">
             <div class="card-header">
-                <h3 class="card-title">Verification Behavior (Q4)</h3>
-                <div class="card-desc">Did they check the article?</div>
-            </div>
-            <div class="chart-wrapper">
-                <canvas id="verifyChart"></canvas>
-            </div>
-            <div class="insight-footer">
-                <strong>Insight:</strong> 73% verified systematically, engaging deeply with the source material.
-            </div>
-        </div>
-        
-        <div class="col-4 card">
-            <div class="card-header">
-                <h3 class="card-title">The "Application Bottleneck" (Q5)</h3>
-                <div class="card-desc">Where AI failed & humans worked</div>
-            </div>
-            <div class="chart-wrapper">
-                <canvas id="rewriteChart"></canvas>
-            </div>
-            <div class="insight-footer">
-                <strong>Insight:</strong> AI summaries (Yellow) were good; Recommendations (Red) needed massive editing.
-            </div>
-        </div>
-
-        <div class="col-4 card">
-            <div class="card-header">
-                <h3 class="card-title">The Friction Points (Q9)</h3>
-                <div class="card-desc">What was hardest?</div>
-            </div>
-            <div class="chart-wrapper">
-                <canvas id="radarChart"></canvas>
-            </div>
-            <div class="insight-footer">
-                <strong>Insight:</strong> "Voice Preservation" (Purple) is a major anxiety alongside Accuracy.
-            </div>
-        </div>
-    </div>
-
-    <div class="section-title">3. Learning Trajectory</div>
-    <div class="section-intro">
-        <strong>Meaning Behind the Data:</strong> How do students learn to prompt? The data suggests a <strong>"Goldilocks Zone" of 4-8 prompts</strong> where students feel most productive. Those who used 15+ prompts often reported "confusion spirals," where more AI interaction led to worse outputs. Most importantly, the "Pivot" chart (right) shows <strong>95% of students want to change their strategy</strong> next time, indicating high metacognitive awareness and a desire to move from "one-shot" attempts to iterative dialogue.
-    </div>
-    <div class="grid-main">
-        <div class="col-6 card">
-            <div class="card-header">
-                <h3 class="card-title">Prompt Frequency: The "Goldilocks Zone"</h3>
+                <h3 class="card-title">Prompt Frequency: The "Goldilocks Zone" (Q2)</h3>
                 <div class="card-desc">Efficiency vs. Confusion Spirals</div>
             </div>
             <div class="chart-wrapper">
                 <canvas id="promptChart"></canvas>
             </div>
             <div class="insight-footer">
-                <strong>Optimization:</strong> 4-8 prompts (Green) is the sweet spot. >15 (Red) leads to confusion.
-            </div>
-        </div>
-
-        <div class="col-6 card">
-            <div class="card-header">
-                <h3 class="card-title">Retrospective Pivot (Q10)</h3>
-                <div class="card-desc">"If you could do it again..."</div>
-            </div>
-            <div class="chart-wrapper">
-                <canvas id="pivotChart"></canvas>
-            </div>
-            <div class="insight-footer">
-                <strong>Learning:</strong> 95.2% would change strategy, mostly towards "Iterative Exchanges".
+                <strong>Optimization:</strong> 4-8 prompts (55.1%, Green) is the sweet spot. Under-engagement (15.0%) fails to leverage iterative potential, whilst over-reliance (15+, 4.8%) leads to confusion spirals.
             </div>
         </div>
     </div>
 
-    <div class="section-title">4. Depth of Engagement: Myth vs. Reality</div>
+    <div class="section-title">4. Depth of Engagement: Revision Strategies (Q3)</div>
+    <div class="section-context">
+        <strong>What we asked:</strong> What did you do with AI outputs—use them as-is with minor tweaks, rewrite completely in your own words, or ask follow-up questions for refinement?
+    </div>
     <div class="section-intro">
-        <strong>Meaning Behind the Data:</strong> A common fear is that AI leads to passivity. The data refutes this. <strong>81% of students (Green)</strong> engaged in "Deep" behaviors—either completely rewriting the output or asking follow-up questions to refine it. Only a minority (14%) engaged in "Surface" behaviors like minor formatting. This proves that for most students, AI functions as a drafting partner that stimulates revision, rather than a ghostwriter that replaces it.
+        <strong>Meaning Behind the Data:</strong> A common fear is that AI leads to passivity. The data refutes this. <strong>81% of students (n=135)</strong> engaged in "Deep" behaviors—either completely rewriting the output (37.7%) or asking follow-up questions (43.1%) to refine it. Only 14% (n=24) engaged in "Surface" behaviors like minor formatting (8.4%) or response combination (6.0%). This proves that for most students, AI functions as a drafting partner that stimulates revision, rather than a ghostwriter that replaces it.
     </div>
     <div class="grid-main">
         <div class="col-6 card">
@@ -293,30 +354,85 @@
                 <canvas id="engagementChart"></canvas>
             </div>
             <div class="insight-footer">
-                <strong>Data Proof:</strong> 81% of students (Active) engaged in rewriting or follow-up questions. Only 14% (Passive) used output with minor formatting.
+                <strong>Data Proof:</strong> 81% of students (n=135) engaged in active revision through rewriting (37.7%) or iterative questioning (43.1%). Only 14% (n=24) used surface-level approaches.
             </div>
         </div>
         <div class="col-6 card">
             <div class="card-header">
-                <h3 class="card-title">Engagement Quality Insight</h3>
-                <div class="card-desc">Analysis of Engagement Levels</div>
+                <h3 class="card-title">Detailed Breakdown</h3>
+                <div class="card-desc">Four distinct revision approaches</div>
             </div>
             <div style="padding: 20px; display: flex; flex-direction: column; justify-content: center; height: 100%;">
-                <div style="margin-bottom: 20px;">
-                    <div style="font-weight: 700; color: var(--success); font-size: 1.1rem; margin-bottom: 5px;">Active Revisers (81%)</div>
-                    <div style="font-size: 0.9rem; color: #555;">These students "Checked article then rewrote" (n=63) or "Asked follow-up questions" (n=72). They view AI as a drafting partner.</div>
+                <div style="margin-bottom: 15px;">
+                    <div style="font-weight: 700; color: var(--sage-blue); font-size: 1rem; margin-bottom: 3px;">Follow-up Questions (43.1%, n=72)</div>
+                    <div style="font-size: 0.85rem; color: #555;">Iterative refinement through continued dialogue</div>
+                </div>
+                <div style="margin-bottom: 15px;">
+                    <div style="font-weight: 700; color: var(--success); font-size: 1rem; margin-bottom: 3px;">Verification-Rewrite (37.7%, n=63)</div>
+                    <div style="font-size: 0.85rem; color: #555;">Checked article then rewrote AI output</div>
+                </div>
+                <div style="margin-bottom: 15px;">
+                    <div style="font-weight: 700; color: var(--warning); font-size: 1rem; margin-bottom: 3px;">Minor Formatting (8.4%, n=14)</div>
+                    <div style="font-size: 0.85rem; color: #555;">Surface-level adjustments only</div>
                 </div>
                 <div>
-                    <div style="font-weight: 700; color: var(--danger); font-size: 1.1rem; margin-bottom: 5px;">Passive Integrators (14%)</div>
-                    <div style="font-size: 0.9rem; color: #555;">Only a small minority (n=24) used "Minor formatting" or "Combined responses" without deep critique.</div>
+                    <div style="font-weight: 700; color: #999; font-size: 1rem; margin-bottom: 3px;">Combined Responses (6.0%, n=10)</div>
+                    <div style="font-size: 0.85rem; color: #555;">Merged multiple AI outputs</div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="section-title">5. Drivers Beyond Time: Equity & Inclusion</div>
+    <div class="section-title">5. The "SAGE" Verification Core (Q4)</div>
+    <div class="section-context">
+        <strong>What we asked:</strong> How often did you check AI responses against the original article—regularly, occasionally, or rarely?
+    </div>
     <div class="section-intro">
-        <strong>Meaning Behind the Data:</strong> Why do students use AI? While "Time Pressure" is the obvious #1, the #2 driver is <strong>"English Confidence" (46%)</strong>. This suggests that for international and NESB students, AI is not just a shortcut, but an equity tool—a "levelling mechanism" that allows them to express their ideas without the barrier of language proficiency.
+        <strong>Meaning Behind the Data:</strong> The study used the SAGE framework to require a "Verification" step. The results are striking: <strong>73% of students complied systematically</strong> (47.9% verified several sections + 25.1% regularly compared), debunking the idea that students will always take the easy route. Only 5.4% demonstrated minimal verification ("AI seemed accurate, checked few times"), showing that with proper scaffolding, students develop sophisticated verification practices.
+    </div>
+    <div class="grid-main">
+        <div class="col-12 card">
+            <div class="card-header">
+                <h3 class="card-title">Verification Behavior (Q4)</h3>
+                <div class="card-desc">Did they check the article?</div>
+            </div>
+            <div class="chart-wrapper" style="height: 350px;">
+                <canvas id="verifyChart"></canvas>
+            </div>
+            <div class="insight-footer">
+                <strong>Insight:</strong> 73% verified systematically (47.9% + 25.1%), engaging deeply with source material. Only 5.4% demonstrated minimal verification, validating SAGE's scaffolding effectiveness.
+            </div>
+        </div>
+    </div>
+
+    <div class="section-title">6. The Application Bottleneck (Q5)</div>
+    <div class="section-context">
+        <strong>What we asked:</strong> Which part of the assessment required the most rewriting after receiving AI help—summary, analysis, recommendations, or something else?
+    </div>
+    <div class="section-intro">
+        <strong>Meaning Behind the Data:</strong> This question tests where AI helps versus where it struggles. The data reveals a stark difference: <strong>only 24.6% needed major rewriting for "Article Summary"</strong> (AI excels at extraction), but <strong>31.1% needed extensive rewriting for "Specific Recommendations"</strong> (AI struggles with context-specific application). This defines the "Application Bottleneck": students add the most value when applying AI-synthesized information to specific contexts, rather than in extracting information.
+    </div>
+    <div class="grid-main">
+        <div class="col-12 card">
+            <div class="card-header">
+                <h3 class="card-title">The "Application Bottleneck" (Q5)</h3>
+                <div class="card-desc">Where AI failed & humans worked</div>
+            </div>
+            <div class="chart-wrapper" style="height: 350px;">
+                <canvas id="rewriteChart"></canvas>
+            </div>
+            <div class="insight-footer">
+                <strong>Insight:</strong> Specific Recommendations (31.1%, Red) required massive editing, whilst Article Summary (24.6%, Yellow/Green) was acceptable. This demonstrates AI's limitation in context-specific application tasks.
+            </div>
+        </div>
+    </div>
+
+    <div class="section-title">7. Drivers Beyond Time: Equity and Inclusion (Q7)</div>
+    <div class="section-context">
+        <strong>What we asked:</strong> What factors influenced your decision to use AI—time pressure, English confidence, maintaining your voice, or something else? (Select up to 2)
+    </div>
+    <div class="section-intro">
+        <strong>Meaning Behind the Data:</strong> The popular assumption is that students use AI for efficiency ("I was running out of time"). While <strong>73.1% cited time pressure</strong>, the second-highest driver was <strong>English confidence (46.7%)</strong>. For international students (~60% of the cohort), AI acts as an <strong>equalizer</strong>, helping them express complex ideas without linguistic barriers. This reframes AI from "cheating shortcut" to "accessibility tool", crucial for equity in higher education.
     </div>
     <div class="grid-main">
         <div class="col-12 card">
@@ -324,18 +440,87 @@
                 <h3 class="card-title">Top Influencing Factors (Q7)</h3>
                 <div class="card-desc">Why do students turn to AI? (Beyond just "Time")</div>
             </div>
-            <div class="chart-wrapper" style="height: 250px;">
+            <div class="chart-wrapper" style="height: 350px;">
                 <canvas id="driversChart"></canvas>
             </div>
             <div class="insight-footer">
-                <strong>Equity Insight:</strong> "English Confidence" (46%) is the second highest driver. This highlights AI's role as an <strong>Equalizer</strong> for international/NESB students.
+                <strong>Equity Insight:</strong> "English Confidence" (46.7%, n=78) is the second highest driver. This highlights AI's role as an <strong>Equalizer</strong> for international/NESB students (approximately 60% of cohort).
             </div>
         </div>
     </div>
 
-    <div class="section-title">6. The "Support Wishlist": What They Want</div>
+    <div class="section-title">8. Engagement Patterns: Interaction Strategies (Q8)</div>
+    <div class="section-context">
+        <strong>What we asked:</strong> Which best describes your overall interaction pattern—provided all info at once, built responses step-by-step, or engaged multiple times with verification checks?
+    </div>
     <div class="section-intro">
-        <strong>Meaning Behind the Data:</strong> Institutional responses often focus on "Integrity Frameworks" (Rules). However, students are asking for "Technical Guidance" (Skills). The chart below shows that <strong>"Verification Guidance" and "Prompt Examples"</strong> are requested nearly 3x more often than integrity policies. Students are essentially saying: "We want to be ethical, but we need you to teach us the technical skills to do so."
+        <strong>Meaning Behind the Data:</strong> This question captures the broader workflow. <strong>58.1% engaged in iterative verification workflows</strong> (multiple AI interactions interspersed with source checks), validating the SAGE emphasis on checkpoint-based engagement. Only <strong>3.0% used "comprehensive single-input"</strong> approaches, showing that students naturally develop multi-turn strategies when assessment structures encourage verification.
+    </div>
+    <div class="grid-main">
+        <div class="col-12 card">
+            <div class="card-header">
+                <h3 class="card-title">Engagement Pattern Distribution (Q8)</h3>
+                <div class="card-desc">Interaction strategies employed during the assessment</div>
+            </div>
+            <div class="chart-wrapper" style="height: 350px;">
+                <canvas id="patternChart"></canvas>
+            </div>
+            <div class="insight-footer">
+                <strong>Key Finding:</strong> Iterative verification (58.1%, n=97) dominates, with incremental building (21.6%, n=36) as secondary strategy. Comprehensive single-input approaches represent only 3.0% (n=5), validating structured dialogue importance.
+            </div>
+        </div>
+    </div>
+
+    <div class="section-title">9. The Friction Points: Technical Challenges (Q9)</div>
+    <div class="section-context">
+        <strong>What we asked:</strong> What was most difficult about using AI effectively—creating useful prompts, verifying accuracy, maintaining your authentic style, or something else? (Select up to 3)
+    </div>
+    <div class="section-intro">
+        <strong>Meaning Behind the Data:</strong> This reveals where students struggle. Contrary to expectations, <strong>the #1 challenge was "Verifying AI Accuracy" (77.8%)</strong>, not prompt creation. The second challenge was <strong>"Maintaining Authentic Style" (64.7%)</strong>. This pattern suggests students need support for <strong>epistemic practices</strong> (how to verify) and <strong>identity concerns</strong> (preserving voice), not just technical operation. It's about confidence and competency, not just knowing how to click buttons.
+    </div>
+    <div class="grid-main">
+        <div class="col-12 card">
+            <div class="card-header">
+                <h3 class="card-title">Challenge Hierarchy: The Friction Points (Q9)</h3>
+                <div class="card-desc">What was hardest for students?</div>
+            </div>
+            <div class="chart-wrapper" style="height: 350px;">
+                <canvas id="challengeChart"></canvas>
+            </div>
+            <div class="insight-footer">
+                <strong>Insight:</strong> "Verifying Accuracy" (77.8%) and "Maintaining Authentic Style" (64.7%) are top challenges, representing epistemic and identity concerns rather than mere technical difficulties. "Understanding AI Limitations" (16.2%) suggests students recognize AI fallibility.
+            </div>
+        </div>
+    </div>
+
+    <div class="section-title">10. Retrospective Learning: Strategic Pivot (Q10)</div>
+    <div class="section-context">
+        <strong>What we asked:</strong> If you could redo the assessment, would you change your AI approach—engage more iteratively, verify more thoroughly, or keep the same strategy?
+    </div>
+    <div class="section-intro">
+        <strong>Meaning Behind the Data:</strong> This question tests metacognitive awareness (the ability to reflect on one's own learning). The result: <strong>95.2% said they would modify their approach</strong>, with <strong>46.7% wanting to "engage more iteratively"</strong>. This is extraordinary—it shows students are not blindly using AI, but actively learning and refining their strategies. The high modification rate demonstrates a <strong>growth mindset</strong>, where students view AI interaction as a learnable skill requiring improvement through practice.
+    </div>
+    <div class="grid-main">
+        <div class="col-12 card">
+            <div class="card-header">
+                <h3 class="card-title">Retrospective Pivot (Q10)</h3>
+                <div class="card-desc">"If you could do it again, what would you change?"</div>
+            </div>
+            <div class="chart-wrapper" style="height: 350px;">
+                <canvas id="pivotChart"></canvas>
+            </div>
+            <div class="insight-footer">
+                <strong>Learning:</strong> 95.2% would change strategy, with "Engage more iteratively" (46.7%, n=78) as top modification. This demonstrates sophisticated metacognitive awareness and growth mindset.
+            </div>
+        </div>
+    </div>
+
+    <div class="section-title">11. The Support Wishlist: Student Priorities (Q11)</div>
+    <div class="section-context">
+        <strong>What we asked:</strong> What kind of institutional support would most help you use AI correctly and ethically—verification guidance, prompt examples, practice opportunities, or integrity frameworks?
+    </div>
+    <div class="section-intro">
+        <strong>Meaning Behind the Data:</strong> Instead of assuming what students need, we asked them. The result: <strong>51.5% requested "Verification Guidance"</strong> (how to check AI outputs), and <strong>33.5% requested "Prompt Examples"</strong> (how to interact effectively). Together, that's <strong>85% requesting technical skills</strong>. Only <strong>19.2% requested "Integrity Frameworks"</strong> (rules). This shows students want <strong>competency development</strong>, not mere compliance. They're asking: "Teach me how to do this right," not "Tell me what's against the rules."
     </div>
     <div class="grid-main">
         <div class="col-12 card">
@@ -343,21 +528,24 @@
                 <h3 class="card-title">Prioritized Support Needs (Q11)</h3>
                 <div class="card-desc">Specific interventions requested by students</div>
             </div>
-            <div class="chart-wrapper">
+            <div class="chart-wrapper" style="height: 350px;">
                 <canvas id="supportChart"></canvas>
             </div>
             <div class="insight-footer">
-                <strong>Actionable Intelligence:</strong> Students want <strong>Technical Guidance</strong> (Verification & Prompts) more than they want "Integrity Frameworks".
+                <strong>Actionable Intelligence:</strong> Students want <strong>Technical Guidance</strong> (Verification 51.5% + Prompts 33.5% = 85%) more than "Integrity Frameworks" (19.2%). Focus should shift from policing to skill-building.
             </div>
         </div>
     </div>
 
-    <div class="section-title">7. Thematic Analysis of Concerns & Needs</div>
+    <div class="section-title">12. Thematic Analysis of Concerns and Needs (Q12)</div>
+    <div class="section-context">
+        <strong>What we asked:</strong> In your own words (2-3 bullet points), what could CQUniversity do more to help you use AI correctly and ethically?
+    </div>
     <div class="section-intro">
-        <strong>Meaning Behind the Data:</strong> Analyzing the open-ended reflections reveals a hierarchy of needs. <strong>45% of all concerns</strong> relate to "Policy Clarity"—students are anxious about vague rules and fear accidental plagiarism. When it comes to training (right chart), they don't want generic advice; they want specific <strong>"Prompt Engineering" (35%)</strong> and tool overviews. They are asking for a curriculum that is practical and hands-on.
+        <strong>Meaning Behind the Data:</strong> The open-ended responses (n=163) were computationally analysed using semantic clustering. The result: <strong>45% expressed "Policy Clarity" concerns</strong> (e.g., "crystal clear guidelines," "what's allowed vs. prohibited"), far exceeding practical training requests (35%). This reveals widespread anxiety about <strong>accidental misconduct</strong> through AI misuse. Students aren't asking "How do I cheat?"—they're asking "How do I avoid accidentally cheating?" This is a legitimation crisis, not a compliance crisis.
     </div>
     <div class="grid-main">
-        <div class="col-4 card">
+        <div class="col-6 card">
             <div class="card-header">
                 <h3 class="card-title">Primary Concern Distribution</h3>
                 <div class="card-desc">What topics dominated reflections?</div>
@@ -366,11 +554,10 @@
                 <canvas id="thematicChart"></canvas>
             </div>
             <div class="insight-footer">
-                <strong>Priority:</strong> 45% of concerns relate to <strong>Policy Clarity</strong> (e.g., "Crystal Clear Guidelines").
+                <strong>Priority:</strong> 45% of concerns relate to Policy Clarity (e.g., "Crystal Clear Guidelines"). Students seek legitimation of practices already developed through experiential learning.
             </div>
         </div>
-        
-        <div class="col-8 card">
+        <div class="col-6 card">
             <div class="card-header">
                 <h3 class="card-title">Desired Training Curriculum</h3>
                 <div class="card-desc">Specific topics requested for workshops</div>
@@ -379,12 +566,15 @@
                 <canvas id="trainingChart"></canvas>
             </div>
             <div class="insight-footer">
-                <strong>Skill Gap:</strong> Students specifically requested "Prompt Engineering" (35%) and "AI Tools Overview" (25%) over generic ethics training.
+                <strong>Skill Gap:</strong> Students specifically requested "Prompt Engineering" (35%) and "AI Tools Overview" (25%) over generic ethics training (20%). They want practical skill development, not abstract principles.
             </div>
         </div>
     </div>
 
-    <div class="section-title">8. Actionable Roadmap (Recommendations)</div>
+    <div class="section-title">13. Actionable Roadmap: Institutional Recommendations</div>
+    <div class="section-context">
+        <strong>What this section provides:</strong> Based on the empirical evidence from 167 students, this roadmap outlines specific, evidence-based actions institutions can take.
+    </div>
     <div class="section-intro">
         <strong>Meaning Behind the Data:</strong> Based on the "Support Wishlist" and behavioral gaps, this roadmap outlines a phased institutional response. It moves from the immediate need for <strong>clarity</strong> (stopping the anxiety), to the mid-term need for <strong>competency</strong> (building skills), to the long-term need for <strong>integration</strong> (embedding AI into the fabric of the degree).
     </div>
@@ -392,156 +582,296 @@
         <div class="col-12">
             <div class="action-grid">
                 <div class="action-card" style="border-left: 5px solid #2c3e50;">
-                    <div class="action-step">Immediate Term</div>
-                    <div class="action-title">Clarify the "Rules of Engagement"</div>
+                    <div class="action-step">Immediate Term (0-3 months)</div>
+                    <div class="action-title">Policy Clarification & Legitimation</div>
                     <ul class="action-list">
-                        <li>Define "Acceptable Use" with concrete examples.</li>
-                        <li>Publish a "Crystal Clear" unified policy.</li>
-                        <li>Differentiate between "Idea Generation" vs "Drafting".</li>
+                        <li><strong>Publish unified AI policy:</strong> Define acceptable use with concrete examples differentiating "idea generation" vs "drafting" vs "editing assistance"</li>
+                        <li><strong>Address three ambiguity layers:</strong> Definitional (what counts as AI assistance?), procedural (disclosure requirements), evaluative (how will it be assessed?)</li>
+                        <li><strong>Establish transparency protocols:</strong> Create AI declaration templates for assessments specifying usage levels</li>
+                        <li><strong>Communicate institutional stance:</strong> Move from "detection and punishment" to "partnership and development" messaging</li>
                     </ul>
                 </div>
                 <div class="action-card" style="border-left: 5px solid #17a2b8;">
-                    <div class="action-step">Mid Term</div>
-                    <div class="action-title">Pedagogy of Exemplars</div>
+                    <div class="action-step">Mid Term (3-12 months)</div>
+                    <div class="action-title">Competency Development via Exemplars</div>
                     <ul class="action-list">
-                        <li>Show "Side-by-Side" examples (Good vs. Bad AI).</li>
-                        <li>Run "Prompt Engineering" workshops (35% demand).</li>
-                        <li>Create safe "Sandbox" environments for failure.</li>
+                        <li><strong>Develop verification frameworks:</strong> Create discipline-specific heuristics for fact-checking AI outputs (51.5% requested this)</li>
+                        <li><strong>Build prompt engineering library:</strong> Annotated case studies showing effective vs ineffective prompts across assessment types (33.5% demand)</li>
+                        <li><strong>Establish practice infrastructure:</strong> Consequence-free "sandbox" environments with formative feedback on AI orchestration quality (29.3% requested)</li>
+                        <li><strong>Create comparison exemplars:</strong> Side-by-side demonstrations of legitimate AI collaboration vs problematic over-reliance</li>
+                        <li><strong>Integrate into curriculum:</strong> Embed AI literacy explicitly within core units rather than treating as supplementary skill</li>
                     </ul>
                 </div>
                 <div class="action-card" style="border-left: 5px solid #28a745;">
-                    <div class="action-step">Long Term</div>
-                    <div class="action-title">Infrastructure & Integration</div>
+                    <div class="action-step">Long Term (12-24 months)</div>
+                    <div class="action-title">Assessment Transformation & Infrastructure</div>
                     <ul class="action-list">
-                        <li>Launch Dedicated AI Support Hub (40% demand).</li>
-                        <li>Move to Process-Based Assessment.</li>
-                        <li>Integrate AI literacy into core curriculum.</li>
+                        <li><strong>Transition to process-based assessment:</strong> Evaluate AI interaction quality through prompt sequences, verification protocols, and revision strategies rather than output alone</li>
+                        <li><strong>Legitimate hybrid authorship models:</strong> Develop contribution frameworks explicitly articulating human value-addition in AI-mediated work</li>
+                        <li><strong>Emphasize application over extraction:</strong> Design assessments requiring context-specific reasoning where AI struggles (recommendations, contextual analysis) rather than information retrieval where AI excels (summarisation)</li>
+                        <li><strong>Position students as co-creators:</strong> Involve student representatives in AI policy development and revision based on evolving practices</li>
+                        <li><strong>Establish AI Support Hub:</strong> Centralized resource providing workshops, drop-in consultations, and discipline-specific guidance</li>
                     </ul>
                 </div>
             </div>
         </div>
     </div>
 
+    <div class="section-title">14. Key Theoretical Implications</div>
+    <div class="section-intro">
+        <strong>From Data to Theory:</strong> The empirical patterns reveal three critical insights that challenge existing assumptions about student AI adoption and inform institutional responses:
+    </div>
+    <div class="grid-main">
+        <div class="col-4 card">
+            <div class="card-header">
+                <h3 class="card-title" style="color: var(--danger);">Competency-Confidence Inversion</h3>
+            </div>
+            <div style="padding: 15px 0;">
+                <p style="font-size: 0.9rem; line-height: 1.6; margin-bottom: 12px;">
+                    Students demonstrate higher competency than confidence: 73% verify systematically yet 77.8% identify verification as their primary challenge. This paradox suggests:
+                </p>
+                <ul class="action-list">
+                    <li>Students possess greater AI orchestration capabilities than they recognize</li>
+                    <li>Regulatory anxiety stems from lacking institutional validation, not from incompetence</li>
+                    <li>The primary educational challenge involves validating emergent competencies rather than teaching fundamentally new skills</li>
+                    <li>Institutional role shifts from instructor to certifier of organically developed capabilities</li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-4 card">
+            <div class="card-header">
+                <h3 class="card-title" style="color: var(--accent);">Temporal Reallocation, Not Reduction</h3>
+            </div>
+            <div style="padding: 15px 0;">
+                <p style="font-size: 0.9rem; line-height: 1.6; margin-bottom: 12px;">
+                    Despite 73.1% citing time pressure as the primary driver, behavioral data reveals extensive engagement through iterative workflows (58.1%) and deep revision (81%). This demonstrates:
+                </p>
+                <ul class="action-list">
+                    <li>AI adoption transforms rather than eliminates intellectual labour requirements</li>
+                    <li>Students invest substantial cognitive effort in verification and revision activities</li>
+                    <li>Time gains from AI-assisted information gathering are reinvested in critical evaluation and contextual application</li>
+                    <li>The "efficiency" narrative obscures the reality of shifted rather than reduced cognitive load</li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-4 card">
+            <div class="card-header">
+                <h3 class="card-title" style="color: var(--success);">Equity Imperative</h3>
+            </div>
+            <div style="padding: 15px 0;">
+                <p style="font-size: 0.9rem; line-height: 1.6; margin-bottom: 12px;">
+                    English language confidence emerges as the second-highest AI adoption driver (46.7%), reframing AI tools from efficiency mechanisms to accessibility technologies:
+                </p>
+                <ul class="action-list">
+                    <li>For linguistically diverse students (~60% of cohort), AI functions as an equalizer enabling intellectual contribution without linguistic barriers</li>
+                    <li>Blanket AI prohibitions may inadvertently exacerbate existing inequities by removing scaffolding that levels linguistic playing fields</li>
+                    <li>Institutional policies must carefully calibrate restrictions to preserve accessibility benefits whilst maintaining academic standards</li>
+                    <li>AI integration represents an equity imperative, not merely an efficiency consideration</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
     <footer>
-        <p>Data Source: CQU Mixed-Methods Study (2025) | Analysis of 167 Valid Responses</p>
-        <p>Copyright Dr Mahmoud Elkhodr and Professor Ergun Gide | Property of FAIR Lab (CQU)</p>
+        <p><strong>Data Source:</strong> CQU Mixed-Methods Study (Term 3, 2025) | n=167 Valid Responses from COIT11239</p>
+        <p><strong>Framework:</strong> SAGE (Structured AI-Guided Education) Verification Protocols</p>
+        <p><strong>Publication:</strong> Elkhodr, M., Azra, A., & Gide, E. (2025). How First-Year Students Actually Use ChatGPT in Permitted Assessments: Empirical Typologies, Verification Gaps, and the Policy-Practice Divide. <em>Preprint available on Research Square.</em></p>
+        <p>Copyright © 2025 Dr Mahmoud Elkhodr and Professor Ergun Gide | Central Queensland University</p>
+        <p style="margin-top: 10px; font-size: 0.75rem; color: #bbb;">Dashboard Version: v1.0 | Dataset available on request, Email: m.elkhodr@cqu.edu.au</p>
     </footer>
 </div>
 
 <script>
-    // Common Options
+    // Common Chart.js Options
     Chart.defaults.font.family = "'Inter', sans-serif";
     Chart.defaults.color = '#555';
     Chart.defaults.maintainAspectRatio = false;
 
-    // --- EXISTING CHARTS ---
-
-    // 1. Verification (Pie)
-    new Chart(document.getElementById('verifyChart'), {
-        type: 'doughnut',
-        data: {
-            labels: ['Verified Sections', 'Regularly Compared', 'Main Points Only', 'Minimal Checks'],
-            datasets: [{
-                data: [48, 25, 16, 11],
-                backgroundColor: ['#0056b3', '#28a745', '#ffc107', '#dc3545'],
-                borderWidth: 0
-            }]
-        },
-        options: { plugins: { legend: { position: 'bottom' } } }
-    });
-
-    // 2. Application Bottleneck (Bar)
-    new Chart(document.getElementById('rewriteChart'), {
+    // ===========================================
+    // Q1: Initial Approach (NEW)
+    // ===========================================
+    new Chart(document.getElementById('q1Chart'), {
         type: 'bar',
         data: {
-            labels: ['Recommendations', 'Summary', 'Analysis', 'Findings'],
+            labels: [
+                'Conversational (n=66)  ',
+                'Article first,\nprompt next (n=61)',
+                'Different per\nsection (n=25)',
+                'PDF+ questions\ntogether (n=12)',
+                'Explored then\napproach (n=11)'
+            ],
             datasets: [{
-                label: 'Rewriting Intensity',
-                data: [52, 41, 32, 21],
-                backgroundColor: ['#dc3545', '#ffc107', '#17a2b8', '#28a745'],
-                borderRadius: 4
+                label: 'Number of Students',
+                data: [66, 61, 25, 12, 11],
+                backgroundColor: ['#0056b3', '#28a745', '#17a2b8', '#ffc107', '#6f42c1'],
+                borderRadius: 6
             }]
         },
         options: { 
-            plugins: { legend: { display: false } }, 
-            scales: { x: { grid: { display: false } }, y: { beginAtZero: true } }
+            indexAxis: 'y',
+            plugins: { 
+                legend: { display: false },
+                tooltip: {
+                    callbacks: {
+                        label: function(context) {
+                            let percent = (context.raw / 167 * 100).toFixed(1);
+                            return `${context.raw} students (${percent}%)`;
+                        }
+                    }
+                }
+            },
+            scales: { 
+                x: { beginAtZero: true, grid: { display: true } }, 
+                y: { grid: { display: false } }
+            }
         }
     });
 
-    // 3. Radar Chart
-    new Chart(document.getElementById('radarChart'), {
-        type: 'radar',
-        data: {
-            labels: ['Accuracy', 'Voice/Style', 'Prompting', 'Context', 'Time'],
-            datasets: [{
-                label: '% Students',
-                data: [78, 65, 51, 35, 17],
-                backgroundColor: 'rgba(0, 86, 179, 0.2)',
-                borderColor: '#0056b3',
-                pointBackgroundColor: '#0056b3'
-            }]
-        },
-        options: { 
-            scales: { r: { ticks: { display: false, backdropColor: 'transparent' } } },
-            plugins: { legend: { display: false } }
-        }
-    });
-
-    // 4. Goldilocks Zone (Bar)
+    // ===========================================
+    // Q2: Prompt Frequency (CORRECTED - 4 categories)
+    // Raw counts: 25, 92, 32, 8
+    // ===========================================
     new Chart(document.getElementById('promptChart'), {
         type: 'bar',
         data: {
             labels: ['1-3 (Under)', '4-8 (Optimal)', '9-14 (Deep)', '15+ (Spiral)'],
             datasets: [{
-                label: '% Students',
-                data: [15.9, 58.6, 20.4, 5.1],
-                backgroundColor: ['#e0e0e0', '#28a745', '#17a2b8', '#dc3545'],
+                label: 'Students',
+                data: [25, 92, 32, 8],
+                backgroundColor: ['#95a5a6', '#28a745', '#17a2b8', '#dc3545'],
                 borderRadius: 6
             }]
         },
         options: { 
-            plugins: { legend: { display: false } }, 
-            scales: { x: { grid: { display: false } }, y: { beginAtZero: true, display: false } }
+            plugins: { 
+                legend: { display: false },
+                tooltip: {
+                    callbacks: {
+                        label: function(context) {
+                            let percent = (context.raw / 167 * 100).toFixed(1);
+                            return `${context.raw} students (${percent}%)`;
+                        }
+                    }
+                }
+            },
+            scales: { 
+                x: { grid: { display: false } },
+                y: { beginAtZero: true }
+            }
         }
     });
 
-    // 5. Pivot (Doughnut)
-    new Chart(document.getElementById('pivotChart'), {
+    // ===========================================
+    // Q3: Revision Strategy (CORRECTED - 4 categories)
+    // Raw counts: 63, 72, 14, 10
+    // ===========================================
+    new Chart(document.getElementById('engagementChart'), {
         type: 'doughnut',
         data: {
-            labels: ['Iterate More', 'More Strategic', 'Verify More', 'Same Approach'],
+            labels: ['Deep (n=135)', 'Surface (n=24)'],
             datasets: [{
-                data: [78, 47, 43, 8],
-                backgroundColor: ['#0056b3', '#17a2b8', '#ffc107', '#e9ecef'],
+                data: [81, 14],
+                backgroundColor: ['#28a745', '#dc3545'],
                 borderWidth: 0,
                 cutout: '65%'
             }]
         },
-        options: { plugins: { legend: { position: 'bottom' } } }
-    });
-
-    // 6. Engagement (Pie)
-    new Chart(document.getElementById('engagementChart'), {
-        type: 'pie',
-        data: {
-            labels: ['Deep Engagement (Rewrite/Iterate)', 'Surface (Minor Edits)'],
-            datasets: [{
-                data: [81, 14], // 135 vs 24
-                backgroundColor: ['#28a745', '#dc3545'],
-                borderWidth: 2,
-                borderColor: '#fff'
-            }]
-        },
         options: { 
-            plugins: { legend: { position: 'right' } }
+            plugins: { 
+                legend: { position: 'right' },
+                tooltip: {
+                    callbacks: {
+                        label: function(context) {
+                            return `${context.label}: ${context.raw.toFixed(1)}%`;
+                        }
+                    }
+                }
+            }
         }
     });
 
-    // 7. Drivers (Bar Horizontal)
+    // ===========================================
+    // Q4: Verification (CORRECTED - 5 categories)
+    // Raw: 80, 42, 26, 10, 9
+    // ===========================================
+    new Chart(document.getElementById('verifyChart'), {
+        type: 'doughnut',
+        data: {
+            labels: [
+                'Verified Several Sections (n=80)',
+                'Regularly Compared (n=42)',
+                'Main Points 2-3 Times (n=26)',
+                'Only When Unclear (n=10)',
+                'AI Seemed Accurate (n=9)'
+            ],
+            datasets: [{
+                data: [47.9, 25.1, 15.6, 6.0, 5.4],
+                backgroundColor: ['#0056b3', '#28a745', '#17a2b8', '#ffc107', '#dc3545'],
+                borderWidth: 0
+            }]
+        },
+        options: { 
+            plugins: { 
+                legend: { position: 'right' },
+                tooltip: {
+                    callbacks: {
+                        label: function(context) {
+                            return `${context.label}: ${context.raw}%`;
+                        }
+                    }
+                }
+            } 
+        }
+    });
+
+    // ===========================================
+    // Q5: Application Bottleneck (CORRECTED - 6 categories)
+    // Raw: 52, 41, 32, 16, 21, 7
+    // ===========================================
+    new Chart(document.getElementById('rewriteChart'), {
+        type: 'bar',
+        data: {
+            labels: [
+                'Specific\nRecommend.',
+                'Article\nSummary',
+                'T&T\nAnalysis',
+                'All Similar\nRewriting',
+                'Key\nFindings',
+                'Minimal\nRewriting'
+            ],
+            datasets: [{
+                label: 'Students Reporting',
+                data: [52, 41, 32, 16, 21, 7],
+                backgroundColor: ['#dc3545', '#ffc107', '#17a2b8', '#95a5a6', '#28a745', '#e9ecef'],
+                borderRadius: 4
+            }]
+        },
+        options: { 
+            plugins: { 
+                legend: { display: false },
+                tooltip: {
+                    callbacks: {
+                        label: function(context) {
+                            let percent = (context.raw / 167 * 100).toFixed(1);
+                            return `${context.raw} students (${percent}%)`;
+                        }
+                    }
+                }
+            }, 
+            scales: { 
+                x: { grid: { display: false } }, 
+                y: { beginAtZero: true }
+            }
+        }
+    });
+
+    // ===========================================
+    // Q7: Drivers (VERIFIED CORRECT)
+    // ===========================================
     new Chart(document.getElementById('driversChart'), {
         type: 'bar',
         data: {
-            labels: ['Time Pressure', 'English Confidence', 'Voice Preservation', 'Prior Experience', 'Policy Confusion'],
+            labels: ['Time Pressure', 'English Confidence', 'Voice Preservation', 'Prior Experience', 'Policy Uncertainty'],
             datasets: [{
                 label: 'Number of Students',
                 data: [122, 78, 45, 30, 14],
@@ -551,30 +881,183 @@
         },
         options: { 
             indexAxis: 'y',
-            plugins: { legend: { display: false } },
-            scales: { x: { grid: { display: true } }, y: { grid: { display: false } } }
+            plugins: { 
+                legend: { display: false },
+                tooltip: {
+                    callbacks: {
+                        label: function(context) {
+                            let percent = (context.raw / 167 * 100).toFixed(1);
+                            return `${context.raw} students (${percent}%)`;
+                        }
+                    }
+                }
+            },
+            scales: { 
+                x: { beginAtZero: true, grid: { display: true } }, 
+                y: { grid: { display: false } }
+            }
         }
     });
 
-    // 8. Support Wishlist (Bar Vertical)
+    // ===========================================
+    // Q8: Engagement Pattern (CORRECTED - 5 categories)
+    // Raw: 97, 36, 22, 8, 5
+    // ===========================================
+    new Chart(document.getElementById('patternChart'), {
+        type: 'bar',
+        data: {
+            labels: [
+                'Engaged several times\nwhilst verifying (n=97)',
+                'Built incrementally,\nediting as progressed (n=36)',
+                'Used AI selectively,\nmost content myself (n=22)',
+                'Relied AI throughout\n(varied by question) (n=8)',
+                'Comprehensive input\nat once, used output (n=5)'
+            ],
+            datasets: [{
+                label: 'Number of Students',
+                data: [97, 36, 22, 8, 5],
+                backgroundColor: ['#0056b3', '#28a745', '#17a2b8', '#6f42c1', '#95a5a6'],
+                borderRadius: 6
+            }]
+        },
+        options: { 
+            indexAxis: 'y',
+            plugins: { 
+                legend: { display: false },
+                tooltip: {
+                    callbacks: {
+                        label: function(context) {
+                            let percent = (context.raw / 167 * 100).toFixed(1);
+                            return `${context.raw} students (${percent}%)`;
+                        }
+                    }
+                }
+            },
+            scales: { 
+                x: { beginAtZero: true, grid: { display: true } }, 
+                y: { grid: { display: false } }
+            }
+        }
+    });
+
+    // ===========================================
+    // Q9: Challenges (VERIFIED CORRECT)
+    // ===========================================
+    new Chart(document.getElementById('challengeChart'), {
+        type: 'radar',
+        data: {
+            labels: [
+                'Verifying Accuracy',
+                'Understanding AI Limits',
+                'Balancing Time',
+                'Producing Useful Prompts',
+                'Adapting to CQU Context',
+                'Maintaining Auth. Style'
+            ],
+            datasets: [{
+                label: '% Citing Challenge',
+                data: [77.8, 16.2, 16.8, 50.9, 35.3, 64.7],
+                backgroundColor: 'rgba(0, 86, 179, 0.2)',
+                borderColor: '#0056b3',
+                borderWidth: 2,
+                pointBackgroundColor: '#0056b3',
+                pointRadius: 4
+            }]
+        },
+        options: { 
+            plugins: { 
+                legend: { display: false },
+                tooltip: {
+                    callbacks: {
+                        label: function(context) {
+                            let counts = [130, 108, 85, 59, 28, 27];
+                            return `${context.raw}% (n=${counts[context.dataIndex]})`;
+                        }
+                    }
+                }
+            }
+        }
+    });
+
+    // ===========================================
+    // Q10: Pivot (CORRECTED - 6 categories)
+    // Raw: 78, 47, 43, 15, 13, 8
+    // ===========================================
+    new Chart(document.getElementById('pivotChart'), {
+        type: 'doughnut',
+        data: {
+            labels: [
+                'Engage More Iteratively (n=78)',
+                'Use More Strategically (n=47)',
+                'Verify More Thoroughly (n=43)',
+                'Provide More Info (n=15)',
+                'Rely on AI Less (n=13)',
+                'Same Approach (n=8)'
+            ],
+            datasets: [{
+                data: [46.7, 28.1, 25.7, 9.0, 7.8, 4.8],
+                backgroundColor: ['#0056b3', '#17a2b8', '#ffc107', '#28a745', '#6f42c1', '#e9ecef'],
+                borderWidth: 0,
+                cutout: '60%'
+            }]
+        },
+        options: { 
+            plugins: { 
+                legend: { position: 'right' },
+                tooltip: {
+                    callbacks: {
+                        label: function(context) {
+                            return `${context.label}: ${context.raw}%`;
+                        }
+                    }
+                }
+            } 
+        }
+    });
+
+    // ===========================================
+    // Q11: Support Wishlist (VERIFIED CORRECT)
+    // ===========================================
     new Chart(document.getElementById('supportChart'), {
         type: 'bar',
         data: {
-            labels: ['Verification Guidance', 'Prompt Examples', 'Practice & Feedback', 'Integrity Frameworks', 'Effective/Ineffective Ex.'],
+            labels: [
+                'Verification\nGuidance',
+                'Prompt\nExamples',
+                'Practice &\nFeedback',
+                'Integrity\nFrameworks',
+                'Effective/\nIneffective Ex.',
+                'Expert\nObservation'
+            ],
             datasets: [{
                 label: 'Requests',
-                data: [86, 56, 49, 32, 22],
+                data: [86, 56, 49, 32, 22, 10],
                 backgroundColor: '#0056b3',
                 borderRadius: 4
             }]
         },
         options: { 
-            plugins: { legend: { display: false } },
-            scales: { x: { grid: { display: false } }, y: { beginAtZero: true } }
+            plugins: { 
+                legend: { display: false },
+                tooltip: {
+                    callbacks: {
+                        label: function(context) {
+                            let percent = (context.raw / 167 * 100).toFixed(1);
+                            return `${context.raw} students (${percent}%)`;
+                        }
+                    }
+                }
+            },
+            scales: { 
+                x: { grid: { display: false } }, 
+                y: { beginAtZero: true }
+            }
         }
     });
 
-    // 9. Thematic Distribution (Donut)
+    // ===========================================
+    // Thematic Charts (PRESERVED)
+    // ===========================================
     new Chart(document.getElementById('thematicChart'), {
         type: 'doughnut',
         data: {
@@ -588,11 +1071,10 @@
         options: { plugins: { legend: { position: 'bottom' } } }
     });
 
-    // 10. Training Curriculum (Bar)
     new Chart(document.getElementById('trainingChart'), {
         type: 'bar',
         data: {
-            labels: ['Prompt Engineering', 'AI Tools Overview', 'Ethics & Bias', 'Citation', 'Hands-on Labs'],
+            labels: ['Prompt Engineering', 'AI Tools Overview', 'Ethics & Bias', 'Citation Methods', 'Hands-on Labs'],
             datasets: [{
                 label: '% Requesting',
                 data: [35, 25, 20, 15, 15],
@@ -602,7 +1084,7 @@
         },
         options: { 
             plugins: { legend: { display: false } },
-            scales: { y: { beginAtZero: true } }
+            scales: { y: { beginAtZero: true, max: 40 } }
         }
     });
 
