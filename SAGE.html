@@ -1655,6 +1655,46 @@
         font-size: 0.8em;
     }
 }
+
+
+/* ============================================
+       PDF PRINT FIXES
+       ============================================ */
+    @media print {
+        /* 1. Force the 3-column grid layout (Left - Arrow - Right) */
+        .comparison-container {
+            display: grid !important;
+            grid-template-columns: 1fr auto 1fr !important;
+            gap: 20px !important;
+            align-items: center !important;
+        }
+
+        /* 2. Reset the arrow rotation (undoing the mobile 90deg turn) */
+        .comparison-arrow {
+            transform: rotate(0deg) !important;
+            flex-direction: column !important; /* Stack text under arrow */
+        }
+
+        /* 3. Ensure the arrow SVG points right, not down */
+        .comparison-arrow svg {
+            transform: rotate(0deg) !important; 
+        }
+
+        /* 4. Prevent the box from splitting across pages */
+        .theory-practice-visual {
+            page-break-inside: avoid !important;
+            break-inside: avoid !important;
+            background-color: #f8f9fa !important; /* Maintain background color */
+            -webkit-print-color-adjust: exact;   /* Force background print */
+            print-color-adjust: exact;
+        }
+
+        /* 5. Keep the validation badge attached to the bottom */
+        .validation-badge {
+            page-break-before: avoid !important;
+            break-before: avoid !important;
+        }
+    }
   </style>
 </head>
 <body>
@@ -1668,7 +1708,10 @@
     </div>
     
     <div class="cover-subtitle">
-      A Research-Informed, Ready-to-Adopt Method for Unit Coordinators and Course Designers
+      A Research-Informed, Ready-to-Adopt Method for Unit Coordinators and Course Designers<br>
+      <span style="font-size: 14px; margin-top: 0.5rem; display: inline-block; opacity: 0.95;">
+        Supporting Academic Integrity, Assessment Assurance, and AI Literacy Development
+      </span>
     </div>
     
     <svg width="120" height="120" viewBox="0 0 120 120" style="margin: 2rem 0;">
@@ -1680,17 +1723,25 @@
     </svg>
     
     <div class="cover-meta">
+     
       <div class="cover-meta-item">
-        <strong>Proposers:</strong> Dr Mahmoud Elkhodr; Prof Ergun Gide
+        <strong>Authors:</strong> Dr Mahmoud Elkhodr, Senior Lecturer, School of Engineering and Technology<br>
+        <span style="margin-left: 4.5rem;">Professor Ergun Gide, Professor of Information Systems, School of Engineering and Technology</span>
       </div>
       <div class="cover-meta-item">
         <strong>Institution:</strong> Central Queensland University
       </div>
       <div class="cover-meta-item">
-        <strong>Version:</strong> 1.0 | November 2025
+        <strong>Version:</strong> 1.0
       </div>
-      <div class="cover-meta-item" style="margin-top: 1rem; font-size: 13px; opacity: 0.8;">
-        <strong>Intended audience:</strong> Unit coordinators, course designers, learning designers,<br>
+      <div class="cover-meta-item">
+        <strong>Date:</strong> January 2026
+      </div>
+      <div class="cover-meta-item">
+        <strong>Correspondence:</strong> m.elkhodr@cqu.edu.au
+      </div>
+      <div class="cover-meta-item" style="margin-top: 1rem; font-size: 13px; opacity: 0.8; border-top: 1px solid rgba(255,255,255,0.2); padding-top: 0.75rem;">
+        <strong>Intended Audience:</strong> Unit coordinators, course designers, learning designers,<br>
         academic integrity leads, accessibility advisors
       </div>
     </div>
@@ -1763,7 +1814,7 @@
     <h2>The Evidence Base: Why Structured GenAI Integration Matters</h2>
     
     <p class="authority-statement">
-        Over three years of systematic research involving 30+ peer-reviewed publications, four large-scale empirical validation studies, and direct observation of student learning across multiple Australian universities, a consistent pattern emerges: students are engaging with GenAI tools without the foundational competencies required for effective, ethical, and academically rigorous use. This evidence base, developed through collaboration with research students and validated across metropolitan, regional, and online contexts with over 1000 students, identifies three critical gaps that impede successful GenAI integration in higher education.
+        Over three years of systematic research involving 30+ peer-reviewed publications, six large-scale empirical validation studies, and direct observation of student learning across multiple Australian universities, a consistent pattern emerges: students are engaging with GenAI tools without the foundational competencies required for effective, ethical, and academically rigorous use. This evidence base, developed through formative research with over 1,000 students across 30+ publications and validated through six focused empirical studies involving 500+ participants, identifies three critical gaps that impede successful GenAI integration in higher education.
     </p>
     
     <!-- THREE CRITICAL GAPS FRAMEWORK -->
@@ -1813,18 +1864,14 @@
                 </div>
             </div>
         </div>
-        
-        <p style="text-align: center; margin-top: 30px; font-size: 1.1em; color: #495057; font-style: italic;">
-            Based on research with 1000+ students across multiple Australian universities
-        </p>
-    </div>
+            </div>
     
     <!-- RESEARCH FOUNDATION VISUAL -->
     <div class="research-foundation">
         <h3>Our Research Foundation</h3>
         <div class="foundation-visual">
             <!-- Concentric Circles SVG -->
-            <svg width="600" height="400" viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+            <svg width="500" height="300" viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
                 <defs>
                     <linearGradient id="greenGrad" x1="0%" y1="0%" x2="100%" y2="100%">
                         <stop offset="0%" style="stop-color:#1a5f3a;stop-opacity:0.3" />
@@ -1845,11 +1892,11 @@
                 <text x="300" y="50" font-size="18" font-weight="600" fill="#0d3d26" text-anchor="middle">30+ Peer-Reviewed Publications</text>
                 <text x="300" y="70" font-size="14" fill="#495057" text-anchor="middle">(2021-2025)</text>
                 
-                <text x="300" y="130" font-size="18" font-weight="600" fill="#0d3d26" text-anchor="middle">4 Empirical Validation Studies</text>
+                <text x="300" y="130" font-size="18" font-weight="600" fill="#0d3d26" text-anchor="middle">6 Empirical Validation Studies</text>
                 
-                <text x="300" y="195" font-size="20" font-weight="700" fill="#1a5f3a" text-anchor="middle">1000+ Students</text>
-                <text x="300" y="215" font-size="14" fill="#0d3d26" text-anchor="middle">Across Australian</text>
-                <text x="300" y="232" font-size="14" fill="#0d3d26" text-anchor="middle">Universities</text>
+                <text x="300" y="195" font-size="18" font-weight="700" fill="#1a5f3a" text-anchor="middle">500+ Direct Validation</text>
+                <text x="300" y="215" font-size="12" fill="#0d3d26" text-anchor="middle">1,000+ Formative Research</text>
+                <text x="300" y="232" font-size="12" fill="#0d3d26" text-anchor="middle">Across Australian Universities</text>
                 
                 <!-- Research theme nodes -->
                 <g transform="translate(120, 180)">
@@ -1879,7 +1926,7 @@
     <div class="sage-pillars-section">
         <h3>SAGE: Evidence-Based Framework for Competency Development</h3>
         <p class="pillars-intro">
-            The Structured AI-Guided Education (SAGE) framework was developed to systematically address these three research-validated gaps through structured pedagogical intervention. Grounded in educational psychology and validated through multi-institutional empirical studies involving over 1000 students, SAGE provides a scaffolded approach to developing AI literacy and numeracy across all student cohorts.
+            The Structured AI-Guided Education (SAGE) framework was developed to systematically address these three research-validated gaps through structured pedagogical intervention. Grounded in educational psychology and validated through multi-institutional empirical studies involving 500+ students across six focused studies (with formative research foundation of 1,000+ students), SAGE provides a scaffolded approach to developing AI literacy and numeracy across all student cohorts.
         </p>
         
         <div class="pillars-matrix-container">
@@ -1952,7 +1999,7 @@
         </div>
         
         <p class="impact-validation">
-            Validated with 1000+ students across metropolitan, regional, and online delivery modes
+            Direct validation: 500+ students across six studies; formative research foundation: 1,000+ students across 30+ publications
         </p>
     </div>
     
@@ -2008,7 +2055,7 @@
     <h3>SAGE Assessment Redesign: From Theory to Practice</h3>
     
     <div class="assessment-intro">
-        <p>The higher education sector is actively discussing assessment redesign in response to GenAI capabilities. Leading voices advocate for programmatic assessment approaches, authentic tasks that "empty the value of cheating," and increased reliance on human expert judgment. These are valuable conceptual frameworks. SAGE moves beyond conceptual discussion to operationalized pedagogy—assessment strategies that have been implemented, refined, and validated across over 1000 students in real classroom contexts.</p>
+        <p>The higher education sector is actively discussing assessment redesign in response to GenAI capabilities. Leading voices advocate for programmatic assessment approaches, authentic tasks that "empty the value of cheating," and increased reliance on human expert judgment. These are valuable conceptual frameworks. SAGE moves beyond conceptual discussion to operationalized pedagogy—assessment strategies that have been implemented, refined, and validated across 500+ students in six focused empirical studies (building on formative research with 1,000+ students).</p>
     </div>
     
     <!-- VISUAL 1: THEORY TO PRACTICE COMPARISON -->
@@ -2067,17 +2114,17 @@
                 <p style="margin-top: 20px; color: #1a5f3a; font-size: 0.95em; font-weight: 600;">Operationalized pedagogy</p>
             </div>
         </div>
-        <div class="validation-badge">Validated with 1000+ students across multiple institutional contexts</div>
+        <div class="validation-badge">Direct validation: 500+ students across six studies; formative foundation: 1,000+ students</div>
     </div>
     
     <!-- Operationalizing Section -->
-    <div class="section-divider">
-        <h4>Operationalizing Assessment Redesign</h4>
+   <div class="section-divider">
+                  <h4>Operationalizing Assessment Redesign</h4>
         <p>Traditional assessment approaches position GenAI as either prohibited tool or unregulated resource, creating a binary that fails to develop student competency. SAGE assessment redesign fundamentally restructures the relationship between students, AI tools, and learning outcomes through four pedagogical strategies validated across multiple institutional contexts.</p>
     </div>
     
     <!-- VISUAL 2: SAGE ASSESSMENT CYCLE -->
-    <div class="assessment-cycle-section">
+    <div class="assessment-cycle-section" style="page-break-before: always;">
         <h4>The SAGE Assessment Cycle</h4>
         <div class="cycle-visual-container">
             <svg width="600" height="600" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
@@ -2110,7 +2157,10 @@
                 <text x="450" y="312" font-size="12" fill="#495057" text-anchor="middle">AI produces</text>
                 <text x="450" y="327" font-size="12" fill="#495057" text-anchor="middle">output</text>
                 <!-- Icon: AI brain -->
-                <path d="M 435,255 Q 430,250 430,260 Q 428,270 432,275 Q 430,285 435,290 Q 440,295 450,293 Q 460,295 465,290 Q 470,285 468,275 Q 472,270 470,260 Q 470,250 465,255 Q 460,245 450,245 Q 440,245 435,255 Z" fill="white" stroke="#1a5f3a" stroke-width="2"/>
+                <ellipse cx="450" cy="265" rx="13" ry="15" fill="white" stroke="#1a5f3a" stroke-width="2"/>
+                <path d="M 443,262 Q 450,257 457,262" stroke="#1a5f3a" stroke-width="1.5" fill="none"/>
+                <circle cx="445" cy="268" r="2" fill="#1a5f3a"/>
+                <circle cx="455" cy="268" r="2" fill="#1a5f3a"/>
                 
                 <!-- Arrow 2 to 3 -->
                 <path d="M 420,355 Q 380,420 300,450" fill="none" stroke="#1a5f3a" stroke-width="3" marker-end="url(#cycleArrow)"/>
@@ -2162,7 +2212,7 @@
     <!-- Strategy 1 -->
     <div class="strategy-section">
         <h4>Strategy 1: Structured Prompt Scaffolding</h4>
-        <p>Rather than allowing students unguided access to GenAI tools, SAGE assessments provide structured prompt frameworks that scaffold progression from novice to expert orchestration. Students receive explicit templates for initial prompts, refinement questions, and verification queries. Early assessments use highly structured prompts with clear success criteria; later assessments reduce scaffolding as competency develops. This approach makes AI orchestration itself an assessable skill rather than hidden process.</p>
+        <p>Rather than allowing students unguided access to GenAI tools, SAGE assessments provide structured prompt frameworks that scaffold progression from novice to expert orchestration. Students receive explicit templates for initial prompts, refinement questions, and verification queries. Early assessments use highly structured prompts with clear success criteria; later assessments reduce scaffolding as competency develops. This approach makes AI orchestration itself an assessable skill rather than hidden process. By cross checking established sources and standards, students realiase the shortcomings and limitations of AI and learn to verify facts before blindly trusting GenAI tools. This hands on learning approach resonate better with students than policies</p>
         
         <div class="strategy-example">
             <strong>Example:</strong> In cybersecurity management assessments, students receive prompt frameworks that require them to specify context parameters, define constraints, and articulate verification requirements before generating AI outputs. This transforms prompt engineering from implicit skill to explicit learning objective.
@@ -2186,7 +2236,7 @@
         <h4>Strategy 3: Mandatory Cross-Verification Protocols</h4>
         <p>SAGE assessments embed systematic verification requirements that make cross-checking AI outputs against authoritative sources a core assessment component. Students must demonstrate three-source verification for factual claims, policy framework alignment for recommendations, and peer-reviewed research support for technical assertions. The verification process itself generates assessable artifacts—annotated AI outputs showing source checking, comparison matrices documenting discrepancies, and reflection statements explaining verification methodology.</p>
         
-        <p>This approach addresses the critical evaluation gap by making verification visible, assessable, and integral to task completion rather than optional quality enhancement. Students cannot achieve high grades by submitting unverified AI outputs, regardless of surface plausibility.</p>
+        <p>This approach addresses the critical evaluation gap by making verification visible, assessable, and integral to task completion rather than optional quality enhancement. Students cannot achieve high grades by submitting unverified AI outputs, regardless of surface plausibility. More importantly it teaches them a job ready-important skill: verify AI output before adoption. A skill indeed becoming extremely important in the industry</p>
         
         <div class="strategy-example">
             <strong>Example:</strong> When students use GenAI to analyze threat landscapes, assessments require citation of specific threat intelligence reports, alignment with frameworks like MITRE ATT&CK, and cross-reference with current vulnerability databases. The assessment rubric allocates significant weight to verification quality, not just final output quality.
@@ -2292,8 +2342,7 @@
         <h4>Structural Redesign: Continuous Competency Development</h4>
         <p>SAGE assessment architecture replaces single high-stakes tasks with sequenced assignments building progressive competency. Early assessments focus on basic skills (structured prompting, simple verification) with extensive scaffolding and formative feedback. Mid-semester assessments increase complexity while reducing scaffolds. Final assessments require independent orchestration with sophisticated verification across complex scenarios.</p>
         
-        <p>This programmatic approach allows students multiple opportunities to develop and demonstrate competency while providing continuous evidence of learning progression. Assessment becomes learning mechanism rather than summative judgment.</p>
-    </div>
+         </div>
     
     <!-- VISUAL 6: ICEBERG MODEL -->
     <div class="iceberg-section">
@@ -2336,8 +2385,9 @@
         <div class="iceberg-conclusion">
             SAGE assesses the 80% that traditional approaches miss
         </div>
-    </div>
-    
+           </div>
+     <p>This programmatic approach allows students multiple opportunities to develop and demonstrate competency while providing continuous evidence of learning progression. Assessment becomes learning mechanism rather than summative judgment.</p>
+   
     <!-- Why This Works Section -->
     <div class="section-divider">
         <h4>Why This Works: Evidence from Implementation</h4>
@@ -2357,7 +2407,7 @@
     <!-- Distinguishing Theory from Practice -->
     <div class="section-divider" style="background: #e8f5d8; padding: 40px; border-radius: 12px; margin-top: 60px;">
         <h4>Distinguishing Theory from Practice</h4>
-        <p>The assessment strategies described above are not aspirational proposals—they represent current practice validated through empirical research with over 1000 students. While the sector discusses what assessment redesign might look like, SAGE provides documented evidence of what works when theory meets classroom implementation. The framework offers practical guidance for educators seeking to move beyond conceptual discussion to actionable assessment transformation that empowers students, motivates engagement, and assures learning outcomes.</p>
+        <p>The assessment strategies described above are not aspirational proposals—they represent current practice validated through six focused empirical studies involving 500+ students (building on a formative research foundation with 1,000+ students). While the sector discusses what assessment redesign might look like, SAGE provides documented evidence of what works when theory meets classroom implementation. The framework offers practical guidance for educators seeking to move beyond conceptual discussion to actionable assessment transformation that empowers students, motivates engagement, and assures learning outcomes.</p>
     </div>
 </section>
 </div>
@@ -2397,7 +2447,7 @@
       Evidence Base
     </div>
     <p style="margin-bottom: 0;">
-      Every recommendation is grounded in empirical results from <strong>four studies across three disciplines</strong> (cybersecurity, data analytics, systems analysis) involving <strong>271 students</strong> at undergraduate and postgraduate levels across <strong>four Australian campuses</strong>.
+      Every recommendation is grounded in empirical results from <strong>six studies across three disciplines</strong> (cybersecurity, data analytics, systems analysis) involving <strong>500+ students</strong> at undergraduate and postgraduate levels across <strong>four Australian campuses</strong>.
     </p>
   </div>
   
@@ -2463,11 +2513,11 @@
   
   <div class="stat-grid">
     <div class="stat-card">
-      <div class="stat-number">271</div>
+      <div class="stat-number">500+</div>
       <div class="stat-label">Students</div>
     </div>
     <div class="stat-card">
-      <div class="stat-number">4</div>
+      <div class="stat-number">6</div>
       <div class="stat-label">Studies</div>
     </div>
     <div class="stat-card">
@@ -2530,7 +2580,7 @@
   <p>The remainder of this guide is structured to move you from understanding to implementation:</p>
   
   <ul style="margin-left: 2rem; line-height: 1.8;">
-    <li><strong>Section 2:</strong> The evidence base — detailed findings from four studies</li>
+    <li><strong>Section 2:</strong> The evidence base — detailed findings from six studies</li>
     <li><strong>Section 3:</strong> The SAGE framework explained — two-stage model, competency dimensions, orchestration levels</li>
     <li><strong>Section 4:</strong> Implementation blueprint — six steps you can follow next term</li>
     <li><strong>Section 5:</strong> Assessment patterns — three ready-to-adapt designs</li>
@@ -2558,7 +2608,7 @@
     SAGE is grounded in empirical research across multiple contexts, student cohorts, and disciplines. This section provides key findings at a glance; comprehensive methodology and detailed results are available in Section 5.2 for institutional validation purposes.
   </p>
   
-  <h2>Research Portfolio: Four Validated Studies</h2>
+  <h2>Research Portfolio: Six Validated Studies</h2>
   
   <table class="evidence-table">
     <thead>
@@ -2580,7 +2630,7 @@
         <td><strong>Study 2</strong><br>Data Analytics</td>
         <td>74 students<br>(73% UG, 27% PG)<br>Business + ICT</td>
         <td>Hands-on tutorial +<br>27-item survey</td>
-        <td><strong>Medium effect size (η²=0.173)</strong> for perceived benefits; satisfaction 3.88/5; concerns about complexity handling</td>
+        <td><strong>Large effect size (η²=0.173)</strong> for perceived benefits; satisfaction 3.88/5; concerns about complexity handling</td>
       </tr>
       <tr>
         <td><strong>Study 3</strong><br>Cybersecurity<br>Management</td>
@@ -2594,6 +2644,18 @@
         <td>Three embedded<br>experiments<br>(requirements, DFD,<br>design evaluation)</td>
         <td><strong>46% reached Balanced</strong><br><strong>Integrator; 38% Selective</strong><br><strong>Adapter;</strong> identified accessibility<br>U-curve and systematic AI failures</td>
       </tr>
+      <tr>
+        <td><strong>Study 5</strong><br>AI as Critic</td>
+        <td>~60-70 students<br>Systems Analysis<br>& Design</td>
+        <td>AI as critical evaluator<br>(reversing AI-as-<br>generator pattern)</td>
+        <td><strong>Strengthened student ownership;</strong><br>validated human authority principle;<br>disciplined accept/reject decisions</td>
+      </tr>
+      <tr>
+        <td><strong>Study 6</strong><br>From Anxiety<br>to Agency</td>
+        <td>~160+ students<br>ICT Programs</td>
+        <td>Mixed-methods<br>examining student<br>ethical frameworks</td>
+        <td><strong>Significant reduction in AI anxiety;</strong><br>increased sense of agency; student-<br>driven ethical integration frameworks</td>
+      </tr>
     </tbody>
   </table>
   
@@ -2601,11 +2663,11 @@
   
   <div class="stat-grid">
     <div class="stat-card">
-      <div class="stat-number">271</div>
+      <div class="stat-number">500+</div>
       <div class="stat-label">Total Students</div>
     </div>
     <div class="stat-card">
-      <div class="stat-number">4</div>
+      <div class="stat-number">6</div>
       <div class="stat-label">Published Studies</div>
     </div>
     <div class="stat-card">
@@ -2670,16 +2732,13 @@
   <div class="emphasis-box">
     <h3>Research-to-Practice Translation</h3>
     <p style="margin-bottom: 0;">
-      Every SAGE recommendation in this guide addresses a specific pattern observed across these four studies. The assessment examples in Section 4 incorporate scaffolds that mitigate the challenges identified (boundary prompts, CRUD matrices, accessibility checkpoints, mandatory rejection quotas). The framework is not theoretical—it is the distillation of what worked across 271 students in authentic educational settings.
+      Every SAGE recommendation addresses a specific pattern observed across these six studies. The assessment examples in Section 4 incorporate scaffolds that mitigate the challenges identified (boundary prompts, accessibility checkpoints, mandatory rejection quotas). The framework is not theoretical but a distillation of what worked across 1000+ students in authentic educational settings.
+    <strong>Detailed methodology and findings are available in Section 5.2</strong> for educators seeking institutional approval or conducting their own research validation.
+  
     </p>
   </div>
   
-  <div style="background: var(--grey-100); padding: 1.5rem; border-radius: 8px; border-left: 4px solid var(--cqu-deep-green); margin-top: 2rem;">
-    <p style="margin: 0; font-size: 14px; font-weight: 600;">
-      📊 <strong>Detailed methodology, statistical analyses, and complete findings are available in Section 5.2</strong> for educators seeking institutional approval or conducting their own research validation.
-    </p>
-  </div>
-  
+   
 </div>
 
 <!-- SECTION 3: SAGE FRAMEWORK EXPLAINED (REVISED) -->
@@ -2696,7 +2755,7 @@
   <h3>What is SAGE? A Simple Explanation</h3>
   
   <p style="font-size: 16px; line-height: 1.8; background: var(--grey-100); padding: 1.5rem; border-radius: 8px; border-left: 4px solid var(--cqu-deep-green);">
-    <strong>SAGE teaches students to "orchestrate" AI outputs rather than blindly accept them.</strong> Think of a conductor leading an orchestra: they don't play every instrument themselves, but they decide which instruments to feature, when to adjust the tempo, and when something sounds wrong. Similarly, students learn to use AI as one tool among many—accepting its strengths (speed, initial drafts), correcting its weaknesses (missing context, regulatory gaps, boundary errors), and knowing when to override it entirely based on professional judgement.
+    <strong>SAGE teaches students to "orchestrate" AI outputs rather than blindly accept them.</strong> Think of a conductor leading an orchestra: they don't play every instrument themselves, but they decide which instruments to feature, when to adjust the tempo, and when something sounds wrong. Similarly, students learn to use AI as one tool among many accepting its strengths (speed, initial drafts), correcting its weaknesses (missing context, regulatory gaps, boundary errors), and knowing when to override it entirely based on professional judgement.
   </p>
   
   <p style="font-size: 15px; line-height: 1.7; margin-top: 1rem;">
@@ -3074,113 +3133,8 @@
 
 
 
-  <div class="svg-container">
-    <svg viewBox="0 0 900 600" style="max-width: 100%; height: auto;">
-      <!-- Title -->
-      <text x="450" y="30" text-anchor="middle" font-size="18" font-weight="700" fill="#1a5f3a">SAGE Framework: Two-Stage Progression</text>
-      
-      <!-- Pedagogical Foundation Banner -->
-      <rect x="50" y="60" width="800" height="60" rx="8" fill="#1a5f3a"/>
-      <text x="450" y="85" text-anchor="middle" font-size="14" font-weight="700" fill="white">Pedagogical Foundation</text>
-      <text x="450" y="105" text-anchor="middle" font-size="12" fill="#a4d65e">Constructivist Learning • Bloom's Taxonomy • Situated Learning</text>
-      
-      <!-- Stage 1: Formative -->
-      <rect x="50" y="150" width="380" height="340" rx="8" fill="#e8f5d8" stroke="#a4d65e" stroke-width="3"/>
-      
-      <text x="240" y="180" text-anchor="middle" font-size="16" font-weight="700" fill="#0d3d26">Stage 1: Tutorial-Based Scaffolded Learning</text>
-      <text x="240" y="200" text-anchor="middle" font-size="12" font-weight="600" fill="#0d3d26" opacity="0.8">FORMATIVE</text>
-      
-      <!-- Stage 1 Steps -->
-      <rect x="70" y="220" width="340" height="60" rx="6" fill="white" stroke="#a4d65e" stroke-width="2"/>
-      <text x="240" y="245" text-anchor="middle" font-size="13" font-weight="700" fill="#0d3d26">Step 1: AI Output Generation</text>
-      <text x="240" y="263" text-anchor="middle" font-size="11" fill="#495057">Students use GenAI tools to create initial policies</text>
-      
-      <path d="M 240 285 L 240 300" stroke="#a4d65e" stroke-width="2" marker-end="url(#arrow-green)"/>
-      
-      <rect x="70" y="300" width="340" height="60" rx="6" fill="white" stroke="#5a6c7d" stroke-width="2"/>
-      <text x="240" y="325" text-anchor="middle" font-size="13" font-weight="700" fill="#0d3d26">Step 2: Research-Based Evaluation</text>
-      <text x="240" y="343" text-anchor="middle" font-size="11" fill="#495057">Critique using academic literature and standards</text>
-      
-      <path d="M 240 365 L 240 380" stroke="#5a6c7d" stroke-width="2" marker-end="url(#arrow-grey)"/>
-      
-      <rect x="70" y="380" width="340" height="60" rx="6" fill="white" stroke="#e76f51" stroke-width="2"/>
-      <text x="240" y="405" text-anchor="middle" font-size="13" font-weight="700" fill="#0d3d26">Step 3: Guided Refinement</text>
-      <text x="240" y="423" text-anchor="middle" font-size="11" fill="#495057">Instructor-supported improvement with peer collaboration</text>
-      
-      <path d="M 240 445 L 240 460" stroke="#e76f51" stroke-width="2" marker-end="url(#arrow-coral)"/>
-      
-      <rect x="70" y="460" width="340" height="60" rx="6" fill="white" stroke="#6a4c93" stroke-width="2"/>
-      <text x="240" y="485" text-anchor="middle" font-size="13" font-weight="700" fill="#0d3d26">Step 4: Structured Reflection</text>
-      <text x="240" y="503" text-anchor="middle" font-size="11" fill="#495057">Metacognitive analysis (150-250 words)</text>
-      
-      <text x="240" y="545" text-anchor="middle" font-size="11" font-weight="600" fill="#0d3d26">Weeks 1-11</text>
-      
-      <!-- Stage 2: Summative -->
-      <rect x="470" y="150" width="380" height="340" rx="8" fill="#fef3f0" stroke="#e76f51" stroke-width="3"/>
-      
-      <text x="660" y="180" text-anchor="middle" font-size="16" font-weight="700" fill="#0d3d26">Stage 2: Assessment-Driven Independent Application</text>
-      <text x="660" y="200" text-anchor="middle" font-size="12" font-weight="600" fill="#0d3d26" opacity="0.8">SUMMATIVE</text>
-      
-      <!-- Stage 2 Steps -->
-      <rect x="490" y="220" width="340" height="60" rx="6" fill="white" stroke="#e76f51" stroke-width="2"/>
-      <text x="660" y="245" text-anchor="middle" font-size="13" font-weight="700" fill="#0d3d26">Step 1: Autonomous Policy Creation</text>
-      <text x="660" y="263" text-anchor="middle" font-size="11" fill="#495057">Independent GenAI-assisted problem solving</text>
-      
-      <path d="M 660 285 L 660 300" stroke="#e76f51" stroke-width="2" marker-end="url(#arrow-coral)"/>
-      
-      <rect x="490" y="300" width="340" height="60" rx="6" fill="white" stroke="#f4a261" stroke-width="2"/>
-      <text x="660" y="325" text-anchor="middle" font-size="13" font-weight="700" fill="#0d3d26">Step 2: Stakeholder Integration</text>
-      <text x="660" y="343" text-anchor="middle" font-size="11" fill="#495057">Real business interviews or case study analysis</text>
-      
-      <path d="M 660 365 L 660 380" stroke="#f4a261" stroke-width="2" marker-end="url(#arrow-amber)"/>
-      
-      <rect x="490" y="380" width="340" height="60" rx="6" fill="white" stroke="#2a9d8f" stroke-width="2"/>
-      <text x="660" y="405" text-anchor="middle" font-size="13" font-weight="700" fill="#0d3d26">Step 3: Professional-Standard Output</text>
-      <text x="660" y="423" text-anchor="middle" font-size="11" fill="#495057">Industry-ready policies with regulatory compliance</text>
-      
-      <path d="M 660 445 L 660 460" stroke="#2a9d8f" stroke-width="2" marker-end="url(#arrow-teal)"/>
-      
-      <rect x="490" y="460" width="340" height="60" rx="6" fill="white" stroke="#6a4c93" stroke-width="2"/>
-      <text x="660" y="485" text-anchor="middle" font-size="13" font-weight="700" fill="#0d3d26">Step 4: Evidence-Based Justification</text>
-      <text x="660" y="503" text-anchor="middle" font-size="11" fill="#495057">Comprehensive reflection (400-500 words)</text>
-      
-      <text x="660" y="545" text-anchor="middle" font-size="11" font-weight="600" fill="#0d3d26">Weeks 4, 8, 12</text>
-      
-      <!-- Progression Arrow -->
-      <path d="M 430 320 L 470 320" stroke="#1a5f3a" stroke-width="3" marker-end="url(#arrow-main)"/>
-      <text x="450" y="310" text-anchor="middle" font-size="12" font-weight="700" fill="#1a5f3a">Progression</text>
-      
-      <!-- Evaluation & Analysis Box -->
-      <rect x="50" y="520" width="800" height="70" rx="8" fill="#0d3d26"/>
-      <text x="450" y="545" text-anchor="middle" font-size="14" font-weight="700" fill="#a4d65e">Evaluation & Analysis</text>
-      <text x="450" y="565" text-anchor="middle" font-size="11" fill="white">• Student reflections and observations</text>
-      <text x="450" y="580" text-anchor="middle" font-size="11" fill="white">• Critical thinking assessment via Bloom's taxonomy</text>
-      
-      <!-- Arrow markers -->
-      <defs>
-        <marker id="arrow-green" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-          <polygon points="0 0, 10 3, 0 6" fill="#a4d65e" />
-        </marker>
-        <marker id="arrow-grey" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-          <polygon points="0 0, 10 3, 0 6" fill="#5a6c7d" />
-        </marker>
-        <marker id="arrow-coral" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-          <polygon points="0 0, 10 3, 0 6" fill="#e76f51" />
-        </marker>
-        <marker id="arrow-amber" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-          <polygon points="0 0, 10 3, 0 6" fill="#f4a261" />
-        </marker>
-        <marker id="arrow-teal" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-          <polygon points="0 0, 10 3, 0 6" fill="#2a9d8f" />
-        </marker>
-        <marker id="arrow-main" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-          <polygon points="0 0, 10 3, 0 6" fill="#1a5f3a" />
-        </marker>
-      </defs>
-    </svg>
-  </div>
-  
-<h3>What Students Actually Do in Each Step</h3>
+   
+<h3 style="page-break-before: always;">What Students Actually Do in Each Step</h3>
 
 <p style="margin-bottom: 1rem;">Here's what the framework looks like in practice:</p>
 
@@ -3303,7 +3257,7 @@
   
 <h2>Student Orchestration Levels</h2>
 
-<p>SAGE moves students through four measurable levels of AI orchestration competence. These levels were formalised from empirical analysis in our cybersecurity management study (Study 3), where patterns emerged from observing how 105 students interacted with AI-generated policy content across multiple assessments. The taxonomy distinguishes students based on three observable criteria:</p>
+<p>SAGE moves students through four measurable levels of AI orchestration competence. These levels were formalised from empirical analysis in our cybersecurity management study (Study 3), where patterns emerged from observing how students interacted with AI-generated policy content across multiple assessments. Our study (6) also showed how students interact with AI. The taxonomy distinguishes students based on three observable criteria:</p>
 
 <div style="background: var(--grey-100); padding: 1.25rem; border-radius: 8px; margin: 1.5rem 0; border-left: 4px solid var(--cqu-deep-green);">
   <h4 style="margin-top: 0; color: var(--cqu-deep-green);">Criteria for Classification</h4>
@@ -3371,7 +3325,7 @@
 <h3>Why This Matters Across Disciplines</h3>
 
 <p style="font-size: 15px; line-height: 1.8; background: var(--amber-light); padding: 1.5rem; border-radius: 8px; border-left: 4px solid var(--amber); margin: 1.5rem 0;">
-  Every discipline has critical considerations that must be carried through the entire workflow—yet often get "lost" during technical, analytical, or complex middle phases. In software design, it's <strong>accessibility and inclusive design</strong>. In nursing, it's <strong>cultural safety and patient dignity</strong>. In history, it's <strong>Indigenous perspectives and historiographical bias</strong>. In business, it's <strong>ethical implications and stakeholder equity</strong>. When students work on complex technical tasks, these essential considerations fade from attention unless explicitly scaffolded at every stage.
+  Every discipline has critical considerations that must be carried through the entire workflow; yet often get "lost" during technical, analytical, or complex middle phases. In software design, it's <strong>accessibility and inclusive design</strong>. In nursing, it's <strong>cultural safety and patient dignity</strong>. In history, it's <strong>Indigenous perspectives and historiographical bias</strong>. In business, it's <strong>ethical implications and stakeholder equity</strong>. When students work on complex technical tasks, these essential considerations fade from attention unless explicitly scaffolded at every stage.
 </p>
 
 <h3>The Accessibility U-Curve: A Representative Example</h3>
@@ -3444,7 +3398,7 @@
   <p>Three mechanisms drive this pattern across disciplines:</p>
   <ol style="margin-left: 1.5rem; margin-top: 0.5rem; font-size: 14px; line-height: 1.7;">
     <li><strong>Cognitive salience:</strong> Critical considerations feel relevant during initial planning (talk to stakeholders, identify needs) and final application (real users will interact with this), but seem "distant" during technical middle work (diagrams, models, analysis)</li>
-    <li><strong>Representational affordance:</strong> Some work formats lack obvious places to encode critical considerations—data flow diagrams don't have "accessibility boxes," literary analysis templates don't prompt for Indigenous perspectives, financial models don't include ethical impact cells</li>
+    <li><strong>Representational affordance:</strong> Some work formats lack obvious places to encode critical considerations e.g., data flow diagrams don't have "accessibility boxes," literary analysis templates don't prompt for Indigenous perspectives, financial models don't include ethical impact cells</li>
     <li><strong>Cognitive load:</strong> Complex technical work (diagramming, calculating, modelling, analysing) crowds out secondary concerns unless explicitly prompted</li>
   </ol>
 </div>
@@ -3516,17 +3470,17 @@
     Evidence from Implementation
   </div>
   <p style="margin-bottom: 0;">
-    When we added micro-notation for accessibility and two mandatory prompts to architectural tasks in Study 4's second iteration, accessibility articulation in the middle phase increased from 10% to 76%—effectively flattening the U-curve. <strong>The pattern is generalizable:</strong> Whatever critical consideration matters in your discipline, make it visible and assessable at every stage, especially during complex technical work where cognitive load is highest.
+    When we added micro-notation for accessibility and two mandatory prompts to architectural tasks in Study 4's second iteration, accessibility articulation in the middle phase increased from 10% to 76%. <strong>The pattern is generalisable:</strong> Whatever critical consideration matters in your discipline, make it visible and assessable at every stage, especially during complex technical work where cognitive load is highest.
   </p>
 </div>
   
   <h2>Connecting Framework to Your Discipline</h2>
   
-  <p style="font-size: 15px; line-height: 1.8; background: var(--cqu-light-green); padding: 1.5rem; border-radius: 8px; border-left: 4px solid var(--cqu-deep-green);">
+  <p style="font-size: 11px; line-height: 1.5; background: var(--cqu-light-green); padding: 1.5rem; border-radius: 8px; border-left: 4px solid var(--cqu-deep-green);">
     <strong>The pattern is the same across all disciplines:</strong> Students generate AI outputs → compare to domain standards (regulations, clinical guidelines, engineering codes, business frameworks) → identify gaps → refine with evidence → justify decisions. The <em>specifics</em> change (Privacy Act vs NDIS Standards vs AS 1170), but the <em>process</em> remains consistent. This makes SAGE adaptable to cybersecurity, nursing, engineering, business, education, and beyond.
   </p>
   
-  <p style="margin-top: 1.5rem;"><strong>Next section:</strong> The 6-step implementation blueprint shows exactly how to embed this framework into your unit starting next term.</p>
+  
   
 </div>
 
@@ -3598,8 +3552,7 @@
     </ul>
     
     <div style="background: var(--grey-100); padding: 1rem; border-radius: 6px; margin-top: 1rem;">
-      <p style="font-size: 13px; font-weight: 600; margin-bottom: 0.5rem;">SAGE Design Note:</p>
-      <p style="font-size: 13px; margin: 0; font-style: italic;">No standardised prompt provided here—students experiment freely. This reveals AI's "natural" output quality and sets baseline for comparison. In Stage 2 assessments, standardised prompts ensure fairness.</p>
+           <p style="font-size: 13px; margin: 0; font-style: italic;">No standardised prompt provided here—students experiment freely. This reveals AI's "natural" output quality and sets baseline for comparison. In Stage 2 assessments, standardised prompts ensure fairness.</p>
     </div>
   </div>
   
@@ -3612,7 +3565,7 @@
     
     <div style="background: var(--cqu-light-green); padding: 1rem; border-radius: 6px; margin: 1rem 0;">
       <p style="font-size: 13px; margin-bottom: 0.5rem;"><strong>1. Overview and Purpose</strong></p>
-      <p style="font-size: 13px; margin-bottom: 0;">Students must outline risks from email misuse; highlight phishing awareness training (as recommended in paper)</p>
+      <p style="font-size: 13px; margin-bottom: 0;">Students must outline risks from email misuse; highlight phishing awareness training (as recommended in the paper)</p>
     </div>
     
     <div style="background: var(--cqu-light-green); padding: 1rem; border-radius: 6px; margin: 1rem 0;">
@@ -3627,7 +3580,7 @@
     
     <div style="background: var(--cqu-light-green); padding: 1rem; border-radius: 6px; margin: 1rem 0;">
       <p style="font-size: 13px; margin-bottom: 0.5rem;"><strong>4. Training and Awareness</strong></p>
-      <p style="font-size: 13px; margin-bottom: 0;">Design continuous awareness program; include phishing simulations (per paper recommendations)</p>
+      <p style="font-size: 13px; margin-bottom: 0;">Design continuous awareness program; include phishing simulations (per the paper recommendations)</p>
     </div>
     
     <div style="background: var(--cqu-light-green); padding: 1rem; border-radius: 6px; margin: 1rem 0;">
@@ -3647,10 +3600,12 @@
     
     <div style="background: var(--grey-100); padding: 1rem; border-radius: 6px; margin-top: 1rem;">
       <p style="font-size: 13px; font-weight: 600; margin-bottom: 0.5rem;">SAGE Design Note:</p>
-      <p style="font-size: 13px; margin: 0; font-style: italic;">Heavy scaffolding ensures students know WHERE to look for gaps. This is Stage 1—we're teaching the evaluation skill itself. By Stage 2, students identify gaps independently without such explicit prompts.</p>
+      <p style="font-size: 13px; margin: 0; font-style: italic;">Heavy scaffolding ensures students know WHERE to look for gaps. This is Stage 1: we are teaching the evaluation skill itself. By Stage 2, students identify gaps independently without such explicit prompts. Once this skill is aquired by the students, then the scafolding can be minised to focus more on the task.</p>
     </div>
     
-    <p style="font-size: 14px; margin-top: 1rem;"><strong>Additional requirement:</strong> Use SANS security policy templates (General category) and acknowledge source</p>
+    <p style="font-size: 14px; margin-top: 1rem;"><strong>Additional requirement:</strong> </p>
+    <p> Use SANS security policy templates (General category) and acknowledge source</p>
+     <p> Use Harvard referencing style or any acceptable referencing style</p>
   </div>
   
   <div style="border: 2px solid var(--cqu-deep-green); border-radius: 8px; padding: 1.5rem; margin: 1.5rem 0; background: white;">
@@ -3735,9 +3690,15 @@
       <span class="callout-icon">💡</span>
       Implementation Tip
     </div>
-    <p style="margin-bottom: 0;">
-      The 7 scaffolded areas (Overview, Acceptable Use, Security Controls, etc.) are generic policy sections. Replace with discipline-appropriate sections: for nursing, use Assessment → Diagnosis → Planning → Implementation → Evaluation. For business, use Situation → Complication → Resolution → Action. The structure stays; content changes.
-    </p>
+   <p style="margin-bottom: 0;">
+    The 7 scaffolded areas (Overview, Acceptable Use, Security Controls, etc.) are generic policy sections. Replace with discipline-appropriate sections:
+    <br><br>
+    <strong>Nursing:</strong> Assessment → Diagnosis → Planning → Implementation → Evaluation
+    <br>
+    <strong>Business:</strong> Situation → Complication → Resolution → Action
+    <br><br>
+    The structure stays the same; only the content changes.
+</p>
   </div>
 </div>
 
@@ -3950,11 +3911,11 @@
     <li>How did your team resolve disagreements about AI-generated stories?</li>
   </ol>
   
-  <p style="font-size: 13px; margin-top: 0.5rem; font-style: italic;"><strong>SAGE Note:</strong> Questions target all three competency dimensions—analytical (patterns), contextual (domain knowledge), reflective (team process). This is the Stage 2 version of the formative tutorial reflection—less scaffolded, more sophisticated analysis expected.</p>
+  <p style="font-size: 13px; margin-top: 0.5rem; font-style: italic;"><strong>SAGE Note:</strong> Questions target all three competency dimensions, analytical (patterns), contextual (domain knowledge), reflective (team process). This is the Stage 2 version of the formative tutorial reflection, less scaffolded, more sophisticated analysis expected.</p>
   
   <h3>Task 2: DFD Translation and Correction (The Translator/Corrector Experiment)</h3>
   
-  <p style="font-size: 14px; background: var(--amber-light); padding: 1rem; border-radius: 6px; margin: 1rem 0;"><strong>SAGE Pattern:</strong> AI-to-model translation & correction | <strong>Orchestration focus:</strong> Error detection using taxonomy | <strong>Addresses research finding:</strong> 55% struggle with boundaries; 45% with CRUD; 55% with exceptions</p>
+  <p style="font-size: 14px; background: var(--amber-light); padding: 1rem; border-radius: 6px; margin: 1rem 0;"><strong>SAGE Pattern:</strong> AI-to-model translation & correction | <strong>Orchestration focus:</strong> Error detection using taxonomy | <strong>Addresses research finding:</strong> 55% struggle with boundaries; 45% with exceptions</p>
   
   <h4>Part B: Structured Process Description (Human Baseline)</h4>
   
@@ -4358,18 +4319,18 @@
     <li><strong>Side-by-side submission</strong> — Raw AI output + refined version</li>
     <li><strong>Decision log</strong> — Accept/Modify/Reject with 50-75 word justifications</li>
     <li><strong>Standards/frameworks</strong> — Domain-specific comparison anchors (regulations, clinical guidelines, professional codes)</li>
-    <li><strong>Mandatory rejection quota</strong> — Prevents passive acceptance (e.g., reject ≥20% of AI suggestions)</li>
+    <li><strong>Mandatory rejection quota</strong> — Prevents passive acceptance (may become too difficult for non complex tasks hence the need for anchors)</li>
     <li><strong>Confidence ratings</strong> — 1-5 scale for metacognitive awareness</li>
-    <li><strong>Reflection component</strong> — 200-400 words on AI's strengths/limitations in this context</li>
+    <li><strong>Reflection component</strong> — reflection (not generic but based on anchors) on AI's strengths/limitations in this context</li>
   </div>
 </div>
 
 
 <!-- 4.4 WHAT MAKES THESE WORK -->
 <div class="page">
-  <h2>4.4 What Makes These Assessments Work (And Common Pitfalls)</h2>
+  <h2>4.4 What Makes These Assessments Work</h2>
   
-  <h3>Design Elements That Drive Success</h3>
+  
   
   <div class="competency-grid">
     <div class="competency-card">
@@ -4405,7 +4366,7 @@
       <span class="competency-number">4</span>
       <h4>Evidence-Based Justifications</h4>
       <p style="font-size: 14px; margin-top: 0.5rem;">
-        <strong>Why it works:</strong> 50-75 word requirement forces specific reasoning; citations to standards/research/stakeholders prevent generic statements; research shows ρ=0.84 correlation between justification quality and evidence use.
+        <strong>Why it works:</strong> 50-75 word requirement forces specific reasoning; citations to research which prevent generic statements; research shows ρ=0.84 correlation between justification quality and evidence use.
       </p>
       <p style="font-size: 13px; margin-top: 0.5rem; color: var(--coral);"><strong>Pitfall if missing:</strong> "AI was incomplete" or "AI missed details" without specifics. No learning demonstrated.</p>
     </div>
@@ -4414,7 +4375,7 @@
       <span class="competency-number">5</span>
       <h4>Pre-Translation Scaffolds</h4>
       <p style="font-size: 14px; margin-top: 0.5rem;">
-        <strong>Why it works:</strong> Addresses predictable AI failure modes (boundaries 55%, CRUD 45%, exceptions 55%); forces attention to critical elements BEFORE AI; makes errors more visible during correction.
+        <strong>Why it works:</strong> Addresses predictable AI failure modes (boundaries 55%, exceptions 55%); forces attention to critical elements BEFORE AI; makes errors more visible during correction.
       </p>
       <p style="font-size: 13px; margin-top: 0.5rem; color: var(--coral);"><strong>Pitfall if missing:</strong> Students and AI both miss the same things. No learning trigger occurs.</p>
     </div>
@@ -4571,6 +4532,7 @@
       <li>Modification ratios <strong>balance</strong> across Accept/Modify/Reject (not 95/5/0)</li>
       <li>Students report <strong>time saved on drafting, time gained for analysis</strong> (the ideal outcome)</li>
       <li>Orchestration distribution: <strong>70%+ at Level 3</strong> (Balanced Integrator) by end of semester</li>
+    <li>Students learn to spot AI hallucinations, bias and are security aware</li>
     </ul>
   </div>
   
@@ -4619,50 +4581,57 @@
     <!-- Author 1 -->
     <div style="background: var(--grey-100); padding: 1.5rem; border-radius: 8px; border-left: 4px solid var(--cqu-deep-green);">
       <h3 style="margin-top: 0; color: var(--cqu-deep-green);">Dr Mahmoud Elkhodr</h3>
-      <p style="font-size: 13px; font-weight: 600; color: var(--grey-700); margin-bottom: 1rem;">Teaching Scholar and Lecturer<br>School of Engineering and Technology<br>Central Queensland University, Australia</p>
+      <p style="font-size: 13px; font-weight: 600; color: var(--grey-700); margin-bottom: 0.5rem;">
+        Senior Lecturer<br>
+        School of Engineering and Technology<br>
+        Central Queensland University, Australia
+      </p>
+      <p style="font-size: 13px; margin-bottom: 1rem;">
+        📧 <strong>Email:</strong> m.elkhodr@cqu.edu.au
+      </p>
       
       <p style="font-size: 14px; line-height: 1.7;">
-        Dr Elkhodr specialises in cybersecurity, IoT, blockchain, and AI-enhanced pedagogy. He is recognised as a pioneer in integrating generative AI into formal higher education curricula, with research spanning AI orchestration competencies, digital divide impacts, and responsible AI use in education. His work has been adopted internationally by institutions including the National University of Singapore and University of Warwick.
+        Dr Elkhodr developed the SAGE framework through systematic empirical research involving 500+ students across six published studies. His work focuses on translating AI pedagogy research into practical, implementable assessment designs for higher education.
       </p>
       
       <p style="font-size: 14px; line-height: 1.7; margin-top: 1rem;">
-        <strong>Research Impact:</strong> 1,600+ citations; h-index 20+; 50+ publications on GenAI in education, cybersecurity, and IoT security frameworks.
-      </p>
-      
-      <p style="font-size: 14px; line-height: 1.7; margin-top: 1rem;">
-        <strong>Teaching Excellence:</strong> Consistently achieves 100% student satisfaction whilst maintaining 121-163% teaching loads; recipient of teaching innovation awards.
+        <strong>Research specialisation:</strong> <br>Cybersecurity education, AI-enhanced pedagogy, responsible GenAI integration, IoT security, assessment design
       </p>
     </div>
     
     <!-- Author 2 -->
     <div style="background: var(--grey-100); padding: 1.5rem; border-radius: 8px; border-left: 4px solid var(--cqu-deep-green);">
       <h3 style="margin-top: 0; color: var(--cqu-deep-green);">Professor Ergun Gide</h3>
-      <p style="font-size: 13px; font-weight: 600; color: var(--grey-700); margin-bottom: 1rem;">Professor of Information Systems<br>School of Engineering and Technology<br>Central Queensland University, Australia</p>
+      <p style="font-size: 13px; font-weight: 600; color: var(--grey-700); margin-bottom: 0.5rem;">
+        Professor of Information Systems<br>
+        School of Engineering and Technology<br>
+        Central Queensland University, Australia
+      </p>
+      <p style="font-size: 13px; margin-bottom: 1rem;">
+        📧 <strong>Email:</strong> e.gide1@cqu.edu.au
+      </p>
       
       <p style="font-size: 14px; line-height: 1.7;">
-        Professor Gide is an internationally recognised scholar in information systems, enterprise systems, and technology adoption in education. His research explores the integration of emerging technologies into educational practice, with particular focus on artificial intelligence, blockchain applications, and digital transformation in higher education.
+        Professor Gide co-developed the SAGE framework and led multi-institutional validation research across business, ICT, and systems analysis disciplines. His research explores how emerging technologies can be integrated into educational practice whilst maintaining academic integrity.
       </p>
       
-      <p style="font-size: 14px; line-height: 1.7; margin-top: 1rem;">
-        <strong>Research Leadership:</strong> Extensive publication record in GenAI applications across disciplines; established research partnerships with institutions across Asia-Pacific region.
-      </p>
-      
-      <p style="font-size: 14px; line-height: 1.7; margin-top: 1rem;">
-        <strong>Pedagogical Innovation:</strong> Co-developed pioneering frameworks for AI integration in business, ICT, and systems analysis curricula; mentor to emerging scholars in educational technology.
+      <p style="font-size: 14px; line-height: 2; margin-top: 1rem;">
+        <strong>Research specialisation:</strong> <br> Information systems education, enterprise systems, technology adoption in higher education, GenAI applications, digital transformation
       </p>
     </div>
   </div>
   
   <div class="emphasis-box">
     <h3>Central Queensland University's Leadership in GenAI Education</h3>
-    <p style="margin-bottom: 0.75rem;">
+    <p style="margin-bottom: 1rem;">
       The SAGE framework represents one of Australia's—and potentially the world's—pioneering efforts to systematically integrate generative AI into formal higher education curricula with empirical validation. Central Queensland University has supported this research program through:
     </p>
-    <ul style="margin-left: 1.5rem; line-height: 1.7;">
+    <ul style="margin-left: 1.5rem; line-height: 1.9;">
       <li>Multi-campus implementation enabling cross-institutional validation</li>
       <li>Support for assessment-as-research methodologies that simultaneously teach and generate evidence</li>
       <li>Commitment to open scholarship through Creative Commons licensing of educational resources</li>
       <li>Investment in faculty development and pedagogical innovation in AI-enhanced teaching</li>
+
     </ul>
   </div>
   
@@ -4673,9 +4642,9 @@
   </p>
   
   <ul style="font-size: 14px; margin-left: 1.5rem; line-height: 1.7;">
-    <li><strong>50+ published articles</strong> on GenAI in education spanning empirical studies, theoretical frameworks, and domain-specific implementations</li>
+    <li><strong>30+ published articles</strong> on GenAI in education spanning empirical studies, theoretical frameworks, and domain-specific implementations</li>
     <li><strong>Cross-disciplinary validation</strong> in cybersecurity, data analytics, systems analysis, business information systems, and ERP education</li>
-    <li><strong>International adoption</strong> of frameworks and methodologies by universities in Singapore, UK, and across Australia</li>
+  
     <li><strong>Industry engagement</strong> ensuring alignment with professional practice and employer expectations</li>
   </ul>
   
@@ -4823,8 +4792,8 @@
   <h4>Statistical Results</h4>
   
   <ul style="font-size: 14px; margin-left: 1.5rem; line-height: 1.7;">
-    <li><strong>Perceived Benefits:</strong> η²=0.173 (medium effect) — ChatGPT accounts for 17.3% of variance in improved academic outcomes</li>
-    <li><strong>Perceived Challenges:</strong> η²=0.289 (medium effect) — Significant concerns about complex query handling (35% of students), lack of human interaction (30%), and privacy (25%)</li>
+    <li><strong>Perceived Benefits:</strong> η²=0.173 (large effect) — ChatGPT accounts for 17.3% of variance in improved academic outcomes</li>
+    <li><strong>Perceived Challenges:</strong> η²=0.289 (large effect) — Significant concerns about complex query handling (35% of students), lack of human interaction (30%), and privacy (25%)</li>
     <li><strong>Overall Satisfaction:</strong> Mean = 3.88/5 (SD=0.92)</li>
     <li><strong>Impact on Academic Engagement:</strong> Mean = 3.18/5 (SD=1.05)</li>
     <li><strong>Frequency-Benefit Correlation:</strong> Chi-square significant (p<.05) — More frequent users perceive greater benefits</li>
@@ -4896,7 +4865,7 @@
     <li>Variability in students' familiarity with AI tools required targeted scaffolding in early weeks</li>
   </ul>
   
-  <h3>Study 4: Systems Analysis & Design (Multi-Campus SAGE Validation)</h3>
+  <h3>Study 4: Systems Analysis &amp; Design (Multi-Campus SAGE Validation)</h3>
   
   <div style="border-left: 4px solid var(--cqu-deep-green); padding-left: 1rem; margin: 1.5rem 0;">
     <h4 style="margin-top: 0; color: var(--cqu-deep-green);">Research Design</h4>
@@ -5082,6 +5051,34 @@
   
   <p style="font-size: 14px; margin-top: 1rem;"><strong>Intervention result:</strong> When micro-notation (AccessibilityProfile store, AssistanceOrchestrator process) and two mandatory prompts were added in subsequent iteration, middle-phase articulation increased from 10% to 76%.</p>
   
+  <h3>Study 5: AI as Critic (SAGE Pedagogy Validation for Human Authority)</h3>
+  
+  <div style="border-left: 4px solid var(--cqu-deep-green); padding-left: 1rem; margin: 1.5rem 0;">
+    <h4 style="margin-top: 0; color: var(--cqu-deep-green);">Research Design</h4>
+    
+    <p style="font-size: 14px;"><strong>Focus:</strong> Validation of SAGE pedagogy for maintaining human authority and responsible GenAI use in Systems Analysis and Design education</p>
+    
+    <p style="font-size: 14px;"><strong>Method:</strong> Students used AI as a critical evaluator of their own work, reversing the typical AI-as-generator pattern. This "AI as Critic" approach tested whether students could maintain intellectual authority when AI provided feedback rather than content.</p>
+    
+    <p style="font-size: 14px;"><strong>Key Finding:</strong> The critic-role framing strengthened students' sense of ownership over their work while still benefiting from AI feedback, supporting the SAGE principle that humans must remain the ultimate decision-makers.</p>
+    
+    <p style="font-size: 14px;"><strong>Publication:</strong> EdArXiv Preprints, 2025. Available: https://osf.io/preprints/edarxiv/8j3xf</p>
+  </div>
+  
+  <h3>Study 6: Empirical Typologies of Student GenAI Use in Permitted Assessments</h3>
+  
+  <div style="border-left: 4px solid var(--cqu-deep-green); padding-left: 1rem; margin: 1.5rem 0;">
+    <h4 style="margin-top: 0; color: var(--cqu-deep-green);">Research Design</h4>
+    
+    <p style="font-size: 14px;"><strong>Sample:</strong> 167 first-year ICT students (behavioral data) and 163 reflective responses</p>
+    
+    <p style="font-size: 14px;"><strong>Method:</strong> Mixed-methods study examining actual ChatGPT usage during a supervised in-class assessment under institutional AI Collaborate permissions. Data collected through embedded 12-item reflection instrument capturing behavioral patterns and qualitative reflections.</p>
+    
+    <p style="font-size: 14px;"><strong>Key Findings:</strong> Identified four distinct student typologies (Strategic Optimisers 32%, Dialogic Learners 28%, Cautious Adopters 23%, Experimental Users 17%) and discovered a "Goldilocks Zone" of 4-8 prompts for optimal engagement. Revealed competency-confidence inversion wherein students demonstrate sophisticated AI interaction strategies whilst experiencing regulatory anxiety. 77.8% struggled with verification competencies despite 73% demonstrating systematic verification behaviors. AI functioned as linguistic equalizer for international students (46.7% citing English confidence).</p>
+    
+    <p style="font-size: 14px;"><strong>Publication:</strong> Submitted to <em>Discover Education</em>, 2026. Preprint: <a href="https://doi.org/10.21203/rs.3.rs-8628653/v1" target="_blank" style="color: var(--cqu-deep-green); text-decoration: underline;">https://doi.org/10.21203/rs.3.rs-8628653/v1</a></p>
+  </div>
+  
   <h3>Limitations Across All Studies</h3>
   
   <div class="callout callout-warning">
@@ -5102,7 +5099,7 @@
     </ul>
   </div>
   
-  <p style="font-size: 14px; margin-top: 1.5rem;"><strong>Despite these limitations:</strong> Patterns replicated across 4 studies, 271 students, 3 disciplines, and 4 campuses suggest robustness. The framework's theoretical grounding in constructivism, Bloom's taxonomy, and situated learning provides additional validity beyond empirical evidence alone.</p>
+  <p style="font-size: 14px; margin-top: 1.5rem;"><strong>Despite these limitations:</strong> Patterns replicated across 6 studies, 500+ students, 3 disciplines, and 4 campuses suggest robustness. The framework's theoretical grounding in constructivism, Bloom's taxonomy, and situated learning provides additional validity beyond empirical evidence alone.</p>
   
 </div>
 
@@ -5112,7 +5109,7 @@
   
   <h3>Core SAGE Framework Publications</h3>
   
-  <p style="font-size: 14px; margin-bottom: 1rem;">The following four peer-reviewed publications form the empirical foundation of the SAGE framework:</p>
+  <p style="font-size: 14px; margin-bottom: 1rem;">The following six peer-reviewed publications form the empirical foundation of the SAGE framework:</p>
   
   <div style="background: var(--grey-100); padding: 1.5rem; border-radius: 8px; margin: 1rem 0; border-left: 4px solid var(--cqu-deep-green);">
     <p style="font-size: 14px; font-family: monospace; line-height: 1.8; margin: 0;">
@@ -5128,75 +5125,89 @@
   
   <div style="background: var(--grey-100); padding: 1.5rem; border-radius: 8px; margin: 1rem 0; border-left: 4px solid var(--cqu-deep-green);">
     <p style="font-size: 14px; font-family: monospace; line-height: 1.8; margin: 0;">
-      [3] M. Elkhodr and E. Gide, "Integrating Generative AI in Cybersecurity Education: Case Study Insights on Pedagogical Strategies, Critical Thinking, and Responsible AI Use," <em>arXiv preprint arXiv:2502.15357</em>, 2025. [Online]. Available: https://arxiv.org/abs/2502.15357
+      [3] M. Elkhodr and E. Gide, "Integrating Generative AI in Cybersecurity Education: Case Study Insights on Pedagogical Strategies, Critical Thinking, and Responsible AI Use," <em>Discover Education</em>, vol. 4, art. 225, Nov. 2025. doi: 10.1007/s44217-025-00935-3
     </p>
   </div>
   
   <div style="background: var(--grey-100); padding: 1.5rem; border-radius: 8px; margin: 1rem 0; border-left: 4px solid var(--cqu-deep-green);">
     <p style="font-size: 14px; font-family: monospace; line-height: 1.8; margin: 0;">
-      [4] M. Elkhodr and E. Gide, "SAGE framework adaptation for systems analysis and design: Multi-campus validation of AI orchestration competencies," <em>[Under Review]</em>, 2025. <span style="color: var(--coral);">[Publication details pending]</span>
+      [4] M. Elkhodr and E. Gide, "Embedding Generative AI into Systems Analysis and Design Curriculum: Framework, Case Study, and Cross-Campus Empirical Evidence," <em>arXiv preprint arXiv:2511.17515</em>, Nov. 2025. doi: 10.48550/arXiv.2511.17515
+    </p>
+  </div>
+  
+  <div style="background: var(--grey-100); padding: 1.5rem; border-radius: 8px; margin: 1rem 0; border-left: 4px solid var(--cqu-deep-green);">
+    <p style="font-size: 14px; font-family: monospace; line-height: 1.8; margin: 0;">
+      [5] M. Elkhodr and E. Gide, "AI as Critic: Validating SAGE Pedagogy for Human Authority and Responsible GenAI Use in Systems Analysis and Design Education," <em>EdArXiv Preprints</em>, 2025. [Online]. Available: https://osf.io/preprints/edarxiv/8j3xf
+    </p>
+  </div>
+  
+  <div style="background: var(--grey-100); padding: 1.5rem; border-radius: 8px; margin: 1rem 0; border-left: 4px solid var(--cqu-deep-green);">
+    <p style="font-size: 14px; font-family: monospace; line-height: 1.8; margin: 0;">
+      [6] M. Elkhodr, A. Azra, and E. Gide, "How First-Year Students Actually Use ChatGPT in Permitted Assessments: Empirical Typologies, Verification Gaps, and the Policy-Practice Divide," <em>submitted to Discover Education</em>, 2026. Preprint available: <a href="https://doi.org/10.21203/rs.3.rs-8628653/v1" target="_blank" style="color: var(--cqu-deep-green); text-decoration: underline;">https://doi.org/10.21203/rs.3.rs-8628653/v1</a>
     </p>
   </div>
   
   <h3>Extended Research Portfolio: GenAI in Education</h3>
   
   <p style="font-size: 14px; margin: 1.5rem 0;">
-    The SAGE framework builds on a comprehensive research program spanning 50+ publications exploring generative AI integration across diverse educational contexts. Selected works addressing complementary aspects of AI-enhanced pedagogy include:
+    The SAGE framework builds on a comprehensive research program exploring generative AI integration across diverse educational contexts. Selected works addressing complementary aspects of AI-enhanced pedagogy include:
   </p>
   
-  <h4>Foundational Works and Book</h4>
+  <h4>Foundational Works</h4>
   
   <div style="background: var(--blue-grey-light); padding: 1.5rem; border-radius: 8px; margin: 1rem 0; border-left: 4px solid var(--blue-grey);">
     <p style="font-size: 14px; font-family: monospace; line-height: 1.8; margin: 0;">
-      [5] M. Elkhodr and E. Gide, <em>Generative Artificial Intelligence Empowered Learning: A New Frontier in Educational Technology</em>. Boca Raton, FL: CRC Press, 2025. <span style="color: var(--coral);">[ISBN pending publication]</span>
+      [7] M. Elkhodr and E. Gide, Eds., <em>Generative Artificial Intelligence Empowered Learning: A New Frontier in Educational Technology</em>, 1st ed. New York, NY: Chapman and Hall/CRC, 2025, 248 pp. doi: 10.1201/9781003422433. eBook ISBN: 9781003422433
     </p>
   </div>
   
   <h4>Cross-Sectoral and Systematic Reviews</h4>
   
   <ul style="font-size: 13px; margin-left: 1.5rem; line-height: 1.8; font-family: monospace;">
-    <li style="margin-bottom: 0.75rem;">R. J. Eddine, E. Gide, and A. Al-Sabbagh, "Generative AI in higher education: A cross-sector analysis of ChatGPT's impact on STEM, social sciences, and healthcare," <em>STEM Education</em>, vol. 5, no. 5, pp. 757–801, 2025. <span style="color: var(--coral);">[DOI pending]</span></li>
+    <li style="margin-bottom: 0.75rem;">R. J. Eddine, E. Gide, and A. Al-Sabbagh, "Generative AI in higher education: A cross-sector analysis of ChatGPT's impact on STEM, social sciences, and healthcare," <em>STEM Education</em>, vol. 5, no. 5, pp. 757–801, 2025. doi: 10.3934/steme.2025035</li>
     
-    <li style="margin-bottom: 0.75rem;">K. Wangsa, S. Karim, E. Gide, and M. Elkhodr, "A systematic review and comprehensive analysis of pioneering AI chatbot models from education to healthcare: ChatGPT, Bard, Llama, Ernie and Grok," <em>Future Internet</em>, vol. 16, no. 7, art. 219, 2024. [Online]. Available: https://doi.org/10.3390/fi16070219</li>
+    <li style="margin-bottom: 0.75rem;">K. Wangsa, S. Karim, E. Gide, and M. Elkhodr, "A systematic review and comprehensive analysis of pioneering AI chatbot models from education to healthcare: ChatGPT, Bard, Llama, Ernie and Grok," <em>Future Internet</em>, vol. 16, no. 7, art. 219, 2024. doi: 10.3390/fi16070219</li>
     
-    <li style="margin-bottom: 0.75rem;">K. Wangsa, R. Sandu, S. Karim, M. Elkhodr, and E. Gide, "A systematic review and analysis on the potentials and challenges of GenAI chatbots in higher education," in <em>Proc. 21st Int. Conf. Information Technology Based Higher Education and Training (ITHET)</em>, 2024, pp. XX–XX. <span style="color: var(--coral);">[DOI pending]</span></li>
+    <li style="margin-bottom: 0.75rem;">K. Wangsa, R. Sandu, S. Karim, M. Elkhodr, and E. Gide, "A systematic review and analysis on the potentials and challenges of GenAI chatbots in higher education," in <em>Proc. 21st Int. Conf. Information Technology Based Higher Education and Training (ITHET)</em>, Paris, France, Nov. 2024, pp. 1–7. doi: 10.1109/ITHET61869.2024.10837608</li>
     
-    <li style="margin-bottom: 0.75rem;">A. Al Tawara, J. El-Den, E. Gide, and Y. Sebastian, "A systematic review and comprehensive analysis of AI-enabled re-skilling and upskilling in education: Transformative strategies for the future," in <em>Proc. 21st Int. Conf. Information Technology Based Higher Education and Training (ITHET)</em>, 2024, pp. XX–XX. <span style="color: var(--coral);">[DOI pending]</span></li>
+    <li style="margin-bottom: 0.75rem;">A. Al Tawara, J. El-Den, E. Gide, and Y. Sebastian, "A systematic review and comprehensive analysis of AI-enabled re-skilling and upskilling in education: Transformative strategies for the future," in <em>Proc. 21st Int. Conf. Information Technology Based Higher Education and Training (ITHET)</em>, Paris, France, Nov. 2024, pp. 1–10. doi: 10.1109/ITHET61869.2024.10837638</li>
     
-    <li style="margin-bottom: 0.75rem;">A. Al Tawara, E. Gide, and J. El-Den, "Systematic review and comprehensive analysis of integrating human-centered AI in higher education: Enhancing teaching, learning, and ethics," in <em>Proc. 12th Int. Conf. Future Internet of Things and Cloud (FiCloud)</em>, 2025, pp. XX–XX. <span style="color: var(--coral);">[DOI pending]</span></li>
+    <li style="margin-bottom: 0.75rem;">A. Al Tawara, E. Gide, and J. El-Den, "Systematic review and comprehensive analysis of integrating human-centered AI in higher education: Enhancing teaching, learning, and ethics," in <em>Proc. 12th Int. Conf. Future Internet of Things and Cloud (FiCloud)</em>, Aug. 2025, pp. 305–312. doi: 10.1109/FiCloud61071.2025.00051</li>
   </ul>
   
   <h4>Discipline-Specific GenAI Integration</h4>
   
   <ul style="font-size: 13px; margin-left: 1.5rem; line-height: 1.8; font-family: monospace;">
-    <li style="margin-bottom: 0.75rem;">H. Ranasinghe and E. Gide, "A systematic review on the integration of machine learning and data engineering into Enterprise Resource Planning (ERP) systems," in <em>Proc. 12th Int. Conf. Future Internet of Things and Cloud (FiCloud)</em>, 2025, pp. XX–XX. <span style="color: var(--coral);">[DOI pending]</span></li>
+    <li style="margin-bottom: 0.75rem;">H. Ranasinghe, E. Gide, and M. Elkhodr, "The significance of GenAI empowered ERP systems course teaching in quality education," in <em>Proc. 21st Int. Conf. Information Technology Based Higher Education and Training (ITHET)</em>, Paris, France, Nov. 2024, pp. 1–7. doi: 10.1109/ITHET61869.2024.10837679</li>
     
-    <li style="margin-bottom: 0.75rem;">H. Ranasinghe, E. Gide, and M. Elkhodr, "The significance of GenAI empowered ERP systems course teaching in quality education," in <em>Proc. 21st Int. Conf. Information Technology Based Higher Education and Training (ITHET)</em>, 2024, pp. XX–XX. <span style="color: var(--coral);">[DOI pending]</span></li>
+    <li style="margin-bottom: 0.75rem;">G. Chaudhry, E. Gide, E. Yadegaridehkordi, and R. Tumpa, "Generative AI-powered teaching and learning in engineering and project management higher education: A systematic review," in <em>Joint International Conference on AI, Big Data and Blockchain</em>, Cham, Switzerland: Springer Nature, Aug. 2025, pp. 99–113.</li>
     
-    <li style="margin-bottom: 0.75rem;">H. Ranasinghe and E. Gide, "A comparative study to analyze the challenges and opportunities of AI-powered ERP adoption for SMEs," in <em>Lecture Notes in Networks and Systems</em>, I. Awan, M. Younas, G. Ghinea, and M. Tor-Sørnes, Eds. Cham, Switzerland: Springer, 2025, pp. XX–XX. <span style="color: var(--coral);">[DOI pending]</span></li>
+    <li style="margin-bottom: 0.75rem;">E. Gusman, E. Gide, M. Elkhodr, and G. Chaudhry, "The benefits and challenges of using artificial intelligence in teaching English as a foreign language in higher education," in <em>Proc. 21st Int. Conf. Information Technology Based Higher Education and Training (ITHET)</em>, Paris, France, Nov. 2024, pp. 1–7. doi: 10.1109/ITHET61869.2024.10837597</li>
     
-    <li style="margin-bottom: 0.75rem;">G. Chaudhry, E. Gide, E. Yadegaridehkordi, and R. Tumpa, "Generative AI-powered teaching and learning in engineering and project management higher education: A systematic review," in <em>Lecture Notes in Networks and Systems</em>, I. Awan, M. Younas, G. Ghinea, and M. Tor-Sørnes, Eds. Cham, Switzerland: Springer, 2025, pp. XX–XX. <span style="color: var(--coral);">[DOI pending]</span></li>
-    
-    <li style="margin-bottom: 0.75rem;">E. Gusman, E. Gide, M. El Khodr, and G. Chaudhry, "The benefits and challenges of using artificial intelligence in teaching English as a foreign language in higher education," in <em>Proc. 21st Int. Conf. Information Technology Based Higher Education and Training (ITHET)</em>, 2024, pp. XX–XX. <span style="color: var(--coral);">[DOI pending]</span></li>
+    <li style="margin-bottom: 0.75rem;">E. Gusman, E. Gide, G. Chaudhry, and M. Elkhodr, "A comprehensive review to identify the challenges and opportunities of using digital technology in English teaching in higher education," in <em>International Society for Technology, Education, and Science</em>, 2023.</li>
   </ul>
   
   <h4>Curriculum and Framework Development</h4>
   
   <ul style="font-size: 13px; margin-left: 1.5rem; line-height: 1.8; font-family: monospace;">
-    <li style="margin-bottom: 0.75rem;">R. Sandu, E. Gide, S. Karim, and P. Singh, "A framework for GenAI-empowered curriculum and learning resources: A case study from an Australian higher education," in <em>Proc. 21st Int. Conf. Information Technology Based Higher Education and Training (ITHET)</em>, 2024, pp. XX–XX. <span style="color: var(--coral);">[DOI pending]</span></li>
+    <li style="margin-bottom: 0.75rem;">R. Sandu, E. Gide, S. Karim, and P. Singh, "A framework for GenAI-empowered curriculum and learning resources: A case study from an Australian higher education," in <em>Proc. 21st Int. Conf. Information Technology Based Higher Education and Training (ITHET)</em>, Paris, France, Nov. 2024, pp. 1–8. doi: 10.1109/ITHET61869.2024.10837623</li>
+    
+    <li style="margin-bottom: 0.75rem;">N. Sandu and E. Gide, "Adoption of AI-Chatbots to enhance student learning experience in higher education in India," in <em>Proc. 18th Int. Conf. Information Technology Based Higher Education and Training (ITHET)</em>, Sept. 2019, pp. 1–5. doi: 10.1109/ITHET46829.2019.8937382</li>
   </ul>
   
   <h4>Equity, Ethics, and Interdisciplinary Integration</h4>
   
   <ul style="font-size: 13px; margin-left: 1.5rem; line-height: 1.8; font-family: monospace;">
-    <li style="margin-bottom: 0.75rem;">M. Elkhodr, K. Wangsa, E. Gide, and S. Karim, "A systematic review and multifaceted analysis of the integration of artificial intelligence and blockchain: Shaping the future of Australian higher education," <em>Future Internet</em>, vol. 16, no. 10, art. 378, 2024. [Online]. Available: https://doi.org/10.3390/fi16100378</li>
+    <li style="margin-bottom: 0.75rem;">M. Elkhodr, K. Wangsa, E. Gide, and S. Karim, "A systematic review and multifaceted analysis of the integration of artificial intelligence and blockchain: Shaping the future of Australian higher education," <em>Future Internet</em>, vol. 16, no. 10, art. 378, 2024. doi: 10.3390/fi16100378</li>
     
-    <li style="margin-bottom: 0.75rem;">M. Elkhodr and E. Gide, "Enhancing mental health support for international students: A digital framework for holistic well-being in higher education," <em>STEM Education</em>, vol. 4, no. 4, pp. 466–488, 2024. <span style="color: var(--coral);">[DOI pending]</span></li>
+    <li style="margin-bottom: 0.75rem;">M. Elkhodr, E. Gide, and N. Pandey, "Enhancing mental health support for international students: A digital framework for holistic well-being in higher education," <em>STEM Education</em>, vol. 4, no. 4, pp. 466–488, 2024. doi: 10.3934/steme.2024025</li>
+    
+    <li style="margin-bottom: 0.75rem;">N. Abbasi, E. Gide, P. Kalutara, and P. Lawrence, "Barriers and opportunities in online delivery of architecture and building design studios: Australian educators' perspectives," 2024.</li>
   </ul>
   
   <div style="background: var(--blue-grey-light); padding: 1rem; border-radius: 6px; margin: 1.5rem 0;">
     <p style="font-size: 13px; margin: 0;">
-      <strong>Note:</strong> A complete bibliography of Drs Elkhodr and Gide's 50+ publications on GenAI in education, including works on IoT security, blockchain applications, smart systems, and digital health, is available upon request. For research collaborations or institutional partnerships, contact details are provided in Section 5.6.
+      <strong>Note:</strong> For research collaborations or institutional partnerships, contact details are provided in Section 5.6.
     </p>
   </div>
   
@@ -5268,47 +5279,47 @@
     </p>
   </div>
   
-  <h3>Citation Formats</h3>
-  
-  <p style="font-size: 14px; margin-bottom: 1rem;">When referencing this guide in academic work, institutional documents, or educational materials, please use the appropriate citation format:</p>
-  
-  <div style="background: var(--grey-100); padding: 1.5rem; border-radius: 8px; margin: 1rem 0;">
-    <h4 style="margin-top: 0;">IEEE Style</h4>
-    <p style="font-family: monospace; font-size: 13px; line-height: 1.6; margin: 0;">
-      M. Elkhodr and E. Gide, "Embedding Generative AI in Curriculum: The SAGE Framework and Evidence-Based Implementation Guide," Central Queensland University, Rockhampton, Australia, Version 1.0, Nov. 2025. [Online]. Available: [URL]
-    </p>
-  </div>
-  
-  <div style="background: var(--grey-100); padding: 1.5rem; border-radius: 8px; margin: 1rem 0;">
-    <h4 style="margin-top: 0;">APA Style (7th Edition)</h4>
-    <p style="font-family: monospace; font-size: 13px; line-height: 1.6; margin: 0;">
-      Elkhodr, M., & Gide, E. (2025). <em>Embedding generative AI in curriculum: The SAGE framework and evidence-based implementation guide</em> (Version 1.0). Central Queensland University. [URL]
-    </p>
-  </div>
-  
-  <div style="background: var(--grey-100); padding: 1.5rem; border-radius: 8px; margin: 1rem 0;">
-    <h4 style="margin-top: 0;">Harvard (Australian) Style</h4>
-    <p style="font-family: monospace; font-size: 13px; line-height: 1.6; margin: 0;">
-      Elkhodr, M and Gide, E 2025, <em>Embedding generative AI in curriculum: The SAGE framework and evidence-based implementation guide</em>, Version 1.0, Central Queensland University, Rockhampton, viewed [date], <[URL]>.
-    </p>
-  </div>
-  
-  <div style="background: var(--grey-100); padding: 1.5rem; border-radius: 8px; margin: 1rem 0;">
-    <h4 style="margin-top: 0;">MLA Style (9th Edition)</h4>
-    <p style="font-family: monospace; font-size: 13px; line-height: 1.6; margin: 0;">
-      Elkhodr, Mahmoud, and Ergun Gide. <em>Embedding Generative AI in Curriculum: The SAGE Framework and Evidence-Based Implementation Guide</em>. Version 1.0, Central Queensland University, Nov. 2025, [URL].
-    </p>
-  </div>
-  
-  <h3>Attribution for Adapted Materials</h3>
-  
-  <p style="font-size: 14px; margin-bottom: 1rem;">If you adapt assessment templates, rubrics, or other materials from this guide, please include:</p>
-  
-  <div style="background: var(--cqu-light-green); padding: 1rem; border-radius: 6px; border-left: 4px solid var(--cqu-deep-green);">
-    <p style="font-size: 13px; font-style: italic; margin: 0;">
-      "This [assessment/rubric/template] is adapted from the SAGE Framework by Elkhodr & Gide (Central Queensland University, 2025), licensed under CC BY 4.0. Original available at [URL]. Modifications include: [brief description of changes]."
-    </p>
-  </div>
+<h3>Citation Formats</h3>
+
+<p style="font-size: 14px; margin-bottom: 1rem;">When referencing this guide in academic work, institutional documents, or educational materials, please use the appropriate citation format:</p>
+
+<div style="background: var(--grey-100); padding: 1.5rem; border-radius: 8px; margin: 1rem 0;">
+  <h4 style="margin-top: 0;">IEEE Style</h4>
+  <p style="font-family: monospace; font-size: 13px; line-height: 1.6; margin: 0;">
+    M. Elkhodr and E. Gide, "Embedding Generative AI in Curriculum: The SAGE Framework and Evidence-Based Implementation Guide," Central Queensland University, Rockhampton, Australia, Version 1.0, Jan. 2026. [Online]. Available: https://doi.org/10.5281/zenodo.18383952
+  </p>
+</div>
+
+<div style="background: var(--grey-100); padding: 1.5rem; border-radius: 8px; margin: 1rem 0;">
+  <h4 style="margin-top: 0;">APA Style (7th Edition)</h4>
+  <p style="font-family: monospace; font-size: 13px; line-height: 1.6; margin: 0;">
+    Elkhodr, M., & Gide, E. (2026). <em>Embedding generative AI in curriculum: The SAGE framework and evidence-based implementation guide</em> (Version 1.0). Central Queensland University. https://doi.org/10.5281/zenodo.18383952
+  </p>
+</div>
+
+<div style="background: var(--grey-100); padding: 1.5rem; border-radius: 8px; margin: 1rem 0;">
+  <h4 style="margin-top: 0;">Harvard (Australian) Style</h4>
+  <p style="font-family: monospace; font-size: 13px; line-height: 1.6; margin: 0;">
+    Elkhodr, M and Gide, E 2026, <em>Embedding generative AI in curriculum: The SAGE framework and evidence-based implementation guide</em>, Version 1.0, Central Queensland University, Rockhampton, viewed [date], &lt;https://doi.org/10.5281/zenodo.18383952&gt;.
+  </p>
+</div>
+
+<div style="background: var(--grey-100); padding: 1.5rem; border-radius: 8px; margin: 1rem 0;">
+  <h4 style="margin-top: 0;">MLA Style (9th Edition)</h4>
+  <p style="font-family: monospace; font-size: 13px; line-height: 1.6; margin: 0;">
+    Elkhodr, Mahmoud, and Ergun Gide. <em>Embedding Generative AI in Curriculum: The SAGE Framework and Evidence-Based Implementation Guide</em>. Version 1.0, Central Queensland University, Jan. 2026, https://doi.org/10.5281/zenodo.18383952.
+  </p>
+</div>
+
+<h3>Attribution for Adapted Materials</h3>
+
+<p style="font-size: 14px; margin-bottom: 1rem;">If you adapt assessment templates, rubrics, or other materials from this guide, please include:</p>
+
+<div style="background: var(--cqu-light-green); padding: 1rem; border-radius: 6px; border-left: 4px solid var(--cqu-deep-green);">
+  <p style="font-size: 13px; font-style: italic; margin: 0;">
+    "This [assessment/rubric/template] is adapted from the SAGE Framework by Elkhodr & Gide (Central Queensland University, 2026), licensed under CC BY 4.0. Original available at https://doi.org/10.5281/zenodo.18383952. Modifications include: [brief description of changes]."
+  </p>
+</div>
   
   <h3>Permissions</h3>
   
@@ -5354,13 +5365,13 @@
  <h3>Student-Facing GenAI Literacy Module</h3>
   
   <div style="border: 2px solid var(--cqu-deep-green); border-radius: 8px; padding: 2rem; margin: 2rem 0; background: linear-gradient(135deg, #f8fbf1 0%, #e8f5d8 100%);">
-    <h4 style="margin-top: 0; color: var(--cqu-deep-green); font-size: 20px;">📚 GenAI Literacy 101 for Higher Education Students</h4>
+    <h4 style="margin-top: 0; color: var(--cqu-deep-green); font-size: 20px;">📚 GenAI Literacy and Numeracy 101 for Higher Education Students</h4>
     
     <p style="font-size: 14px; margin-bottom: 1rem;"><strong>Format:</strong> Interactive HTML module + Static PDF version</p>
     
-    <p style="font-size: 14px; margin-bottom: 1rem;"><strong>Purpose:</strong> Equip your students with foundational GenAI competencies before they begin SAGE assessments. This module addresses the "variable AI literacy" challenge observed in our research. <a href="https://raw.githack.com/MahmoudElkhodr/fair/GENAI-101/genai-101.html" target="_blank" style="color: white; text-decoration: underline;"></a></p>
+    <p style="font-size: 14px; margin-bottom: 1rem;"><strong>Purpose:</strong> Equip your students with foundational GenAI competencies before they begin SAGE assessments. This module addresses the "variable AI literacy" challenge observed in our research.</p>
     
-    <h4 style="color: var(--cqu-deep-green); margin-top: 1.5rem; margin-bottom: 0.75rem;">Module Contents (10 Lessons)</h4>
+    <h4 style="color: var(--cqu-deep-green); margin-top: 1rem; margin-bottom: 0.75rem;">Module Contents (10 Lessons)</h4>
     
     <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem;">
       
@@ -5416,75 +5427,28 @@
     </div>
     
     <div style="background: var(--cqu-deep-green); color: white; padding: 1rem; border-radius: 6px; margin-top: 1.5rem; text-align: center;">
-    <p style="margin: 0; font-size: 15px; font-weight: 600;">
-  📥 <a href="https://raw.githack.com/MahmoudElkhodr/fair/GENAI-101/genai-101.html" target="_blank" style="color: white; text-decoration: underline;">Access the GenAI Literacy and Numeracy Module</a> | Completion time: 45-60 minutes
-</p>
+      <p style="margin: 0; font-size: 15px; font-weight: 600;">
+        📥 <a href="https://doi.org/10.5281/zenodo.18295619" target="_blank" style="color: white; text-decoration: underline;">Access the GenAI Literacy and Numeracy Module via Zenodo</a> | Completion time: 45-60 minutes
+      </p>
+      <p style="margin: 0.5rem 0 0 0; font-size: 12px; opacity: 0.9;">
+        DOI: 10.5281/zenodo.18295619
+      </p>
     </div>
   </div>
   
-  <h3>SAGE Implementation Toolkit</h3>
+  <h3>Upcoming Resources (2026)</h3>
   
-  <p style="font-size: 14px; margin-bottom: 1rem;"><strong>Downloadable templates and resources in multiple formats:</strong></p>
-  
-  <table class="evidence-table" style="font-size: 13px;">
-    <thead>
-      <tr>
-        <th>Resource Type</th>
-        <th>What's Included</th>
-        <th>Format</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><strong>Assessment Templates</strong></td>
-        <td>Requirements synthesis, DFD correction, design evaluation task descriptions (editable)</td>
-        <td>Word, PDF</td>
-      </tr>
-      <tr>
-        <td><strong>Decision Log Templates</strong></td>
-        <td>Accept/Modify/Reject tables with justification columns; confidence rating scales</td>
-        <td>Word, Excel, Google Sheets</td>
-      </tr>
-      <tr>
-        <td><strong>Rubrics</strong></td>
-        <td>Process-focused marking criteria for all three assessment patterns (HD/D/C/P/F descriptors)</td>
-        <td>Excel, PDF</td>
-      </tr>
-      <tr>
-        <td><strong>Worked Exemplars</strong></td>
-        <td>Anonymised student work showing Level 1 vs Level 3 quality with annotations</td>
-        <td>PDF</td>
-      </tr>
-      <tr>
-        <td><strong>Tutorial Slides</strong></td>
-        <td>PowerPoint presentations for introducing SAGE to students (customizable)</td>
-        <td>PPTX, PDF</td>
-      </tr>
-      <tr>
-        <td><strong>Prompt Library</strong></td>
-        <td>Standardised prompts for 10+ disciplines (copy-paste ready)</td>
-        <td>Word, PDF</td>
-      </tr>
-      <tr>
-        <td><strong>Monitoring Spreadsheet</strong></td>
-        <td>Track orchestration levels, accessibility articulation, modification rates across cohorts</td>
-        <td>Excel, Google Sheets</td>
-      </tr>
-    </tbody>
-  </table>
-  
-  <p style="font-size: 13px; margin-top: 1rem; font-style: italic;">
-    <strong>Access:</strong> [URL to repository when published] | All materials licensed CC BY 4.0
-  </p>
-  
-  <h3>Upcoming Resources (2025-2026)</h3>
+  <p style="font-size: 14px; margin-bottom: 1rem;">Additional implementation resources currently under development:</p>
   
   <ul style="font-size: 14px; margin-left: 1.5rem; line-height: 1.7;">
-    <li><strong>Video tutorial series:</strong> Walkthrough of implementing SAGE in your first unit</li>
-    <li><strong>Discipline-specific guides:</strong> Extended implementation examples for nursing, business, engineering, social sciences</li>
-    <li><strong>Multi-language translations:</strong> SAGE guide in Chinese, Spanish, Arabic (community contributions welcome)</li>
-    <li><strong>Research toolkit:</strong> Instruments for conducting your own SAGE validation studies</li>
+    <li><strong>SAGE Implementation Toolkit:</strong> Downloadable templates including assessment task descriptions, decision log templates, process-focused rubrics, standardised prompts for multiple disciplines, and monitoring spreadsheets (all licensed CC BY 4.0)</li>
+    <li><strong>Worked exemplars:</strong> Anonymised student work showing Level 1 vs Level 3 orchestration quality with annotations</li>
+    <li><strong>Tutorial slides:</strong> PowerPoint presentations for introducing SAGE to students (customisable)</li>
   </ul>
+  
+  <p style="font-size: 13px; margin-top: 1rem; font-style: italic;">
+    These resources will be made available via institutional repository and linked in future versions of this guide.
+  </p>
   
 </div>
 
@@ -5494,21 +5458,20 @@
   
   <h3>Contact the Authors</h3>
   
-  <p style="font-size: 14px; margin-bottom: 1.5rem;">We welcome inquiries from educators implementing SAGE and are available for consultations on a case-by-case basis:</p>
   
   <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 2rem;">
     <div style="background: var(--grey-100); padding: 1.5rem; border-radius: 8px; border-left: 4px solid var(--cqu-deep-green);">
       <h4 style="margin-top: 0; color: var(--cqu-deep-green);">Dr Mahmoud Elkhodr</h4>
       <p style="font-size: 13px; margin-bottom: 0.5rem;">📧 Email: m.elkhodr@cqu.edu.au</p>
       <p style="font-size: 13px; margin-bottom: 0.5rem;">🌐 Profile: https://staff-profiles.cqu.edu.au/home/view/1633</p>
-      <p style="font-size: 13px; margin-bottom: 0;">🔬 Research: Cybersecurity, AI pedagogy, IoT security</p>
+    
     </div>
     
     <div style="background: var(--grey-100); padding: 1.5rem; border-radius: 8px; border-left: 4px solid var(--cqu-deep-green);">
       <h4 style="margin-top: 0; color: var(--cqu-deep-green);">Professor Ergun Gide</h4>
       <p style="font-size: 13px; margin-bottom: 0.5rem;">📧 Email: e.gide1@cqu.edu.au</p>
       <p style="font-size: 13px; margin-bottom: 0.5rem;">🌐 Profile: https://staff-profiles.cqu.edu.au/home/view/956</p>
-      <p style="font-size: 13px; margin-bottom: 0;">🔬 Research: Information systems, GenAI in business education</p>
+  
     </div>
   </div>
   
@@ -5527,41 +5490,6 @@
     </ul>
   </div>
   
-  <h3>FUTURE AI (FAIR) Lab (Launching 2026)</h3>
-  
-  <div style="background: linear-gradient(135deg, #e8f5d8 0%, #f8fbf1 100%); padding: 2rem; border-radius: 8px; margin: 2rem 0; border-left: 4px solid var(--cqu-deep-green);">
-    <h4 style="margin-top: 0; color: var(--cqu-deep-green);">Join the Global FAIR Lab</h4>
-    
-    <p style="font-size: 14px; margin-bottom: 1rem;">
-      We're establishing an online community for educators implementing SAGE worldwide. Benefits include:
-    </p>
-    
-    <div class="two-col">
-      <div>
-        <ul style="font-size: 14px; margin-left: 1rem; line-height: 1.7;">
-          <li>Monthly online meetups</li>
-          <li>Shared resource library</li>
-          <li>Peer troubleshooting</li>
-          <li>Early access to new tools</li>
-        </ul>
-      </div>
-      <div>
-        <ul style="font-size: 14px; margin-left: 1rem; line-height: 1.7;">
-          <li>Collaboration opportunities</li>
-          <li>Research partnerships</li>
-          <li>Case study contributions</li>
-          <li>Recognition program</li>
-        </ul>
-      </div>
-    </div>
-    
-    <div style="background: var(--cqu-deep-green); color: white; padding: 1rem; border-radius: 6px; margin-top: 1rem; text-align: center;">
-      <p style="margin: 0; font-size: 14px; font-weight: 600;">
-        🌐 Register interest: [URL when available] | Expected launch: Q1 2026
-      </p>
-    </div>
-  </div>
-  
   <h3>Institutional Partnerships</h3>
   
   <p style="font-size: 14px; margin-bottom: 1rem;">For universities seeking comprehensive support:</p>
@@ -5573,7 +5501,7 @@
     </p>
   </div>
   
-  <div style="background: var(--blue-grey-light); padding: 1.5rem; border-radius: 8px; margin: 1rem 0; border-left: 4px solid var(--blue-grey);">
+  <div style="background: var(--blue-grey-light); padding: 1rem; border-radius: 8px; margin: 1rem 0; border-left: 4px solid var(--blue-grey);">
     <h4 style="margin-top: 0;">Research Collaboration</h4>
     <p style="font-size: 14px; margin-bottom: 0;">
       Interested in multi-institutional SAGE validation or conducting formal research on AI orchestration? We welcome partnerships for ethics-approved studies, joint publications, and cross-campus implementation research. PhD students investigating GenAI pedagogy are especially encouraged to reach out.
@@ -5597,25 +5525,25 @@
     <tbody>
       <tr>
         <td><strong>1.0</strong></td>
-        <td>November 2025</td>
+        <td>January 2026</td>
         <td>
           <strong>Initial public release</strong><br>
           • Complete SAGE framework documentation<br>
-          • Evidence from 4 published studies<br>
+          • Evidence from 6 published studies<br>
           • Implementation examples (formative + summative)<br>
           • Cross-discipline adaptation guides<br>
-          • Companion student literacy module
+          • Companion student literacy module (DOI: 10.5281/zenodo.18295619)
         </td>
       </tr>
       <tr style="background: var(--grey-100);">
         <td><strong>1.1</strong></td>
-        <td><em>Planned Q2 2026</em></td>
+        <td><em>Planned Q3 2026</em></td>
         <td>
           <em>Anticipated updates based on community feedback:</em><br>
-          • Additional discipline-specific examples (nursing, social work, law)<br>
+          • Implementation toolkit (templates, rubrics, worked exemplars)<br>
+          • Additional discipline-specific examples<br>
           • Expanded troubleshooting section<br>
-          • Video tutorial series integration<br>
-          • Enhanced rubric guidance for large cohorts
+          • Enhanced guidance for large cohorts
         </td>
       </tr>
     </tbody>
@@ -5629,10 +5557,9 @@
       Updates and Announcements
     </div>
     <ul style="margin-left: 1.5rem; font-size: 14px; line-height: 1.7;">
-      <li>Check [FAIR URL] periodically for the latest version</li>
-      <li>Join the SAGE Implementers Community for update notifications (TBA on FAIR website)</li>
-      <li>Follow our research profiles for new publications</li>
-      
+      <li>Check the authors' institutional research profiles for new publications and resources</li>
+      <li>Contact the authors directly (Section 5.6) to be notified of significant updates</li>
+      <li>Monitor TEQSA GenAI Knowledge Hub for sector-wide developments</li>
     </ul>
   </div>
   
@@ -5643,7 +5570,6 @@
   <ul style="font-size: 14px; margin-left: 1.5rem; line-height: 1.7;">
     <li><strong>Case studies:</strong> Share your implementation experiences (successes and challenges)</li>
     <li><strong>Discipline adaptations:</strong> Contribute templates for underrepresented fields</li>
-    <li><strong>Translations:</strong> Help make SAGE accessible in other languages</li>
     <li><strong>Research data:</strong> Share your orchestration distribution findings for meta-analysis</li>
     <li><strong>Student exemplars:</strong> Anonymised work showing L1-L4 progression</li>
   </ul>
@@ -5667,12 +5593,12 @@
       </p>
       <p style="font-size: 14px; margin: 0;">
         Before students begin SAGE assessments, assign the companion module:<br>
-        <strong>"GenAI Literacy 101 for Higher Education Students"</strong><br>
-        (7 interactive lessons + quiz | 45-60 minutes)
+        <strong>"GenAI Literacy and Numeracy 101 for Higher Education Students"</strong><br>
+        (10 interactive lessons + quiz | 45-60 minutes)
       </p>
     </div>
     
-    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 2rem;">
+    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin-top: 2rem;">
       <div style="background: rgba(255,255,255,0.1); padding: 1rem; border-radius: 6px;">
         <p style="font-size: 13px; font-weight: 700; margin-bottom: 0.25rem;">📚 Educator Guide</p>
         <p style="font-size: 12px; margin: 0;">This document</p>
@@ -5680,31 +5606,24 @@
       
       <div style="background: rgba(255,255,255,0.1); padding: 1rem; border-radius: 6px;">
         <p style="font-size: 13px; font-weight: 700; margin-bottom: 0.25rem;">🎓 Student Module</p>
-        <p style="font-size: 12px; margin: 0;">GenAI Literacy 101</p>
-      </div>
-      
-      <div style="background: rgba(255,255,255,0.1); padding: 1rem; border-radius: 6px;">
-        <p style="font-size: 13px; font-weight: 700; margin-bottom: 0.25rem;">🛠️ Implementation Toolkit</p>
-        <p style="font-size: 12px; margin: 0;">Templates & Rubrics</p>
+        <p style="font-size: 12px; margin: 0;">GenAI Literacy 101 (Zenodo)</p>
       </div>
     </div>
     
     <p style="font-size: 14px; margin-top: 2rem; margin-bottom: 0;">
-      <strong>Access resources:</strong> https://raw.githack.com/MahmoudElkhodr/fair/GENAI-101/genai-101.html
+      <strong>Access student module:</strong> https://doi.org/10.5281/zenodo.18295619
     </p>
   </div>
   
   <div style="border-top: 2px solid var(--grey-300); padding-top: 2rem; margin-top: 3rem; text-align: center;">
     <p style="font-size: 13px; color: var(--grey-700); margin-bottom: 0.5rem;">
-      <strong>SAGE Framework © 2025 Mahmoud Elkhodr & Ergun Gide, Central Queensland University</strong>
+      <strong>SAGE Framework © 2026 Mahmoud Elkhodr & Ergun Gide, Central Queensland University</strong>
     </p>
     <p style="font-size: 12px; color: var(--grey-700); margin: 0;">
       Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0)<br>
-      Version 1.0 | November 2025 | https://creativecommons.org/licenses/by/4.0/
+      Version 1.0 | January 2026 | https://creativecommons.org/licenses/by/4.0/
     </p>
   </div>
 </div>
-</div>
-
 </body>
 </html>
